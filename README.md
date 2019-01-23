@@ -1,28 +1,24 @@
-# Getting Started With Schematics
+# TIBCO Cloud Quick Starter Kit
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+This repository is a starter kit to get going with TIBCO Cloud Starters
 
-### Testing
+### Create your first Cloud App
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+To create your first app run
 
-Check the documentation with
 ```bash
 schematics --help
 ```
 
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
+### Create your own cloud component
 
 To publish, simply do:
 
 ```bash
 npm run build
 npm publish
+npm install
+ng generate cloudstarter:cloud-component --name MyComponent
 ```
 
 That's it!
- 
