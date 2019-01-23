@@ -1,0 +1,29 @@
+Step 1) Create new App
+
+ng new CloudAPP
+ng serve
+
+Step 2) Generate a component in this app
+
+ng generate component cloud
+
+Step 3) Use this component
+
+ng serve
+
+Step 4) Link to cloud starter
+
+npm link ../cloudstarter/
+
+Step 5) Use a cloudstarter component
+
+ng generate cloudstarter:my-schematic
+
+Step 6A) Build the Cloudstarter
+
+npm run build
+
+Step 6B) Use install on NPM
+
+npm install
+
