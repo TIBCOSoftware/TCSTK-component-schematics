@@ -1,35 +1,133 @@
 import { Component } from '@angular/core';
+import {
+  AccessToken,
+  AuthInfo, CaseAction,
+  CaseSearchResults, CaseType,
+  LoginContext,
+  UiAppConfig
+} from '../../projects/tc-liveapps-lib/src/lib/models/liveappsdata';
+import {MatIconRegistry} from '@angular/material';
+import {DomSanitizer} from '@angular/platform-browser';
+import { Location } from '@angular/common';
 
 @Component({
-  selector: '<%= selector %>',<% if(inlineTemplate) { %>
-  template: `
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-      <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-    </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
-    <% if (routing) {
-     %><router-outlet></router-outlet><%
-    } %>
-  `,<% } else { %>
-  templateUrl: './app.component.html',<% } if(inlineStyle) { %>
-  styles: []<% } else { %>
-  styleUrls: ['./app.component.<%= styleext %>']<% } %>
+  selector: 'laapp-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '<%= name %>';
+  title = 'tc-liveapps';
+
+  loggedIn = false;
+  loginContext: LoginContext;
+
+  // generic app config
+  appConfig = new UiAppConfig().deserialize({
+    id: undefined,
+    userId: '256',
+    applicationId: '1742',
+    typeId: '1',
+    uiAppId: 'testappjs',
+    caseIconsFolderId: 'ServiceRequest_Icons',
+    caseTypeLabel: 'Partner Request'
+  });
+
+  // handle login context
+  handleLoginContext = (loginContext: LoginContext) => {
+    this.loginContext = loginContext;
+    this.loggedIn = true;
+  }
+
+  // case clicked
+  private clickCaseAction = (caseReference) => {
+    console.log('Case was clicked: ' + caseReference);
+  }
+
+  // action clicked
+  private handleActionClick = (action: CaseAction) => {
+    console.log('Action was clicked:' + action.label);
+  }
+
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private location: Location) {
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-reply',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-reply.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-delete',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-delete.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-edit',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-edit.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-send',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-send.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-subscribed',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-subscribed.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-unsubscribed',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-unsubscribed.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-collaboration-feed',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-feed.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-library',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-library.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-action',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-action.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-upload',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-upload.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-zip',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-zip.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-image',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-image.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-document-doc',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-document-doc.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-summary-details-button',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-details-button.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-favorites-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-favorite.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-recent-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-recent.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-clear-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-clear.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-customization-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-settings.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-caselist-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-caselist.svg'))
+    );
+    this.matIconRegistry.addSvgIcon(
+        'tcs-search-icon',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(this.location.prepareExternalUrl('assets/icons/ic-search.svg'))
+    );
+  }
 }
