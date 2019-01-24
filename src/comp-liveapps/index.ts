@@ -54,6 +54,8 @@ export default function (options: any): Rule {
       context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
       context.logger.info('--- **                V1.01              ** ---');
       context.logger.info('-----------------------------------------------');
+      context.logger.info('--- ** TYPE: LIVE APPS                   ** ---');
+      context.logger.info('-----------------------------------------------');
       context.logger.info('Building TIBCO Cloud LiveApps Component, with the following settings: ' + JSON.stringify(options));
     },
 
@@ -62,8 +64,8 @@ export default function (options: any): Rule {
     // validated and could throw, e.g. if a required option is missing.
     //schematic('my-other-schematic', { option: true }),
     (host: Tree, context: SchematicContext) => {
-      context.logger.log('info', "Project: " + options.project);
-      context.logger.log('info', "Host: " + host.getDir('/').path);
+      //context.logger.log('info', "Project: " + options.project);
+      //context.logger.log('info', "Host: " + host.getDir('/').path);
       //context.logger.info('Adding dependencies...');
       //addDependencies(host);
       //context.logger.info('Adding module to imports...')

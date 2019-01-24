@@ -19,14 +19,26 @@
     "description": "New Cloud Application",
     "factory": "./cloud-app",
     "schema": "./cloud-app/schema.json"
-  },"cloud-component": {
-      "description": "New Cloud Component.",
-      "factory": "./cloud-component",
-      "schema": "./cloud-component/schema.json"
-    },"tcc": {
-      "description": "Cloud Cloud Component.",
-      "factory": "./tcc",
-      "schema": "./tcc/schema.json"
+  },"comp-base": {
+      "description": "New Cloud Base Component.",
+      "factory": "./comp-base",
+      "schema": "./comp-base/schema.json"
+    },"comp-events": {
+      "description": "New Events Component.",
+      "factory": "./comp-events",
+      "schema": "./comp-events/schema.json"
+    },"comp-liveapps": {
+      "description": "New LiveApps Component.",
+      "factory": "./comp-liveapps",
+      "schema": "./comp-liveapps/schema.json"
+    },"comp-spotfire": {
+      "description": "New Spotfire Component.",
+      "factory": "./comp-spotfire",
+      "schema": "./comp-spotfire/schema.json"
+    },"comp-tci": {
+      "description": "New TIBCO Cloud Integration Component.",
+      "factory": "./comp-tci",
+      "schema": "./comp-tci/schema.json"
     }
   }
 }
