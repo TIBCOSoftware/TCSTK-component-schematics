@@ -1,0 +1,116 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@schematics/angular@7.1.2",
+        "scope": "@schematics",
+        "escapedName": "@schematics%2fangular",
+        "name": "@schematics/angular",
+        "rawSpec": "7.1.2",
+        "spec": "7.1.2",
+        "type": "version"
+      },
+      "/usr/local/lib/node_modules/@angular/cli"
+    ]
+  ],
+  "_from": "@schematics/angular@7.1.2",
+  "_hasShrinkwrap": false,
+  "_id": "@schematics/angular@7.1.2",
+  "_inCache": true,
+  "_location": "/@angular/cli/@schematics/angular",
+  "_nodeVersion": "10.9.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/angular_7.1.2_1544132086231_0.8066412489514623"
+  },
+  "_npmUser": {
+    "name": "angular",
+    "email": "devops+npm@angular.io"
+  },
+  "_npmVersion": "6.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@schematics/angular@7.1.2",
+    "scope": "@schematics",
+    "escapedName": "@schematics%2fangular",
+    "name": "@schematics/angular",
+    "rawSpec": "7.1.2",
+    "spec": "7.1.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/@angular/cli"
+  ],
+  "_resolved": "https://registry.npmjs.org/@schematics/angular/-/angular-7.1.2.tgz",
+  "_shasum": "b3eefbc81d12b0b53816896f6172eb613885826c",
+  "_shrinkwrap": null,
+  "_spec": "@schematics/angular@7.1.2",
+  "_where": "/usr/local/lib/node_modules/@angular/cli",
+  "author": {
+    "name": "Angular Authors"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular-cli/issues"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "7.1.2",
+    "@angular-devkit/schematics": "7.1.2",
+    "typescript": "3.1.6"
+  },
+  "description": "Schematics specific to Angular",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-coypNxjRjCExCbkJ8Vser4iZbdksl3cNqgdokDlEtpXnnph3ZYvNDhDD9TBWYQ+cwDhCHAOzT3U3IjN4R2MCgQ==",
+    "shasum": "b3eefbc81d12b0b53816896f6172eb613885826c",
+    "tarball": "https://registry.npmjs.org/@schematics/angular/-/angular-7.1.2.tgz",
+    "fileCount": 194,
+    "unpackedSize": 760955,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcCZX3CRA9TVsSAnZWagAANuwP/2vm58UzhkBV82qCIksO\nCWlhM3BTwQN2njqhd/jAf74qCrtwrK4/QPmyNjQO8PsQZqFvNwY/qd16JFkr\nDsKjFEOhRTLK+J/KfMJ16UPp2AMXSqsTQyRMaGsxMoRM9FgXRoLogxi48FZI\n8D0n7GtDN0diGyU7yJQhgOKwlpT/foUCN7o+xurS+o6YX6zleD4ukItf7IvC\ndmeNXWUngLCcFW13VPoln50ULRmJqyKvJaFLyOI2pLa6qFe6rN3GG0KoVUcD\nqVdn780c2OIbWS+/9ICC1mys27Lti2PEqg3L9di9n2tmMMcPNXp/8+YUuSDG\nE3L2TOWvvx55OiztsWc0E+mRBssQJyZrmrZV9HE3IfJ07iN9Vhnl3PmDqODK\nKoJIQI7eUMlQ8LVsOEWSP635F4C1m/kFviOyBTqbBRq/1O/kZcVx9PBLhLvP\nGx4a/YRs6AUlMM7gX/KypqPRUHqJwGYOQm6VkGLNvD5xLKft/bU41co3ULKu\nVf5w2QASIIY9KuQBZ/zGp9hYpdPfu87w0u+QIzuMdfHDq7A8C5y/3KiCOqVE\nCYfLUG5rOsPJEq83YBZJYUkAIc12FirqG+5ki/4jhH6qY7jLjtTb7IXDAQGq\nqwubo3mr3G56r9g9b5ng+socUiYX05audEvw4KTfygeHlwgcbnGtDaxa87rg\ncgWm\r\n=LZN6\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.5.1"
+  },
+  "homepage": "https://github.com/angular/angular-cli",
+  "keywords": [
+    "angular",
+    "Angular CLI",
+    "devkit",
+    "sdk",
+    "Angular DevKit",
+    "blueprints",
+    "code generation",
+    "schematics"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "angular",
+      "email": "angular-core+npm@google.com"
+    },
+    {
+      "name": "schematics",
+      "email": "hans+schematics@hansl.ca"
+    }
+  ],
+  "name": "@schematics/angular",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-cli.git"
+  },
+  "schematics": "./collection.json",
+  "version": "7.1.2",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">= 8.9.0",
+        "npm": ">= 5.5.1"
+      },
+      "pkgid": "@schematics/angular@7.1.2"
+    }
+  ]
+}
