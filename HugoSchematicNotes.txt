@@ -34,3 +34,21 @@ Location of App:
 Command to create app:
 
 ng new --collection=@custom/mycloudapp MyCloudStarter
+
+
+,
+    "ctype": {
+      "description": "Type of Component",
+      "type": "string",
+      "default": "cloud",
+      "x-prompt": {
+      "message": "Which type of component would you like to create ?",
+      "type": "list",
+      "items": [
+        { "value": "CloudBase", "label": "Base Cloud [http://cloud.tibco.com]" },
+        { "value": "LiveApps", "label": "Live Apps [https://www.tibco.com/products/tibco-cloud-live-apps]" },
+        { "value": "SpotFire", "label": "Spotfire [https://www.tibco.com/products/tibco-spotfire/cloud]" },
+        { "value": "tci", "label": "Tibco Cloud Integration [https://www.tibco.com/resources/datasheet/tibco-cloud-integration]" },
+        { "value": "CloudEvents", "label": "Cloud Events [https://www.tibco.com/products/tibco-cloud-events]" }
+      ]
+    }

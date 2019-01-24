@@ -10,9 +10,8 @@ import {
   url
 } from '@angular-devkit/schematics';
 
-import { addPackageJsonDependency,getWorkspace, getProjectFromWorkspace, addModuleImportToRootModule ,NodeDependency, NodeDependencyType } from 'schematics-utilities';
-
-
+//import { addPackageJsonDependency,getWorkspace, getProjectFromWorkspace, addModuleImportToRootModule ,NodeDependency, NodeDependencyType } from 'schematics-utilities';
+/*
 function addDependencies(host: Tree): Tree {
   const dependencies: NodeDependency[] = [
     { type: NodeDependencyType.Default, version: '4.17.10', name: 'lodash-es' }
@@ -40,7 +39,7 @@ function addModuleToImports(options: any): Rule {
     return host;
   };
 }
-
+*/
 
 
 
@@ -52,18 +51,10 @@ export default function (options: any): Rule {
     (_tree: Tree, context: SchematicContext) => {
       // Show the options for this Schematics.
       context.logger.info('-----------------------------------------------');
-      context.logger.info('--- ** TIBCO CLOUD APPLICATION GENERATOR ** ---');
-      context.logger.info('--- **                V1.0               ** ---');
+      context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
+      context.logger.info('--- **                V1.01              ** ---');
       context.logger.info('-----------------------------------------------');
-
-
-
-      //context.logger.info('Building TIBCO Cloud Application, with the following settings: ' + JSON.stringify(options));
-      context.logger.info('--- **         NAME: ' + options.name);
-      context.logger.info('--- ** Use LiveApps: ' + options.useLA);
-      context.logger.info('--- ** Use Spotfire: ' + options.useSF);
-      context.logger.info('--- **      Use TCI: ' + options.useTCI);
-
+      context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
     },
 
     // The schematic Rule calls the schematic from the same collection, with the options
@@ -71,11 +62,12 @@ export default function (options: any): Rule {
     // validated and could throw, e.g. if a required option is missing.
     //schematic('my-other-schematic', { option: true }),
     (host: Tree, context: SchematicContext) => {
-     // context.logger.log('info', "Project: " + options.project);
-     // context.logger.log('info', "Host: " + host.getDir('/').path);
-      context.logger.log('info', "-- test functions ---");
-      addDependencies(host);
-      addModuleToImports(options);
+      context.logger.log('info', "Project: " + options.project);
+      context.logger.log('info', "Host: " + host.getDir('/').path);
+      //context.logger.info('Adding dependencies...');
+      //addDependencies(host);
+      //context.logger.info('Adding module to imports...')
+      //addModuleToImports(options);
 
       //const workspace = getWorkspace(host);
     /*
