@@ -24,14 +24,6 @@ export class <%= name %>Component extends LiveAppsComponent implements OnInit {
     constructor (private liveapps: LiveAppsService){
         super();
     }
-    /*
-    constructor(<% if (ctype=='LiveApps') { %>
-    private liveapps: LiveAppsService
-        <% } else { %>
-
-        <% } %>) {
-        super();
-    }*/
 
     /**
      * global Component Refresh Function

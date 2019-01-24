@@ -64,8 +64,8 @@ export default function (options: any): Rule {
     // validated and could throw, e.g. if a required option is missing.
     //schematic('my-other-schematic', { option: true }),
     (host: Tree, context: SchematicContext) => {
-      //context.logger.log('info', "Project: " + options.project);
-      //context.logger.log('info', "Host: " + host.getDir('/').path);
+      context.logger.log('info', "Name: " + options.name);
+      context.logger.log('info', "Host: " + host);
       //context.logger.info('Adding dependencies...');
       //addDependencies(host);
       //context.logger.info('Adding module to imports...')
