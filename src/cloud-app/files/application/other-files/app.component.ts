@@ -5,7 +5,7 @@ import {
   CaseSearchResults, CaseType,
   LoginContext,
   UiAppConfig
-} from '../../projects/tc-liveapps-lib/src/lib/models/liveappsdata';
+} from 'tc-liveapps-lib';
 import {MatIconRegistry} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import { Location } from '@angular/common';

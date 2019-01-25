@@ -7,7 +7,7 @@ This repository is a starter kit to get going with TIBCO Cloud Starters
 To create your first app run
 
 ```bash
-schematics --help
+ng new --collection=@custom/mycloudapp MyCloudStarter
 ```
 
 ### Create your own cloud component
