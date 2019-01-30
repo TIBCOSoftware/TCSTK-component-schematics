@@ -5,6 +5,7 @@
 
 # IDEs
 .idea/
+.idea/workspace.xml
 jsconfig.json
 .vscode/
 
