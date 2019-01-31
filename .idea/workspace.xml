@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,11 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/comp-base/schema.json" />
         <option value="$PROJECT_DIR$/src/comp-events/schema.json" />
         <option value="$PROJECT_DIR$/src/comp-spotfire/schema.json" />
-        <option value="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.html" />
         <option value="$PROJECT_DIR$/src/cloud-app/files/application/files/src/index.html" />
         <option value="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.module.ts" />
@@ -153,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
+        <option value="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
       </list>
     </option>
   </component>
@@ -176,211 +186,6 @@
               <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -393,7 +198,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -436,7 +241,7 @@
       <updated>1548248311354</updated>
       <workItem from="1548248312650" duration="2617000" />
       <workItem from="1548258819892" duration="26539000" />
-      <workItem from="1548925220594" duration="697000" />
+      <workItem from="1548925220594" duration="2623000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -522,11 +327,25 @@
       <option name="project" value="LOCAL" />
       <updated>1548850103774</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed super()">
+      <created>1548926350425</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1548926350425</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed super() 2">
+      <created>1548939713335</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1548939713335</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29853000" />
+    <option name="totallyTimeSpent" value="31779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="984" extended-state="0" />
@@ -556,6 +375,9 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="ok" />
     <MESSAGE value="app" />
     <MESSAGE value="component split" />
@@ -565,7 +387,9 @@
     <MESSAGE value="working version 1.2" />
     <MESSAGE value="Removed App" />
     <MESSAGE value="Comp name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comp name" />
+    <MESSAGE value="Fixed super()" />
+    <MESSAGE value="Fixed super() 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed super() 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.html">
@@ -712,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.module.ts" />
     <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.spec.ts" />
     <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.html" />
@@ -807,6 +624,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

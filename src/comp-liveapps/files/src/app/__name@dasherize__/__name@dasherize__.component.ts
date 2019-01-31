@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LiveAppsComponent} from "tc-liveapps-lib";
+import {LiveAppsComponent, LiveAppsService} from "tc-liveapps-lib";
 
 /**
  * <%= name %>
