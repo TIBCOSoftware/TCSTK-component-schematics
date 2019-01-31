@@ -1,264 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="working version 1.1">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/app-shell-long.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/app-shell/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/lint/__tsLintRoot__/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/root/browserslist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/root/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/root/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/root/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/__dot__gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-cancel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-closed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-created.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-info.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-investigate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-partner-portal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-respond.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-review.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/ServiceRequest/ic-reported.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/ServiceRequest/ic-servicerequest.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-caselist.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-clear.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-delete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-details-button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-action.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-doc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-image.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-library.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-upload.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-document-zip.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-favorite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-feed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-generic-casetype.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-generic-state.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-recent.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-reply.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-search.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-send.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-subscribed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/ic-unsubscribed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/mocks/as/token.oauth2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/mocks/case/types.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/mocks/idm/v1/login-oauth.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/mocks/organisation/claims.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/mocks/pageflow/caseActions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/styles.__style__" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/files/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/application/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/files/__name@dasherize____type__.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/files/__name@dasherize____type__.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/class/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/files/__name@dasherize@if-flat__/__name@dasherize__.component.__styleext__" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/files/__name@dasherize@if-flat__/__name@dasherize__.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/files/__name@dasherize@if-flat__/__name@dasherize__.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/files/__name@dasherize@if-flat__/__name@dasherize__.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/component/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/files/__name@dasherize@if-flat__/__name@dasherize__.directive.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/files/__name@dasherize@if-flat__/__name@dasherize__.directive.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/directive/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/e2e-long.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/files/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/files/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/files/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/files/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/e2e/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/files/__name@dasherize__.enum.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/enum/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/files/__name@dasherize__.guard.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/files/__name@dasherize__.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/guard/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/files/__name@dasherize____type__.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/interface/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/ng-package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/src/__entryFile__.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/tsconfig.lib.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/files/__projectRoot__/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/library-long.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/library/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/migration-collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-6/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-6/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/devkit-ng-packagr.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/devkit-ng-packagr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/polyfill-metadata.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/polyfill-metadata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/typescript-helpers.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/migrations/update-7/typescript-helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/files/__name@dasherize@if-flat__/__name@dasherize__-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/files/__name@dasherize@if-flat__/__name@dasherize__.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/module/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/ng-new/schemaORG.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/files/__name@dasherize@if-flat__/__name@dasherize__.pipe.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/files/__name@dasherize@if-flat__/__name@dasherize__.pipe.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/pipe/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service-worker/files/ngsw-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service-worker/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service-worker/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service-worker/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service-worker/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/files/__name@dasherize@if-flat__/__name@dasherize__.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/files/__name@dasherize@if-flat__/__name@dasherize__.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/service/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/files/root/__tsconfigFileName__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/files/src/__main@stripTsExtension__.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/files/src/app/__rootModuleFileName__" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/universal/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/ast-utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/ast-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/change.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/change.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/config.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/dependencies.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/dependencies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/find-module.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/find-module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/json-utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/json-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/latest-versions.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/latest-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/lint-fix.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/lint-fix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/ng-ast-utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/ng-ast-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/parse-name.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/parse-name.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/project-targets.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/project-targets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/project.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/project.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/create-app-module.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/create-app-module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/get-file-content.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/get-file-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/validation.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/workspace-models.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/utility/workspace-models.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/__dot__editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/__dot__gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/packageORG.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/proxy.conf.apidev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/proxy.conf.int.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/proxy.conf.prod.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Card-config.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Case-search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Documents.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Favorites.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Navbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Notes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Recent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Summary-mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/screenshots/Summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/start.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/files/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/schema.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/files/workspace/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index_spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index_spec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/index_spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloud-app/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -271,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install-app.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -291,7 +39,47 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -330,7 +118,6 @@
         <option value="$PROJECT_DIR$/src/cloud-component/index.ts" />
         <option value="$PROJECT_DIR$/HugoSchematicNotes.txt" />
         <option value="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.html" />
-        <option value="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.md" />
         <option value="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.md" />
         <option value="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.md" />
@@ -361,12 +148,16 @@
         <option value="$PROJECT_DIR$/src/cloud-app/files/workspace/files/styles.css" />
         <option value="$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.json" />
         <option value="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
+        <option value="$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
+        <option value="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
+        <option value="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1746" />
-    <option name="y" value="31" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="984" />
   </component>
@@ -389,6 +180,206 @@
               <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="__name@dasherize__" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,7 +435,8 @@
       <option name="presentableId" value="Default" />
       <updated>1548248311354</updated>
       <workItem from="1548248312650" duration="2617000" />
-      <workItem from="1548258819892" duration="25226000" />
+      <workItem from="1548258819892" duration="26539000" />
+      <workItem from="1548925220594" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -516,14 +508,28 @@
       <option name="project" value="LOCAL" />
       <updated>1548762731158</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Removed App">
+      <created>1548850002138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1548850002138</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Comp name">
+      <created>1548850103774</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1548850103774</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27843000" />
+    <option name="totallyTimeSpent" value="29853000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1746" y="31" width="1680" height="984" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="984" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -557,29 +563,11 @@
     <MESSAGE value="create app" />
     <MESSAGE value="working version 1" />
     <MESSAGE value="working version 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="working version 1.2" />
+    <MESSAGE value="Removed App" />
+    <MESSAGE value="Comp name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comp name" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__-style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="14" selection-start-column="14" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -603,9 +591,6 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__-style.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -734,58 +719,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-info.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.prod.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-349" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/assets/icons/app-icons/PartnerRequest/ic-info.svg" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.prod.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/environments/environment.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/files/src/index.html" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -796,60 +738,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/package.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/proxy.conf.apidev.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/README.md" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/packageORG.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/package.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/projects/tc-liveapps-lib/src/lib/pipes/reverse.pipe.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/start.sh" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/styles.css" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/schema.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schemaORG.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.json" />
+    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.js" />
+    <entry file="https://github.com/hpeters83/cloud-starter-application-template.git">
+      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/proxy.conf.apidev.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="405">
-            <caret line="63" selection-start-line="63" selection-end-line="63" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/packageORG.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/projects/tc-liveapps-lib/src/lib/pipes/reverse.pipe.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/start.sh">
+    <entry file="file://$PROJECT_DIR$/install-app.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/application/other-files/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/workspace/files/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/schema.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/HugoSchematicNotes.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -858,22 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schemaORG.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="117" column="68" selection-start-line="117" selection-start-column="68" selection-end-line="117" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cloud-app/files/ng-new/schema.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -881,13 +775,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="https://github.com/hpeters83/cloud-starter-application-template.git">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install-app.sh">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-base/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-events/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -16,13 +16,13 @@ import { Component, OnInit } from '@angular/core';
  * Class Description of the Component
  */
 export class <%= name %>Component implements OnInit {
-@Input() sandboxId: number;
+//@Input() sandboxId: number;
 
 
     somedata: any;
 
     constructor (){
-        super();
+       // super();
     }
 
 
