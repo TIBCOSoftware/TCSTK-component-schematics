@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LiveAppsComponent} from "tc-liveapps-lib";
 
 /**
  * <%= name %>
@@ -16,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
  * Class Description of the Component
  */
 export class <%= name %>Component extends LiveAppsComponent implements OnInit {
-@Input() sandboxId: number;
+//@Input() sandboxId: number;
 
 
     somedata: any;
