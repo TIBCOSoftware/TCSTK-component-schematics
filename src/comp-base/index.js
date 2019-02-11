@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular-devkit/core");
 const schematics_1 = require("@angular-devkit/schematics");
+const tasks_1 = require("@angular-devkit/schematics/tasks");
 //import { addPackageJsonDependency,getWorkspace, getProjectFromWorkspace, addModuleImportToRootModule ,NodeDependency, NodeDependencyType } from 'schematics-utilities';
+const schematics_utilities_1 = require("schematics-utilities");
 /*
 function addDependencies(host: Tree): Tree {
   const dependencies: NodeDependency[] = [
@@ -41,7 +43,7 @@ function default_1(options) {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.01              ** ---');
+            context.logger.info('--- **                V1.04              ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: CLOUD BASE                  ** ---');
             context.logger.info('-----------------------------------------------');
@@ -54,10 +56,26 @@ function default_1(options) {
         (host, context) => {
             context.logger.log('info', "Name: " + options.name);
             context.logger.log('info', "Host: " + host);
-            //context.logger.info('Adding dependencies...');
+            context.logger.info('Adding dependencies...');
             //addDependencies(host);
             //context.logger.info('Adding module to imports...')
             //addModuleToImports(options);
+            const workspace = schematics_utilities_1.getWorkspace(host);
+            const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
+            // Takes the first project in case it's not provided by CLI
+            options.project ? options.project : Object.keys(workspace['projects'])[0]);
+            //import {base1Component} from './base1/base1.component';
+            const moduleName = options.name + 'Component';
+            const sourceLoc = './' + options.name + '/' + options.name + '.component';
+            context.logger.info('host: ' + host);
+            console.log(host);
+            context.logger.info('moduleName: ' + moduleName);
+            context.logger.info('sourceLoc: ' + sourceLoc);
+            context.logger.info('project: ' + project);
+            console.log(project);
+            schematics_utilities_1.addModuleImportToRootModule(host, moduleName, sourceLoc, project);
+            context.logger.info('Installing Dependencies...');
+            context.addTask(new tasks_1.NodePackageInstallTask());
             //const workspace = getWorkspace(host);
             /*
               const workspace = getWorkspace(host);
