@@ -9,37 +9,8 @@ import {
   template,
   url
 } from '@angular-devkit/schematics';
+import {addModuleImportToRootModule, getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
 
-//import { addPackageJsonDependency,getWorkspace, getProjectFromWorkspace, addModuleImportToRootModule ,NodeDependency, NodeDependencyType } from 'schematics-utilities';
-/*
-function addDependencies(host: Tree): Tree {
-  const dependencies: NodeDependency[] = [
-    { type: NodeDependencyType.Default, version: '4.17.10', name: 'lodash-es' }
-  ];
-
-  // 2. Just use it whenever you need :)
-  dependencies.forEach(dependency => addPackageJsonDependency(host, dependency));
-
-  return host;
-}
-
-function addModuleToImports(options: any): Rule {
-  return (host: Tree, context: SchematicContext) => {
-    const workspace = getWorkspace(host);
-    const project = getProjectFromWorkspace(
-        workspace,
-        // Takes the first project in case it's not provided by CLI
-        options.project ? options.project : Object.keys(workspace['projects'])[0]
-    );
-    const moduleName = 'MadeWithLoveModule';
-
-    addModuleImportToRootModule(host, moduleName, 'angular-made-with-love', project);
-    context.logger.log('info', `✅️ "${moduleName}" is imported`);
-
-    return host;
-  };
-}
-*/
 
 
 
@@ -52,7 +23,7 @@ export default function (options: any): Rule {
       // Show the options for this Schematics.
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-      context.logger.info('--- **                V1.01              ** ---');
+      context.logger.info('--- **                V1.07              ** ---');
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- ** TYPE: LIVE APPS                   ** ---');
       context.logger.info('-----------------------------------------------');
@@ -65,26 +36,23 @@ export default function (options: any): Rule {
     //schematic('my-other-schematic', { option: true }),
     (host: Tree, context: SchematicContext) => {
       context.logger.log('info', "Name: " + options.name);
-      context.logger.log('info', "Host: " + host);
-      //context.logger.info('Adding dependencies...');
-      //addDependencies(host);
-      //context.logger.info('Adding module to imports...')
-      //addModuleToImports(options);
+      context.logger.info('Adding dependencies...');
 
-      //const workspace = getWorkspace(host);
-    /*
       const workspace = getWorkspace(host);
       const project = getProjectFromWorkspace(
           workspace,
           // Takes the first project in case it's not provided by CLI
           options.project ? options.project : Object.keys(workspace['projects'])[0]
       );
-      const moduleName = 'MadeWithLoveModule';
+      const moduleName = options.name + 'Component';
+      const sourceLoc = './' + options.name + '/' + options.name + '.component';
+      context.logger.info('moduleName: ' + moduleName);
+      context.logger.info('sourceLoc: ' + sourceLoc);
+      context.logger.info('Project Root: ' + project.root);
+      //console.log(project);
 
-      addModuleImportToRootModule(host, moduleName, 'angular-made-with-love', project);
-      context.logger.log('info', `✅️ "${moduleName}" is imported`);
-
-      return host;*/
+      addModuleImportToRootModule(host, moduleName, sourceLoc, project);
+      context.logger.info('Installed Dependencies...');
     },
 
     // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no

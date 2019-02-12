@@ -4,10 +4,13 @@
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp-base/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/index.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/comp-base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-events/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-events/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-liveapps/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-liveapps/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-spotfire/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/comp-tci/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-tci/index.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +26,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/comp-base/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-815">
-              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="428">
+              <caret line="101" column="55" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="101" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-events/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="36" selection-start-line="36" selection-end-line="52" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-liveapps/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/comp-spotfire/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -33,6 +72,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/comp-tci/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -78,10 +129,6 @@
         <option value="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.md" />
         <option value="$PROJECT_DIR$/src/collection.json" />
         <option value="$PROJECT_DIR$/src/comp-tci/schema.json" />
-        <option value="$PROJECT_DIR$/src/comp-events/index.ts" />
-        <option value="$PROJECT_DIR$/src/comp-liveapps/index.ts" />
-        <option value="$PROJECT_DIR$/src/comp-spotfire/index.ts" />
-        <option value="$PROJECT_DIR$/src/comp-tci/index.ts" />
         <option value="$PROJECT_DIR$/src/comp-liveapps/schema.json" />
         <option value="$PROJECT_DIR$/src/comp-base/schema.json" />
         <option value="$PROJECT_DIR$/src/comp-events/schema.json" />
@@ -101,8 +148,12 @@
         <option value="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
         <option value="$PROJECT_DIR$/src/comp-liveapps/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" />
-        <option value="$PROJECT_DIR$/src/comp-base/index.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/comp-base/index.ts" />
+        <option value="$PROJECT_DIR$/src/comp-events/index.ts" />
+        <option value="$PROJECT_DIR$/src/comp-liveapps/index.ts" />
+        <option value="$PROJECT_DIR$/src/comp-spotfire/index.ts" />
+        <option value="$PROJECT_DIR$/src/comp-tci/index.ts" />
       </list>
     </option>
   </component>
@@ -136,6 +187,30 @@
               <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="comp-base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-liveapps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-spotfire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuickStarterKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuickStarterKit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="comp-tci" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,7 +270,7 @@
       <workItem from="1548925220594" duration="4260000" />
       <workItem from="1549014937351" duration="806000" />
       <workItem from="1549268863527" duration="571000" />
-      <workItem from="1549451011202" duration="7311000" />
+      <workItem from="1549451011202" duration="11715000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -302,11 +377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548941970761</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add import">
+      <created>1549898685216</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549898685216</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42104000" />
+    <option name="totallyTimeSpent" value="46508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="984" extended-state="0" />
@@ -361,7 +443,8 @@
     <MESSAGE value="Fixed super()" />
     <MESSAGE value="Fixed super() 2" />
     <MESSAGE value="Fixed live apps service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed live apps service" />
+    <MESSAGE value="add import" />
+    <option name="LAST_COMMIT_MESSAGE" value="add import" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/comp-tci/files/src/app/__name@dasherize__/__name@dasherize__.component.md">
@@ -393,41 +476,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-events/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-liveapps/index_spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-spotfire/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-tci/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -464,16 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/comp-liveapps/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,20 +627,60 @@
     <entry file="file://$PROJECT_DIR$/node_modules/schematics-utilities/dist/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/comp-base/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-815">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        <state relative-caret-position="428">
+          <caret line="101" column="55" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="101" selection-end-column="55" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/comp-events/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="82">
+          <caret line="36" selection-start-line="36" selection-end-line="52" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-liveapps/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-spotfire/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/comp-tci/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
