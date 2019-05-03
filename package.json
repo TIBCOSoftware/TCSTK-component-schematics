@@ -1,7 +1,7 @@
 {
-  "name": "@TIBCO/cloud-components",
-  "version": "1.2.2",
-  "description": "Schematics to create new component for the TIBCO Cloud Starters",
+  "name": "@tibco-tcstk/component-template",
+  "version": "0.0.3",
+  "description": "Schematics to create new components for the TIBCO Cloud Starters",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"

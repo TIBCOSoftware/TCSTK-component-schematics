@@ -15,11 +15,11 @@
   // The factory is required, except when using the extends field. Then the factory can
   // overwrite the extended schematic factory.
   "schematics": {
-    "cloud-app": {
-    "description": "New Cloud Application",
-    "factory": "./cloud-app",
-    "schema": "./cloud-app/schema.json"
-  },"comp-base": {
+    "home-cockpit": {
+      "description": "New Custom Home Cockpit.",
+      "factory": "./home-cockpit",
+      "schema": "./home-cockpit/schema.json"
+    },"comp-base": {
       "description": "New Cloud Base Component.",
       "factory": "./comp-base",
       "schema": "./comp-base/schema.json"
