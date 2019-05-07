@@ -6,10 +6,14 @@
   "properties": {
     "name": {
       "type": "string"
+    },"endpoint": {
+      "type": "string",
+      "description": "The TCI Endpoint to Call",
+      "x-prompt": "What is the TCI Endpoint ?"
     }
   },
   "required": [
-    "name"
+    "name", "endpoint"
   ]
 }
 

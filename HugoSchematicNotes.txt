@@ -52,3 +52,6 @@ ng new --collection=@custom/mycloudapp MyCloudStarter
         { "value": "CloudEvents", "label": "Cloud Events [https://www.tibco.com/products/tibco-cloud-events]" }
       ]
     }
+
+
+import { <%= classify(name) %>Service } from './<%=dasherize(name)%>.service';

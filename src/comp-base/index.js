@@ -100,7 +100,7 @@ function default_1(options) {
         // The apply() source takes a Source, and apply rules to it. In our case, the Source is
         // url(), which takes an URL and returns a Tree that contains all the files from that URL
         // in it. In this case, we use the relative path `./files`, and so two files are going to
-        // be created (test1, and __name@dasherize__home-cockpit.md).
+        // be created (test1, and __name@dasherize__-home-cockpit.md).
         // We then apply the template() rule, which takes a tree and apply two templates to it:
         //   path templates: this template replaces instances of __X__ in paths with the value of
         //                   X from the options passed to template(). If the value of X is a

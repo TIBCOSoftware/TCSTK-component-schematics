@@ -8,6 +8,6 @@ import {LiveAppsHomeCockpitComponent} from '@tibco-tcstk/tc-liveapps-lib';
     styleUrls: ['./<%= name %>-home-cockpit.component.css']
 })
 
-export class <%= name %>HomeCockpitComponent extends LiveAppsHomeCockpitComponent {
+export class <%= classify(name) %>HomeCockpitComponent extends LiveAppsHomeCockpitComponent {
 
 }
