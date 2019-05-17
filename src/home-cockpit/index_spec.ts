@@ -19,6 +19,6 @@ describe('home-cockpit', () => {
     const tree = runner.runSchematic('home-cockpit', { name: 'str' }, Tree.empty());
 
     // Listing files
-    expect(tree.files.sort()).toEqual(['/__name@dasherize__-home-cockpit.md']);
+    expect(tree.files.sort()).toEqual(['/__name@dasherize__.md']);
   });
 });

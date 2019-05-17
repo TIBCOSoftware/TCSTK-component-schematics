@@ -15,7 +15,7 @@ describe('home-cockpit', () => {
         const runner = new testing_1.SchematicTestRunner('schematics', collectionPath);
         const tree = runner.runSchematic('home-cockpit', { name: 'str' }, schematics_1.Tree.empty());
         // Listing files
-        expect(tree.files.sort()).toEqual(['/__name@dasherize__-home-cockpit.md']);
+        expect(tree.files.sort()).toEqual(['/__name@dasherize__.md']);
     });
 });
 //# sourceMappingURL=index_spec.js.map

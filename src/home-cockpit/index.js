@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular-devkit/core");
 const schematics_1 = require("@angular-devkit/schematics");
-//import {addDeclarationToModule, addModuleImportToRootModule, getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
-//import {addDeclarationToModule,  getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
-//import { addModuleImportToRootModule, getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
 const schematics_utilities_1 = require("schematics-utilities");
 const ng_module_utils_1 = require("../utils/ng-module-utils");
 const find_module_1 = require("../schematics-angular-utils/find-module");
@@ -19,7 +16,7 @@ function default_1(options) {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.013             ** ---');
+            context.logger.info('--- **                V1.024             ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: TIBCO HOME COCKPIT          ** ---');
             context.logger.info('-----------------------------------------------');
@@ -36,8 +33,8 @@ function default_1(options) {
             const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
             // Takes the first project in case it's not provided by CLI
             options.project ? options.project : Object.keys(workspace['projects'])[0]);
-            const moduleName = options.name + 'HomeCockpitComponent';
-            const sourceLoc = './' + options.name + '-home-cockpit/' + options.name + '-home-cockpit.component';
+            const moduleName = options.name + 'Component';
+            const sourceLoc = './' + options.name + '/' + options.name + '.component';
             context.logger.info('moduleName: ' + moduleName);
             context.logger.info('sourceLoc: ' + sourceLoc);
             context.logger.info('Project Root: ' + project.root);
@@ -49,32 +46,12 @@ function default_1(options) {
                 options.path = `/${project.root}/src/${projectDirName}`;
             }
             options.module = find_module_1.findModuleFromOptions(host, options);
-            const moduleNameNew = options.name + 'HomeCockpit';
-            //const sourceLocNew = // './' + options.path + '/' + options.name + '-home-cockpit/' + options.name + '-home-cockpit.component';
+            const moduleNameNew = options.name;
             const parsedPath = parse_name_1.parseName(options.path, moduleNameNew);
             options.name = parsedPath.name;
             context.logger.info('options.name: ' + options.name);
             options.path = parsedPath.path;
             context.logger.info('options.path: ' + options.path);
-            /*
-      { name: 'menu2',
-        project: 'callTCI2',
-        path: '/src/app',
-        module: '/src/app/app.module.ts',
-        export: false,
-        menuService: false }
-      
-        { name: 'tci10',
-        project: 'callTCI2',
-        path: '/src/app',
-        module: '/src/app/app.module.ts',
-        export: false }
-      
-      
-      
-      
-      
-             */
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
             //console.log(options);
@@ -86,7 +63,7 @@ function default_1(options) {
         // The apply() source takes a Source, and apply rules to it. In our case, the Source is
         // url(), which takes an URL and returns a Tree that contains all the files from that URL
         // in it. In this case, we use the relative path `./files`, and so two files are going to
-        // be created (test1, and __name@dasherize__-home-cockpit.md).
+        // be created (test1, and __name@dasherize__.md).
         // We then apply the template() rule, which takes a tree and apply two templates to it:
         //   path templates: this template replaces instances of __X__ in paths with the value of
         //                   X from the options passed to template(). If the value of X is a

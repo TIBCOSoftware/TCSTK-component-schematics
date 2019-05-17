@@ -1,6 +1,6 @@
 {
   "name": "@tibco-tcstk/component-template",
-  "version": "0.0.20",
+  "version": "0.0.24",
   "description": "Schematics to create new components for the TIBCO Cloud Starters",
   "scripts": {
     "build": "tsc -p tsconfig.json",

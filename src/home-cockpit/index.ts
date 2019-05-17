@@ -9,9 +9,6 @@ import {
   template,
   url
 } from '@angular-devkit/schematics';
-//import {addDeclarationToModule, addModuleImportToRootModule, getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
-//import {addDeclarationToModule,  getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
-//import { addModuleImportToRootModule, getProjectFromWorkspace, getWorkspace} from "schematics-utilities";
 import {getProjectFromWorkspace} from "schematics-utilities";
 import {addDeclarationToNgModule} from "../utils/ng-module-utils";
 import {findModuleFromOptions} from "../schematics-angular-utils/find-module";
@@ -28,7 +25,7 @@ export default function (options: any): Rule {
       // Show the options for this Schematics.
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-      context.logger.info('--- **                V1.020             ** ---');
+      context.logger.info('--- **                V1.024             ** ---');
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- ** TYPE: TIBCO HOME COCKPIT          ** ---');
       context.logger.info('-----------------------------------------------');
@@ -50,8 +47,8 @@ export default function (options: any): Rule {
           // Takes the first project in case it's not provided by CLI
           options.project ? options.project : Object.keys(workspace['projects'])[0]
       );
-      const moduleName = options.name + 'HomeCockpitComponent';
-      const sourceLoc = './' + options.name + '-home-cockpit/' + options.name + '-home-cockpit.component';
+      const moduleName = options.name + 'Component';
+      const sourceLoc = './' + options.name + '/' + options.name + '.component';
       context.logger.info('moduleName: ' + moduleName);
       context.logger.info('sourceLoc: ' + sourceLoc);
       context.logger.info('Project Root: ' + project.root);
@@ -63,34 +60,13 @@ export default function (options: any): Rule {
         options.path = `/${project.root}/src/${projectDirName}`;
       }
       options.module = findModuleFromOptions(host, options);
-      const moduleNameNew = options.name + 'HomeCockpit';
-      //const sourceLocNew = // './' + options.path + '/' + options.name + '-home-cockpit/' + options.name + '-home-cockpit.component';
-
+      const moduleNameNew = options.name;
       const parsedPath = parseName(options.path, moduleNameNew);
       options.name = parsedPath.name;
       context.logger.info('options.name: ' + options.name);
       options.path = parsedPath.path;
       context.logger.info('options.path: ' + options.path);
 
-      /*
-{ name: 'menu2',
-  project: 'callTCI2',
-  path: '/src/app',
-  module: '/src/app/app.module.ts',
-  export: false,
-  menuService: false }
-
-  { name: 'tci10',
-  project: 'callTCI2',
-  path: '/src/app',
-  module: '/src/app/app.module.ts',
-  export: false }
-
-
-
-
-
-       */
       options.export = false;
      // context.logger.info('Adding declaration: ' + options.export);
 
@@ -105,7 +81,7 @@ export default function (options: any): Rule {
     // The apply() source takes a Source, and apply rules to it. In our case, the Source is
     // url(), which takes an URL and returns a Tree that contains all the files from that URL
     // in it. In this case, we use the relative path `./files`, and so two files are going to
-    // be created (test1, and __name@dasherize__-home-cockpit.md).
+    // be created (test1, and __name@dasherize__.md).
     // We then apply the template() rule, which takes a tree and apply two templates to it:
     //   path templates: this template replaces instances of __X__ in paths with the value of
     //                   X from the options passed to template(). If the value of X is a

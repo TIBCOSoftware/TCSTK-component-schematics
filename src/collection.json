@@ -15,13 +15,11 @@
   // The factory is required, except when using the extends field. Then the factory can
   // overwrite the extended schematic factory.
   "schematics": {
-    "menu": {
-      "aliases": [ "mnu" ],
-      "factory": "./menu",
-      "description": "Generates a menu component",
-      "schema": "./menu/schema.json"
-    },
-    "home-cockpit": {
+    "case-cockpit": {
+      "description": "New Custom Case Cockpit.",
+      "factory": "./case-cockpit",
+      "schema": "./case-cockpit/schema.json"
+    },"home-cockpit": {
       "description": "New Custom Home Cockpit.",
       "factory": "./home-cockpit",
       "schema": "./home-cockpit/schema.json"
