@@ -18,7 +18,7 @@ function default_1(options) {
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
             context.logger.info('--- **                V1.025             ** ---');
             context.logger.info('-----------------------------------------------');
-            context.logger.info('--- ** TYPE: TIBCO HOME COCKPIT          ** ---');
+            context.logger.info('--- ** TYPE: TIBCO CASE COCKPIT          ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
         },

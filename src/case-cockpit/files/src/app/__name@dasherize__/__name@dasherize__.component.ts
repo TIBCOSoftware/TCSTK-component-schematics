@@ -1,7 +1,6 @@
-
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import {RouteAction} from '@tibco-tcstk/tc-core-lib';
-import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfig} from '@tibco-tcstk/tc-liveapps-lib';
+import {LiveAppsCaseCockpitComponent,Roles,RouteAccessControlConfig} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
@@ -10,7 +9,7 @@ import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
     styleUrls: ['./<%= name %>-style.css']
 })
 
-export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent {
+export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent {
 
     /**
      * The Application ID of the UI (should ideally be unique as it is shared state key)
@@ -18,9 +17,14 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() uiAppId: string;
 
     /**
-     * The list of LA Application IDs you want to handle
+     * The LA Application Id
      */
-@Input() appIds: string[];
+@Input() appId: string;
+
+    /**
+     * The LA Application Type Id (generally 1)
+     */
+@Input() typeId: string;
 
     /**
      * sandboxId - this comes from claims resolver
@@ -28,9 +32,9 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() sandboxId: number;
 
     /**
-     * The name of the logged user
+     * The case reference
      */
-@Input() userName: string;
+@Input() caseRef: string;
 
     /**
      * The ID of the logged user
@@ -38,14 +42,9 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() userId: string;
 
     /**
-     * * NOT USED but is the email address of the user (comes from resolver)
+     * The list of LA Application Ids you want to mark as recent cases when accessed
      */
-@Input() email: string;
-
-    /**
-     * page title comes from config resolver
-     */
-@Input() title: string;
+@Input() exclRecentAppIds: string[];
 
     /**
      * Roles - The users current roles
@@ -63,10 +62,17 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() customFormDefs: CustomFormDefs;
 
     /**
+     * Layout object that can be passed to override default layout of the form renderer
+     */
+@Input() layout: any[] = this.layout ?  this.layout : this.DEFAULT_CASE_DATA_LAYOUT;
+
+
+    /**
      * ~event routeAction : Component requests route to another page
      * ~payload RouteAction : RouteAction object to tell caller to navigate somewhere
      */
 @Output() routeAction: EventEmitter<RouteAction> = new EventEmitter<RouteAction>();
+
 
 
 
