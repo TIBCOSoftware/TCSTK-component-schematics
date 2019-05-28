@@ -5,6 +5,8 @@
 
 <p>High level component to allow interaction with case.</p>
 
+<p>  <img src="../live-apps-case-cockpit.png" alt="alt-text" class="img-responsive" title="Image"></p>
+
 
 
 #### Usage
@@ -13,7 +15,7 @@
 This Component can be used by using the following HTML Tag:
 
 ```html
-<<%= name %>></<%= name %>>
+<tcla-live-apps-case-cockpit></tcla-live-apps-case-cockpit>
 ```
 
 #### Inputs
@@ -39,6 +41,11 @@ Attribute | Type |   | Comments
 routeAction | EventEmitter<RouteAction> |   |  
   | Event |  routeAction  |  Component requests route to another page
   | Payload |  RouteAction  |  RouteAction object to tell caller to navigate somewhere
+
+
+<b>full development Documentation</b>
+
+[Link to LiveAppsCaseCockpitComponent](https://tibcosoftware.github.io/TCSTK-Angular/libdocs/tc-liveapps-lib/components/LiveAppsCaseCockpitComponent.html)
 
 
 [auto]: https://img.shields.io/badge/Status-auto%20generated-lightgrey.svg?style=flat "auto generated"
