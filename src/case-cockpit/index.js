@@ -16,7 +16,7 @@ function default_1(options) {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.029             ** ---');
+            context.logger.info('--- **                V1.034             ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: TIBCO CASE COCKPIT          ** ---');
             context.logger.info('-----------------------------------------------');
