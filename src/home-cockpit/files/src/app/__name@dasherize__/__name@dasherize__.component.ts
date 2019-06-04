@@ -1,5 +1,5 @@
 
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter , Input, Output} from '@angular/core';
 import {RouteAction} from '@tibco-tcstk/tc-core-lib';
 import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfig} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
