@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { <%= name %>Component } from './<%= name %>.component';
+import { <%= name %>Component } from './<%= dasherize(name) %>.component';
 
 describe('<%= name %>Component', () => {
     let component: <%= name %>Component;

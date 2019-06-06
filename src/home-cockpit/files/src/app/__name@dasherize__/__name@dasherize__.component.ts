@@ -5,9 +5,9 @@ import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfig} from '@tibc
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
-    selector: 'app-<%= name %>',
-    templateUrl: './<%= name %>.component.html',
-    styleUrls: ['./<%= name %>-style.css']
+    selector: 'app-<%= dasherize(name) %>',
+    templateUrl: './<%= dasherize(name) %>.component.html',
+    styleUrls: ['./<%= dasherize(name) %>-style.css']
 })
 
 export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent {
