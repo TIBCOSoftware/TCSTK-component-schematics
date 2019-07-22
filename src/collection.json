@@ -23,6 +23,10 @@
       "description": "New Custom Home Cockpit.",
       "factory": "./home-cockpit",
       "schema": "./home-cockpit/schema.json"
+    },"custom-form": {
+      "description": "New Custom Form.",
+      "factory": "./custom-form",
+      "schema": "./custom-form/schema.json"
     }
   }
 }
