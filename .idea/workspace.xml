@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection.json" afterDir="false" />
-    </list>
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -212,6 +208,24 @@
               <item name="TCSTK-component-schematics" type="b2602c69:ProjectViewProjectNode" />
               <item name="TCSTK-component-schematics" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TCSTK-component-schematics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TCSTK-component-schematics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TCSTK-component-schematics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TCSTK-component-schematics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="custom-form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TCSTK-component-schematics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TCSTK-component-schematics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="custom-form" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -320,7 +334,7 @@
       <workItem from="1560512833536" duration="1091000" />
       <workItem from="1562930208577" duration="1715000" />
       <workItem from="1563200378635" duration="1239000" />
-      <workItem from="1563802459332" duration="595000" />
+      <workItem from="1563802459332" duration="1174000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -518,16 +532,23 @@
       <option name="project" value="LOCAL" />
       <updated>1562931486766</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Custom Form Schematic">
+      <created>1563803489463</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1563803489463</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95119000" />
+    <option name="totallyTimeSpent" value="95698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="958" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.79094076" visible="true" weight="0.32851115" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79094076" visible="true" weight="0.32851115" />
       <window_info id="Structure" order="1" sideWeight="0.33502537" side_tool="true" weight="0.34478602" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" sideWeight="0.20905924" side_tool="true" visible="true" weight="0.32851115" />
@@ -541,7 +562,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4996986" weight="0.32858837" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49909583" visible="true" weight="0.31909847" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49909583" visible="true" weight="0.31909847" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50090414" side_tool="true" weight="0.5706278" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -610,7 +631,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="ok" />
     <MESSAGE value="app" />
     <MESSAGE value="component split" />
     <MESSAGE value="showing types" />
@@ -635,7 +655,8 @@
     <MESSAGE value="Removed Sample components" />
     <MESSAGE value="Added Dasherize" />
     <MESSAGE value="Upgrade to Angular 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade to Angular 8" />
+    <MESSAGE value="Custom Form Schematic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Custom Form Schematic" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/comp-base/schema.json">
