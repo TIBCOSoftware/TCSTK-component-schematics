@@ -1,0 +1,3 @@
+## Custom Case Data Form Component: <%= name %>
+
+This Case Data custom form, <%= name %> does...

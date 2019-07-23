@@ -27,6 +27,13 @@ function addDeclarationToNgModule(options, exports) {
     };
 }
 exports.addDeclarationToNgModule = addDeclarationToNgModule;
+function addEntryPointToNgModule(options) {
+    return (host) => {
+        addEntryPoint(host, options);
+        return host;
+    };
+}
+exports.addEntryPointToNgModule = addEntryPointToNgModule;
 function createAddToModuleContext(host, options) {
     const result = new add_to_module_context_1.AddToModuleContext();
     if (!options.module) {
@@ -49,11 +56,38 @@ function createAddToModuleContext(host, options) {
 function addDeclaration(host, options) {
     const context = createAddToModuleContext(host, options);
     const modulePath = options.module || '';
+    // console.log('context.source:',context.source);
+    console.log('modulePath:', modulePath);
+    console.log('context.classifiedName:', context.classifiedName);
+    console.log('context.relativePath:', context.relativePath);
     const declarationChanges = ast_utils_1.addDeclarationToModule(context.source, modulePath, context.classifiedName, context.relativePath);
+    //console.log('declarationChanges:',declarationChanges);
     const declarationRecorder = host.beginUpdate(modulePath);
+    console.log('mp:', modulePath);
     for (const change of declarationChanges) {
         if (change instanceof change_1.InsertChange) {
             declarationRecorder.insertLeft(change.pos, change.toAdd);
+            console.log('change.pos:', change.pos, ' change.toAdd:', change.toAdd);
+        }
+    }
+    host.commitUpdate(declarationRecorder);
+}
+;
+function addEntryPoint(host, options) {
+    const context = createAddToModuleContext(host, options);
+    const modulePath = options.module || '';
+    // console.log('AE]context.source:',context.source);
+    console.log('AE]modulePath:', modulePath);
+    console.log('AE]context.classifiedName:', context.classifiedName);
+    console.log('AE]context.relativePath:', context.relativePath);
+    const declarationChanges = ast_utils_1.addEntryComponentToModule(context.source, modulePath, context.classifiedName, context.relativePath);
+    //console.log('declarationChanges:',declarationChanges);
+    const declarationRecorder = host.beginUpdate(modulePath);
+    console.log('mp:', modulePath);
+    for (const change of declarationChanges) {
+        if (change instanceof change_1.InsertChange) {
+            declarationRecorder.insertLeft(change.pos, change.toAdd);
+            console.log('AE]change.pos:', change.pos, ' change.toAdd:', change.toAdd);
         }
     }
     host.commitUpdate(declarationRecorder);

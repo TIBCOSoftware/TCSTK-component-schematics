@@ -454,6 +454,14 @@ export function addBootstrapToModule(source: ts.SourceFile,
   return addSymbolToNgModuleMetadata(source, modulePath, 'bootstrap', classifiedName, importPath);
 }
 
+export function addEntryComponentToModule(source: ts.SourceFile,
+                                     modulePath: string, classifiedName: string,
+                                     importPath: string): Change[] {
+  return addSymbolToNgModuleMetadata(source, modulePath, 'entryComponents', classifiedName, importPath);
+}
+
+
+
 /**
  * Determine if an import already exists.
  */

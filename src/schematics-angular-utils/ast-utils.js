@@ -399,6 +399,10 @@ function addBootstrapToModule(source, modulePath, classifiedName, importPath) {
     return addSymbolToNgModuleMetadata(source, modulePath, 'bootstrap', classifiedName, importPath);
 }
 exports.addBootstrapToModule = addBootstrapToModule;
+function addEntryComponentToModule(source, modulePath, classifiedName, importPath) {
+    return addSymbolToNgModuleMetadata(source, modulePath, 'entryComponents', classifiedName, importPath);
+}
+exports.addEntryComponentToModule = addEntryComponentToModule;
 /**
  * Determine if an import already exists.
  */

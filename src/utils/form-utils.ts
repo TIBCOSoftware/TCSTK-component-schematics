@@ -1,40 +1,52 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular-devkit/core");
-const schematics_1 = require("@angular-devkit/schematics");
-const schematics_utilities_1 = require("schematics-utilities");
-const ng_module_utils_1 = require("../utils/ng-module-utils");
-const find_module_1 = require("../schematics-angular-utils/find-module");
-const parse_name_1 = require("../utils/parse-name");
-const config_1 = require("../schematics-angular-utils/config");
-// Instead of `any`, it would make sense here to get a schema-to-dts package and output the
-// interfaces so you get type-safe options.
-function default_1(options) {
-    // The chain rule allows us to chain multiple rules and apply them one after the other.
-    return schematics_1.chain([
-        (_tree, context) => {
+import {apply, chain, mergeWith, SchematicContext, template, Tree, url} from "@angular-devkit/schematics";
+import {getWorkspace} from "../schematics-angular-utils/config";
+import {getProjectFromWorkspace} from "schematics-utilities";
+import {findModuleFromOptions} from "../schematics-angular-utils/find-module";
+import {parseName} from "./parse-name";
+import {strings} from "@angular-devkit/core";
+import {addDeclarationToNgModule, addEntryPointToNgModule} from "./ng-module-utils";
+
+
+export function formChain(options: any, type: string){
+    console.log('Inject');
+    /*
+    (tree: Tree, context: SchematicContext) => {
+        console.log('Inject');
+        console.log('tree: ' , tree);
+        console.log('context: ', context);
+    }*/
+
+
+    return chain([
+        (_tree: Tree, context: SchematicContext) => {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.035             ** ---');
+            context.logger.info('--- **                V1.039             ** ---');
             context.logger.info('-----------------------------------------------');
-            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM           ** ---');
+            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM ('+type+')** ---');
             context.logger.info('-----------------------------------------------');
+
             context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
+            console.log('CONTEXT:', context);
         },
+
         // The schematic Rule calls the schematic from the same collection, with the options
         // passed in. Please note that if the schematic has a schema, the options will be
         // validated and could throw, e.g. if a required option is missing.
         //schematic('my-other-schematic', { option: true }),
-        (host, context) => {
+        (host: Tree, context: SchematicContext) => {
             context.logger.log('info', "Name: " + options.name);
             context.logger.info('Adding dependencies...');
-            const workspace = config_1.getWorkspace(host);
-            const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
-            // Takes the first project in case it's not provided by CLI
-            options.project ? options.project : Object.keys(workspace['projects'])[0]);
+
+            const workspace = getWorkspace(host);
+            const project = getProjectFromWorkspace(
+                workspace,
+                // Takes the first project in case it's not provided by CLI
+                options.project ? options.project : Object.keys(workspace['projects'])[0]
+            );
             const moduleName = options.name + 'Component';
-            const sourceLoc = './' + options.name + '/' + options.name + '.component';
+            const sourceLoc = './custom-forms/' + options.name + '/' + options.name + '.component';
             context.logger.info('moduleName: ' + moduleName);
             context.logger.info('sourceLoc: ' + sourceLoc);
             context.logger.info('Project Root: ' + project.root);
@@ -45,18 +57,43 @@ function default_1(options) {
                 const projectDirName = project.projectType === 'application' ? 'app' : 'lib';
                 options.path = `/${project.root}/src/${projectDirName}`;
             }
-            options.module = find_module_1.findModuleFromOptions(host, options);
+            options.module = findModuleFromOptions(host, options);
             const moduleNameNew = options.name;
-            const parsedPath = parse_name_1.parseName(options.path, moduleNameNew);
+            const parsedPath = parseName(options.path, moduleNameNew);
             options.name = parsedPath.name;
             context.logger.info('options.name: ' + options.name);
             options.path = parsedPath.path;
             context.logger.info('options.path: ' + options.path);
+
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
-            //console.log(options);
+
+            /* */
+           //TODO: update other files as well
+
+           // Make a clone of the object
+           var devOptions = JSON.parse(JSON.stringify(options));
+           var buildOptions = JSON.parse(JSON.stringify(options));
+
+           devOptions.module = devOptions.module.replace('.ts','.dev');
+           buildOptions.module = buildOptions.module.replace('.ts','.build');
+
+           console.log('Options: ',options);
+           console.log('DevOptions: ',devOptions);
+           console.log('buildOptions: ',buildOptions);
+
+
+
+           addDeclarationToNgModule(devOptions, false);
+           addEntryPointToNgModule(devOptions);
+           addDeclarationToNgModule(buildOptions, false);
+           addEntryPointToNgModule(buildOptions);
+
+
+
             context.logger.info('Installed Dependencies...');
         },
+
         // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no
         // base), and the one as input to the rule. You can think of it like rebasing a Source on
         // top of your current set of changes. In this case, the Source is that apply function.
@@ -73,11 +110,14 @@ function default_1(options) {
         //                     extension), does not support additional functions if you don't pass
         //                     them in, and only work on text files (we use an algorithm to detect
         //                     if a file is binary or not).
-        schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
-            schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
+        mergeWith(apply(url('./files'), [
+            template({
+                ...strings,
+                INDEX: options.index,
+                name: options.name,
+            }),
         ])),
-        ng_module_utils_1.addDeclarationToNgModule(options, false)
+        addDeclarationToNgModule(options, false),
+        addEntryPointToNgModule(options)
     ]);
 }
-exports.default = default_1;
-//# sourceMappingURL=index.js.map

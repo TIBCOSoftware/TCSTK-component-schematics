@@ -17,7 +17,11 @@ const { dasherize, classify } = strings;
 
 // Referencing forked and copied private APIs 
 import { ModuleOptions, buildRelativePath } from '../schematics-angular-utils/find-module';
-import { addDeclarationToModule, addExportToModule } from '../schematics-angular-utils/ast-utils';
+import {
+  addDeclarationToModule,
+  addEntryComponentToModule,
+  addExportToModule
+} from '../schematics-angular-utils/ast-utils';
 import { InsertChange } from '../schematics-angular-utils/change';
 
 const stringUtils = { dasherize, classify };
@@ -28,6 +32,14 @@ export function addDeclarationToNgModule(options: ModuleOptions, exports: boolea
     if (exports) {
       addExport(host, options);
     }
+    return host;
+  };
+}
+
+export function addEntryPointToNgModule(options: ModuleOptions): Rule {
+  return (host: Tree) => {
+    addEntryPoint(host, options);
+
     return host;
   };
 }
@@ -66,19 +78,56 @@ function addDeclaration(host: Tree, options: ModuleOptions) {
   const context = createAddToModuleContext(host, options);
   const modulePath = options.module || '';
 
+  // console.log('context.source:',context.source);
+  console.log('modulePath:',modulePath);
+  console.log('context.classifiedName:',context.classifiedName);
+  console.log('context.relativePath:',context.relativePath);
+
   const declarationChanges = addDeclarationToModule(context.source,
     modulePath,
       context.classifiedName,
       context.relativePath);
+  //console.log('declarationChanges:',declarationChanges);
 
   const declarationRecorder = host.beginUpdate(modulePath);
+  console.log('mp:',modulePath);
   for (const change of declarationChanges) {
     if (change instanceof InsertChange) {
       declarationRecorder.insertLeft(change.pos, change.toAdd);
+      console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
     }
   }
   host.commitUpdate(declarationRecorder);
 };
+
+
+function addEntryPoint(host: Tree, options: ModuleOptions) {
+
+  const context = createAddToModuleContext(host, options);
+  const modulePath = options.module || '';
+
+ // console.log('AE]context.source:',context.source);
+  console.log('AE]modulePath:',modulePath);
+  console.log('AE]context.classifiedName:',context.classifiedName);
+  console.log('AE]context.relativePath:',context.relativePath);
+
+  const declarationChanges = addEntryComponentToModule(context.source,
+      modulePath,
+      context.classifiedName,
+      context.relativePath);
+  //console.log('declarationChanges:',declarationChanges);
+
+  const declarationRecorder = host.beginUpdate(modulePath);
+  console.log('mp:',modulePath);
+  for (const change of declarationChanges) {
+    if (change instanceof InsertChange) {
+      declarationRecorder.insertLeft(change.pos, change.toAdd);
+      console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+    }
+  }
+  host.commitUpdate(declarationRecorder);
+};
+
 
 function addExport(host: Tree, options: ModuleOptions) {
   const context = createAddToModuleContext(host, options);

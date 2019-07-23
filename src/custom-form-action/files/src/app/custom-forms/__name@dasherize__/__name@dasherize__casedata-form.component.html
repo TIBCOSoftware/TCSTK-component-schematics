@@ -1,0 +1,22 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form" fxLayout="column">
+
+    <mat-toolbar style="margin-bottom: 5px;"><%= name %> Form</mat-toolbar>
+
+    <div [formGroup]="sampleAppFormGroup" fxLayout="column">
+
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Field 1"  formControlName="field1" type="text">
+        </mat-form-field>
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Field 2"  formControlName="field2" type="text">
+        </mat-form-field>
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Field 3"  formControlName="field3" type="text">
+        </mat-form-field>
+    </div>
+
+    <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit <%= name %> Form</button>
+    </div>
+
+</form>

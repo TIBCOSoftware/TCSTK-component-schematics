@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "CloudStarterSchema",
+  "title": "Cloud Starter Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },"formRef": {
+      "type": "string",
+      "description": "You can get the form reference by running the generated form in case manager and looking at the console log.\n *\n * You will see entries like this (filter for *** Forms:)\n * *** Forms: > Using auto-rendered form (formRef): SampleApp.SampleApp.creator.Create SampleApp",
+      "x-prompt": "What is the Form Reference (formId) ?"
+    }
+  },
+  "required": [
+    "name", "formRef"
+  ]
+}
+
