@@ -27,6 +27,7 @@ import { InsertChange } from '../schematics-angular-utils/change';
 const stringUtils = { dasherize, classify };
 
 export function addDeclarationToNgModule(options: ModuleOptions, exports: boolean): Rule {
+  console.log('addDeclarationToNgModule:' , options.module);
   return (host: Tree) => {
     addDeclaration(host, options);
     if (exports) {
@@ -45,9 +46,9 @@ export function addEntryPointToNgModule(options: ModuleOptions): Rule {
 }
 
 function createAddToModuleContext(host: Tree, options: ModuleOptions): AddToModuleContext {
-
+  console.log('createAddToModuleContext:' , options.module);
   const result = new AddToModuleContext();
-
+  console.log('options.module: ', options.module);
   if (!options.module) {
     throw new SchematicsException(`Module not found.`);
   }
@@ -59,12 +60,16 @@ function createAddToModuleContext(host: Tree, options: ModuleOptions): AddToModu
   }
   const sourceText = text.toString('utf-8');
   result.source = ts.createSourceFile(options.module, sourceText, ts.ScriptTarget.Latest, true);
-
+/* HUGO: Removed name in path -> get it from the input*/
   const componentPath = `${options.path}/`
       + stringUtils.dasherize(options.name) + '/'
       + stringUtils.dasherize(options.name)
       + '.component';
-
+ /*
+  const componentPath = `${options.path}/`
+      + stringUtils.dasherize(options.name)
+      + '.component';
+*/
   result.relativePath = buildRelativePath(options.module, componentPath);
 
   result.classifiedName = stringUtils.classify(`${options.name}Component`);
@@ -74,7 +79,8 @@ function createAddToModuleContext(host: Tree, options: ModuleOptions): AddToModu
 }
 
 function addDeclaration(host: Tree, options: ModuleOptions) {
-
+  // console.log('Add Declaration', host);
+  console.log('addDeclaration:' , options.module);
   const context = createAddToModuleContext(host, options);
   const modulePath = options.module || '';
 

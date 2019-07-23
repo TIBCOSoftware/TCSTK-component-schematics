@@ -1,20 +1,18 @@
 import {apply, chain, mergeWith, SchematicContext, template, Tree, url} from "@angular-devkit/schematics";
 import {getWorkspace} from "../schematics-angular-utils/config";
 import {getProjectFromWorkspace} from "schematics-utilities";
-import {findModuleFromOptions} from "../schematics-angular-utils/find-module";
+import {findModuleFromOptions,  ModuleOptionsC} from "../schematics-angular-utils/find-module";
 import {parseName} from "./parse-name";
 import {strings} from "@angular-devkit/core";
 import {addDeclarationToNgModule, addEntryPointToNgModule} from "./ng-module-utils";
 
+var devOptions:ModuleOptionsC;
+var buildOptions:ModuleOptionsC ;
 
 export function formChain(options: any, type: string){
-    console.log('Inject');
-    /*
-    (tree: Tree, context: SchematicContext) => {
-        console.log('Inject');
-        console.log('tree: ' , tree);
-        console.log('context: ', context);
-    }*/
+    console.log('Options: ' , options);
+
+
 
 
     return chain([
@@ -22,13 +20,13 @@ export function formChain(options: any, type: string){
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.039             ** ---');
+            context.logger.info('--- **                V1.040             ** ---');
             context.logger.info('-----------------------------------------------');
-            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM ('+type+')** ---');
+            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM ('+type.toUpperCase()+')** ---');
             context.logger.info('-----------------------------------------------');
 
             context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
-            console.log('CONTEXT:', context);
+            //console.log('CONTEXT:', context);
         },
 
         // The schematic Rule calls the schematic from the same collection, with the options
@@ -45,6 +43,7 @@ export function formChain(options: any, type: string){
                 // Takes the first project in case it's not provided by CLI
                 options.project ? options.project : Object.keys(workspace['projects'])[0]
             );
+            updateFormRegistry(project, host, context);
             const moduleName = options.name + 'Component';
             const sourceLoc = './custom-forms/' + options.name + '/' + options.name + '.component';
             context.logger.info('moduleName: ' + moduleName);
@@ -58,8 +57,9 @@ export function formChain(options: any, type: string){
                 options.path = `/${project.root}/src/${projectDirName}`;
             }
             options.module = findModuleFromOptions(host, options);
-            const moduleNameNew = options.name;
-            const parsedPath = parseName(options.path, moduleNameNew);
+            const moduleNameNew = options.name + '-'+type+ '-form';
+            const parsedPath = parseName(options.path+ '/custom-forms/', moduleNameNew);
+            console.log('parsedPath: ' , parsedPath);
             options.name = parsedPath.name;
             context.logger.info('options.name: ' + options.name);
             options.path = parsedPath.path;
@@ -68,19 +68,28 @@ export function formChain(options: any, type: string){
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
 
-            /* */
+            console.log('Options: ',options);
+            /*
+
            //TODO: update other files as well
 
            // Make a clone of the object
-           var devOptions = JSON.parse(JSON.stringify(options));
-           var buildOptions = JSON.parse(JSON.stringify(options));
+           // devOptions = new ModuleOptions();
+           devOptions = JSON.parse(JSON.stringify(options));
+           buildOptions = JSON.parse(JSON.stringify(options));
+*/
+            devOptions = new ModuleOptionsC(options.module.replace('.ts','.dev') + '.ts',options.name,false, options.path, !options.export);
+            buildOptions = new ModuleOptionsC(options.module.replace('.ts','.build') + '.ts',options.name,false, options.path, !options.export);
 
-           devOptions.module = devOptions.module.replace('.ts','.dev');
-           buildOptions.module = buildOptions.module.replace('.ts','.build');
+            /*
+            devOptions.module = devOptions.module.replace('.ts','.dev') + '.ts';
 
+            buildOptions.module = buildOptions.module.replace('.ts','.build') + '.ts';
+*/
            console.log('Options: ',options);
-           console.log('DevOptions: ',devOptions);
-           console.log('buildOptions: ',buildOptions);
+           console.warn('DevOptions: ',devOptions);
+           console.warn('buildOptions: ',buildOptions);
+
 
 
 
@@ -91,7 +100,7 @@ export function formChain(options: any, type: string){
 
 
 
-            context.logger.info('Installed Dependencies...');
+           // context.logger.info('Installed Dependencies...');
         },
 
         // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no
@@ -118,6 +127,31 @@ export function formChain(options: any, type: string){
             }),
         ])),
         addDeclarationToNgModule(options, false),
+        addEntryPointToNgModule(options),
+        () => {
+            options.module = options.module.replace('.ts','.dev');
+        },
+
+        addDeclarationToNgModule(options, false),
+        addEntryPointToNgModule(options),
+        () => {
+            options.module = options.module.replace('.dev','.build');
+        },
+        addDeclarationToNgModule(options, false),
         addEntryPointToNgModule(options)
+
     ]);
+}
+
+
+export function updateFormRegistry(project:any, tree: Tree, context: SchematicContext){
+    //TODO: update nicely from schematic
+    console.log('Updating Form Registry: ' + __dirname);
+
+    // TODO: HIER VERDER, Update the Form Registry
+    console.log(project);
+    console.warn('TREE: ', tree);
+    console.warn('CONTEXT: ', context);
+    //console.log(tree.getDir()._backend.ScopedHost._root);
+
 }

@@ -7,25 +7,21 @@ const find_module_1 = require("../schematics-angular-utils/find-module");
 const parse_name_1 = require("./parse-name");
 const core_1 = require("@angular-devkit/core");
 const ng_module_utils_1 = require("./ng-module-utils");
+var devOptions;
+var buildOptions;
 function formChain(options, type) {
-    console.log('Inject');
-    /*
-    (tree: Tree, context: SchematicContext) => {
-        console.log('Inject');
-        console.log('tree: ' , tree);
-        console.log('context: ', context);
-    }*/
+    console.log('Options: ', options);
     return schematics_1.chain([
         (_tree, context) => {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.039             ** ---');
+            context.logger.info('--- **                V1.040             ** ---');
             context.logger.info('-----------------------------------------------');
-            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM (' + type + ')** ---');
+            context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM (' + type.toUpperCase() + ')** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
-            console.log('CONTEXT:', context);
+            //console.log('CONTEXT:', context);
         },
         // The schematic Rule calls the schematic from the same collection, with the options
         // passed in. Please note that if the schematic has a schema, the options will be
@@ -38,6 +34,7 @@ function formChain(options, type) {
             const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
             // Takes the first project in case it's not provided by CLI
             options.project ? options.project : Object.keys(workspace['projects'])[0]);
+            updateFormRegistry(project, host, context);
             const moduleName = options.name + 'Component';
             const sourceLoc = './custom-forms/' + options.name + '/' + options.name + '.component';
             context.logger.info('moduleName: ' + moduleName);
@@ -51,29 +48,40 @@ function formChain(options, type) {
                 options.path = `/${project.root}/src/${projectDirName}`;
             }
             options.module = find_module_1.findModuleFromOptions(host, options);
-            const moduleNameNew = options.name;
-            const parsedPath = parse_name_1.parseName(options.path, moduleNameNew);
+            const moduleNameNew = options.name + '-' + type + '-form';
+            const parsedPath = parse_name_1.parseName(options.path + '/custom-forms/', moduleNameNew);
+            console.log('parsedPath: ', parsedPath);
             options.name = parsedPath.name;
             context.logger.info('options.name: ' + options.name);
             options.path = parsedPath.path;
             context.logger.info('options.path: ' + options.path);
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
-            /* */
-            //TODO: update other files as well
-            // Make a clone of the object
-            var devOptions = JSON.parse(JSON.stringify(options));
-            var buildOptions = JSON.parse(JSON.stringify(options));
-            devOptions.module = devOptions.module.replace('.ts', '.dev');
-            buildOptions.module = buildOptions.module.replace('.ts', '.build');
             console.log('Options: ', options);
-            console.log('DevOptions: ', devOptions);
-            console.log('buildOptions: ', buildOptions);
+            /*
+
+           //TODO: update other files as well
+
+           // Make a clone of the object
+           // devOptions = new ModuleOptions();
+           devOptions = JSON.parse(JSON.stringify(options));
+           buildOptions = JSON.parse(JSON.stringify(options));
+*/
+            devOptions = new find_module_1.ModuleOptionsC(options.module.replace('.ts', '.dev') + '.ts', options.name, false, options.path, !options.export);
+            buildOptions = new find_module_1.ModuleOptionsC(options.module.replace('.ts', '.build') + '.ts', options.name, false, options.path, !options.export);
+            /*
+            devOptions.module = devOptions.module.replace('.ts','.dev') + '.ts';
+
+            buildOptions.module = buildOptions.module.replace('.ts','.build') + '.ts';
+*/
+            console.log('Options: ', options);
+            console.warn('DevOptions: ', devOptions);
+            console.warn('buildOptions: ', buildOptions);
             ng_module_utils_1.addDeclarationToNgModule(devOptions, false);
             ng_module_utils_1.addEntryPointToNgModule(devOptions);
             ng_module_utils_1.addDeclarationToNgModule(buildOptions, false);
             ng_module_utils_1.addEntryPointToNgModule(buildOptions);
-            context.logger.info('Installed Dependencies...');
+            // context.logger.info('Installed Dependencies...');
         },
         // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no
         // base), and the one as input to the rule. You can think of it like rebasing a Source on
@@ -95,8 +103,28 @@ function formChain(options, type) {
             schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
         ])),
         ng_module_utils_1.addDeclarationToNgModule(options, false),
+        ng_module_utils_1.addEntryPointToNgModule(options),
+        () => {
+            options.module = options.module.replace('.ts', '.dev');
+        },
+        ng_module_utils_1.addDeclarationToNgModule(options, false),
+        ng_module_utils_1.addEntryPointToNgModule(options),
+        () => {
+            options.module = options.module.replace('.dev', '.build');
+        },
+        ng_module_utils_1.addDeclarationToNgModule(options, false),
         ng_module_utils_1.addEntryPointToNgModule(options)
     ]);
 }
 exports.formChain = formChain;
+function updateFormRegistry(project, tree, context) {
+    //TODO: update nicely from schematic
+    console.log('Updating Form Registry: ' + __dirname);
+    // TODO: HIER VERDER, Update the Form Registry
+    console.log(project);
+    console.warn('TREE: ', tree);
+    console.warn('CONTEXT: ', context);
+    //console.log(tree.getDir()._backend.ScopedHost._root);
+}
+exports.updateFormRegistry = updateFormRegistry;
 //# sourceMappingURL=form-utils.js.map

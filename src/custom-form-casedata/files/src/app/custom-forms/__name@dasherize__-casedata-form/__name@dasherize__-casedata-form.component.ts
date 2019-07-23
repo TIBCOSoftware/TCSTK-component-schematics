@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {Form, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {BaseCustomFormComponent} from '../base-custom-form/base-custom-form.component';
+import {BaseCustomFormComponent} from '../../form-components/base-custom-form/base-custom-form.component';
 import {MatDatepicker} from '@angular/material';
 import { Moment } from 'moment';
 

@@ -18,6 +18,7 @@ const ast_utils_1 = require("../schematics-angular-utils/ast-utils");
 const change_1 = require("../schematics-angular-utils/change");
 const stringUtils = { dasherize, classify };
 function addDeclarationToNgModule(options, exports) {
+    console.log('addDeclarationToNgModule:', options.module);
     return (host) => {
         addDeclaration(host, options);
         if (exports) {
@@ -35,7 +36,9 @@ function addEntryPointToNgModule(options) {
 }
 exports.addEntryPointToNgModule = addEntryPointToNgModule;
 function createAddToModuleContext(host, options) {
+    console.log('createAddToModuleContext:', options.module);
     const result = new add_to_module_context_1.AddToModuleContext();
+    console.log('options.module: ', options.module);
     if (!options.module) {
         throw new schematics_1.SchematicsException(`Module not found.`);
     }
@@ -45,15 +48,23 @@ function createAddToModuleContext(host, options) {
     }
     const sourceText = text.toString('utf-8');
     result.source = ts.createSourceFile(options.module, sourceText, ts.ScriptTarget.Latest, true);
+    /* HUGO: Removed name in path -> get it from the input*/
     const componentPath = `${options.path}/`
         + stringUtils.dasherize(options.name) + '/'
         + stringUtils.dasherize(options.name)
         + '.component';
+    /*
+     const componentPath = `${options.path}/`
+         + stringUtils.dasherize(options.name)
+         + '.component';
+   */
     result.relativePath = find_module_1.buildRelativePath(options.module, componentPath);
     result.classifiedName = stringUtils.classify(`${options.name}Component`);
     return result;
 }
 function addDeclaration(host, options) {
+    // console.log('Add Declaration', host);
+    console.log('addDeclaration:', options.module);
     const context = createAddToModuleContext(host, options);
     const modulePath = options.module || '';
     // console.log('context.source:',context.source);
