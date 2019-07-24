@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const form_utils_1 = require("../utils/form-utils");
+const schematic_util_wrapper_1 = require("../schematic-utils/schematic-util-wrapper");
 function default_1(options) {
     // Call the form chain function to create the generic chain
-    return form_utils_1.formChain(options, 'casedata');
+    return schematic_util_wrapper_1.formChain(options, 'casedata');
 }
 exports.default = default_1;
 //# sourceMappingURL=index.js.map

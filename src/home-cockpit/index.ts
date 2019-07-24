@@ -1,19 +1,15 @@
-import { strings } from '@angular-devkit/core';
 import {
-  Rule,
-  SchematicContext,
-  Tree,
   apply,
   chain,
   mergeWith,
+  Rule,
+  SchematicContext,
   template,
+  Tree,
   url
-} from '@angular-devkit/schematics';
-import {getProjectFromWorkspace} from "schematics-utilities";
-import {addDeclarationToNgModule} from "../utils/ng-module-utils";
-import {findModuleFromOptions} from "../schematics-angular-utils/find-module";
-import {parseName} from "../utils/parse-name";
-import {getWorkspace} from '../schematics-angular-utils/config';
+} from "@angular-devkit/schematics";
+import {strings} from "@angular-devkit/core";
+import {addDeclarationToNgModule, addDependencies, showHead} from "../schematic-utils/schematic-util-wrapper";
 
 
 // Instead of `any`, it would make sense here to get a schema-to-dts package and output the
@@ -22,22 +18,11 @@ export default function (options: any): Rule {
   // The chain rule allows us to chain multiple rules and apply them one after the other.
   return chain([
     (_tree: Tree, context: SchematicContext) => {
-      // Show the options for this Schematics.
-      context.logger.info('-----------------------------------------------');
-      context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-      context.logger.info('--- **                V1.026             ** ---');
-      context.logger.info('-----------------------------------------------');
-      context.logger.info('--- ** TYPE: TIBCO HOME COCKPIT          ** ---');
-      context.logger.info('-----------------------------------------------');
-
-      context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
+      showHead("HOME COCKPIT", context,options);
     },
-
-    // The schematic Rule calls the schematic from the same collection, with the options
-    // passed in. Please note that if the schematic has a schema, the options will be
-    // validated and could throw, e.g. if a required option is missing.
-    //schematic('my-other-schematic', { option: true }),
     (host: Tree, context: SchematicContext) => {
+      options = addDependencies(options, context, host);
+    /*
       context.logger.log('info', "Name: " + options.name);
       context.logger.info('Adding dependencies...');
 
@@ -66,13 +51,10 @@ export default function (options: any): Rule {
       context.logger.info('options.name: ' + options.name);
       options.path = parsedPath.path;
       context.logger.info('options.path: ' + options.path);
-
       options.export = false;
-     // context.logger.info('Adding declaration: ' + options.export);
-
-      //console.log(options);
-
       context.logger.info('Installed Dependencies...');
+
+     */
     },
 
     // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no

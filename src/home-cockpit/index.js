@@ -1,61 +1,51 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular-devkit/core");
 const schematics_1 = require("@angular-devkit/schematics");
-const schematics_utilities_1 = require("schematics-utilities");
-const ng_module_utils_1 = require("../utils/ng-module-utils");
-const find_module_1 = require("../schematics-angular-utils/find-module");
-const parse_name_1 = require("../utils/parse-name");
-const config_1 = require("../schematics-angular-utils/config");
+const core_1 = require("@angular-devkit/core");
+const schematic_util_wrapper_1 = require("../schematic-utils/schematic-util-wrapper");
 // Instead of `any`, it would make sense here to get a schema-to-dts package and output the
 // interfaces so you get type-safe options.
 function default_1(options) {
     // The chain rule allows us to chain multiple rules and apply them one after the other.
     return schematics_1.chain([
         (_tree, context) => {
-            // Show the options for this Schematics.
-            context.logger.info('-----------------------------------------------');
-            context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.026             ** ---');
-            context.logger.info('-----------------------------------------------');
-            context.logger.info('--- ** TYPE: TIBCO HOME COCKPIT          ** ---');
-            context.logger.info('-----------------------------------------------');
-            context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
+            schematic_util_wrapper_1.showHead("HOME COCKPIT", context, options);
         },
-        // The schematic Rule calls the schematic from the same collection, with the options
-        // passed in. Please note that if the schematic has a schema, the options will be
-        // validated and could throw, e.g. if a required option is missing.
-        //schematic('my-other-schematic', { option: true }),
         (host, context) => {
-            context.logger.log('info', "Name: " + options.name);
-            context.logger.info('Adding dependencies...');
-            const workspace = config_1.getWorkspace(host);
-            const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
-            // Takes the first project in case it's not provided by CLI
-            options.project ? options.project : Object.keys(workspace['projects'])[0]);
-            const moduleName = options.name + 'Component';
-            const sourceLoc = './' + options.name + '/' + options.name + '.component';
-            context.logger.info('moduleName: ' + moduleName);
-            context.logger.info('sourceLoc: ' + sourceLoc);
-            context.logger.info('Project Root: ' + project.root);
-            if (!options.project) {
+            options = schematic_util_wrapper_1.addDependencies(options, context, host);
+            /*
+              context.logger.log('info', "Name: " + options.name);
+              context.logger.info('Adding dependencies...');
+        
+              const workspace = getWorkspace(host);
+              const project = getProjectFromWorkspace(
+                  workspace,
+                  // Takes the first project in case it's not provided by CLI
+                  options.project ? options.project : Object.keys(workspace['projects'])[0]
+              );
+              const moduleName = options.name + 'Component';
+              const sourceLoc = './' + options.name + '/' + options.name + '.component';
+              context.logger.info('moduleName: ' + moduleName);
+              context.logger.info('sourceLoc: ' + sourceLoc);
+              context.logger.info('Project Root: ' + project.root);
+                 if (!options.project) {
                 options.project = Object.keys(workspace.projects)[0];
-            }
-            if (options.path === undefined) {
+              }
+              if (options.path === undefined) {
                 const projectDirName = project.projectType === 'application' ? 'app' : 'lib';
                 options.path = `/${project.root}/src/${projectDirName}`;
-            }
-            options.module = find_module_1.findModuleFromOptions(host, options);
-            const moduleNameNew = options.name;
-            const parsedPath = parse_name_1.parseName(options.path, moduleNameNew);
-            options.name = parsedPath.name;
-            context.logger.info('options.name: ' + options.name);
-            options.path = parsedPath.path;
-            context.logger.info('options.path: ' + options.path);
-            options.export = false;
-            // context.logger.info('Adding declaration: ' + options.export);
-            //console.log(options);
-            context.logger.info('Installed Dependencies...');
+              }
+              options.module = findModuleFromOptions(host, options);
+              const moduleNameNew = options.name;
+              const parsedPath = parseName(options.path, moduleNameNew);
+              options.name = parsedPath.name;
+              context.logger.info('options.name: ' + options.name);
+              options.path = parsedPath.path;
+              context.logger.info('options.path: ' + options.path);
+              options.export = false;
+              context.logger.info('Installed Dependencies...');
+        
+             */
         },
         // The mergeWith() rule merge two trees; one that's coming from a Source (a Tree with no
         // base), and the one as input to the rule. You can think of it like rebasing a Source on
@@ -76,7 +66,7 @@ function default_1(options) {
         schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
             schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
         ])),
-        ng_module_utils_1.addDeclarationToNgModule(options, false)
+        schematic_util_wrapper_1.addDeclarationToNgModule(options, false)
     ]);
 }
 exports.default = default_1;
