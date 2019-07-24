@@ -120,7 +120,7 @@ function updateFormRegistry(options) {
                 recorder.insertRight(content.indexOf(searchString) + searchString.length, toInsert);
                 // Add the import statement
                 // import {F17CreatorFormComponent} from "./custom-forms/f17-creator-form/f17-creator-form.component";
-                const importStatement = 'import {' + strings_1.classify(options.name) + 'Component} from "./custom-forms/' + strings_1.dasherize(options.name) + '/' + strings_1.dasherize(options.name) + '.component";';
+                const importStatement = 'import {' + strings_1.classify(options.name) + 'Component} from \'./custom-forms/' + strings_1.dasherize(options.name) + '/' + strings_1.dasherize(options.name) + '.component\';\n';
                 recorder.insertRight(0, importStatement);
                 host.commitUpdate(recorder);
             }

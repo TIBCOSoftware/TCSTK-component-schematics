@@ -146,7 +146,7 @@ export function updateFormRegistry(options: ModuleOptions){
                 recorder.insertRight(content.indexOf(searchString) + searchString.length, toInsert);
                 // Add the import statement
                 // import {F17CreatorFormComponent} from "./custom-forms/f17-creator-form/f17-creator-form.component";
-                const importStatement = 'import {' + classify(options.name) +'Component} from "./custom-forms/' + dasherize(options.name) + '/' + dasherize(options.name) + '.component";';
+                const importStatement = 'import {' + classify(options.name) +'Component} from \'./custom-forms/' + dasherize(options.name) + '/' + dasherize(options.name) + '.component\';\n';
                 recorder.insertRight(0,importStatement);
 
                 host.commitUpdate(recorder);
