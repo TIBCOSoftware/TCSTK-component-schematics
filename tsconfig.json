@@ -20,7 +20,6 @@
     "strictNullChecks": true,
     "target": "es6",
     "types": [
-      "jasmine",
       "node"
     ]
   },

@@ -1,13 +1,13 @@
 import {apply, chain, mergeWith, SchematicContext, template, Tree, url} from "@angular-devkit/schematics";
 import {getWorkspace} from "../schematics-angular-utils/config";
 import {getProjectFromWorkspace} from "schematics-utilities";
-import {findModuleFromOptions,  ModuleOptionsC} from "../schematics-angular-utils/find-module";
+import {findModuleFromOptions, ModuleOptions} from "../schematics-angular-utils/find-module";
 import {parseName} from "./parse-name";
 import {strings} from "@angular-devkit/core";
 import {addDeclarationToNgModule, addEntryPointToNgModule} from "./ng-module-utils";
+import {classify,dasherize} from "@angular-devkit/core/src/utils/strings";
 
-var devOptions:ModuleOptionsC;
-var buildOptions:ModuleOptionsC ;
+
 
 export function formChain(options: any, type: string){
     console.log('Options: ' , options);
@@ -20,7 +20,7 @@ export function formChain(options: any, type: string){
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.040             ** ---');
+            context.logger.info('--- **                V1.041             ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM ('+type.toUpperCase()+')** ---');
             context.logger.info('-----------------------------------------------');
@@ -43,7 +43,7 @@ export function formChain(options: any, type: string){
                 // Takes the first project in case it's not provided by CLI
                 options.project ? options.project : Object.keys(workspace['projects'])[0]
             );
-            updateFormRegistry(project, host, context);
+            // updateFormRegistry(project, host, context);
             const moduleName = options.name + 'Component';
             const sourceLoc = './custom-forms/' + options.name + '/' + options.name + '.component';
             context.logger.info('moduleName: ' + moduleName);
@@ -68,35 +68,11 @@ export function formChain(options: any, type: string){
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
 
-            console.log('Options: ',options);
-            /*
-
-           //TODO: update other files as well
-
-           // Make a clone of the object
-           // devOptions = new ModuleOptions();
-           devOptions = JSON.parse(JSON.stringify(options));
-           buildOptions = JSON.parse(JSON.stringify(options));
-*/
-            devOptions = new ModuleOptionsC(options.module.replace('.ts','.dev') + '.ts',options.name,false, options.path, !options.export);
-            buildOptions = new ModuleOptionsC(options.module.replace('.ts','.build') + '.ts',options.name,false, options.path, !options.export);
-
-            /*
-            devOptions.module = devOptions.module.replace('.ts','.dev') + '.ts';
-
-            buildOptions.module = buildOptions.module.replace('.ts','.build') + '.ts';
-*/
-           console.log('Options: ',options);
-           console.warn('DevOptions: ',devOptions);
-           console.warn('buildOptions: ',buildOptions);
+            options.type = type;
 
 
+           console.warn('Options: ',options);
 
-
-           addDeclarationToNgModule(devOptions, false);
-           addEntryPointToNgModule(devOptions);
-           addDeclarationToNgModule(buildOptions, false);
-           addEntryPointToNgModule(buildOptions);
 
 
 
@@ -130,28 +106,55 @@ export function formChain(options: any, type: string){
         addEntryPointToNgModule(options),
         () => {
             options.module = options.module.replace('.ts','.dev');
+            console.warn('Options (DEV): ',options);
         },
 
         addDeclarationToNgModule(options, false),
         addEntryPointToNgModule(options),
         () => {
             options.module = options.module.replace('.dev','.build');
+            console.warn('Options (BUILD): ',options);
         },
         addDeclarationToNgModule(options, false),
-        addEntryPointToNgModule(options)
-
+        addEntryPointToNgModule(options),
+        () => {
+            options.formRegistry = '/src/app/form.registry.ts';
+            console.warn('Options (Form Registry): ',options);
+        },
+        updateFormRegistry(options)
     ]);
 }
 
+export function updateFormRegistry(options: ModuleOptions){
+    return (host: Tree) => {
+        console.log('updateFormRegistry: ' ,options);
+        if(options.formRegistry && options.formRef && options.type && options.name){
+            var fRegBuffer = host.read(options.formRegistry);
+            if(fRegBuffer) {
+                var content = fRegBuffer.toString();
+                // console.warn('Form Registry: ', content);
+                console.log('--- Updating Form Registry ---')
 
-export function updateFormRegistry(project:any, tree: Tree, context: SchematicContext){
-    //TODO: update nicely from schematic
-    console.log('Updating Form Registry: ' + __dirname);
+                const recorder = host.beginUpdate(options.formRegistry);
+                console.log('-        ID: ' + options.formRef);
+                console.log('-      TYPE: ' + options.type);
+                console.log('-      NAME: ' + options.name);
 
-    // TODO: HIER VERDER, Update the Form Registry
-    console.log(project);
-    console.warn('TREE: ', tree);
-    console.warn('CONTEXT: ', context);
-    //console.log(tree.getDir()._backend.ScopedHost._root);
+                const toInsert = "\n  new FormRecord('"+options.formRef+"', '"+options.type+"', '"+options.name+"', '"+ options.name + " " + options.type + " Form', "+ classify(options.name ) + "Component),";
+                console.log('- INSERTING: ' + toInsert);
+                const searchString = 'FORM_REGISTRY = [';
+                recorder.insertRight(content.indexOf(searchString) + searchString.length, toInsert);
+                // Add the import statement
+                // import {F17CreatorFormComponent} from "./custom-forms/f17-creator-form/f17-creator-form.component";
+                const importStatement = 'import {' + classify(options.name) +'Component} from "./custom-forms/' + dasherize(options.name) + '/' + dasherize(options.name) + '.component";';
+                recorder.insertRight(0,importStatement);
 
+                host.commitUpdate(recorder);
+
+            }
+        }
+
+
+        return host;
+    };
 }

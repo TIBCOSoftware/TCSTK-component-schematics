@@ -15,23 +15,11 @@ export interface ModuleOptions {
   flat?: boolean;
   path?: string;
   skipImport?: boolean;
+  formRegistry?: string;
+  type?:string;
+  formRef?:string;
 }
 
-export class ModuleOptionsC implements ModuleOptions {
-  constructor(m:string, n:string, f:boolean, p:string, si:boolean) {
-    this.module = m;
-    this.name = n;
-    this.flat = f;
-    this.path = p;
-    this.skipImport = si;
-  }
-
-  module?: string;
-  name: string;
-  flat?: boolean;
-  path?: string;
-  skipImport?: boolean;
-}
 
 /**
  * Find the module referred by a set of options passed to the schematics.

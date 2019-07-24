@@ -8,16 +8,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * found in the LICENSE file at https://angular.io/license
  */
 const core_1 = require("@angular-devkit/core");
-class ModuleOptionsC {
-    constructor(m, n, f, p, si) {
-        this.module = m;
-        this.name = n;
-        this.flat = f;
-        this.path = p;
-        this.skipImport = si;
-    }
-}
-exports.ModuleOptionsC = ModuleOptionsC;
 /**
  * Find the module referred by a set of options passed to the schematics.
  */
