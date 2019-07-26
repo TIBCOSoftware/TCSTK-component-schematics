@@ -2,69 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-action/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-action/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-action/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-action/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-action/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-action/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-casedata/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-casedata/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-casedata/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-casedata/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-casedata/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-casedata/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-creator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-creator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-creator/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-creator/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-form-creator/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-form-creator/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ast-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ast-utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ast-utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/change.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/change.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/change.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/config.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/find-module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/find-module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/find-module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/latest-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/latest-versions.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/latest-versions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ng-ast-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ng-ast-utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/ng-ast-utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/parse-name.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/parse-name.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/parse-name.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/route-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/route-utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/route-utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/validation.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematics-angular-utils/validation.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-injection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-injection.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-injection.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-to-module-context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-to-module-context.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/add-to-module-context.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/find-file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/find-file.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/find-file.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/form-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/form-utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/form-utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ng-module-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ng-module-utils.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ng-module-utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parse-name.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parse-name.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parse-name.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +124,7 @@
       <workItem from="1563200378635" duration="1239000" />
       <workItem from="1563802459332" duration="27451000" />
       <workItem from="1563965056528" duration="6171000" />
-      <workItem from="1563975657991" duration="2491000" />
+      <workItem from="1563975657991" duration="5191000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -432,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563969116079</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Cleaned up code and exported utils">
+      <created>1563978832479</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1563978832479</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,6 +398,8 @@
         <option value="$PROJECT_DIR$/src/home-cockpit/index.js" />
         <option value="$PROJECT_DIR$/../TCSTK-custom-form-app-plugin/node_modules/@tibco-tcstk/component-template/src/utils/form-utils.js.map" />
         <option value="$PROJECT_DIR$/../TCSTK-custom-form-app-plugin/node_modules/@tibco-tcstk/component-template/src/utils/form-utils.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-Cloud-CLI/node_modules/@tibco-tcstk/web-scaffolding-utility/Index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-Cloud-CLI/node_modules/@tibco-tcstk/web-scaffolding-utility/Test.js" />
       </list>
     </option>
   </component>
@@ -472,7 +420,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Removed App" />
     <MESSAGE value="Comp name" />
     <MESSAGE value="Fixed super()" />
     <MESSAGE value="Fixed super() 2" />
@@ -497,6 +444,7 @@
     <MESSAGE value="Removed Jasmine and Form Registry schematic update" />
     <MESSAGE value="on submit" />
     <MESSAGE value="before tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="before tag" />
+    <MESSAGE value="Cleaned up code and exported utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code and exported utils" />
   </component>
 </project>
