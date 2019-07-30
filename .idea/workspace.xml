@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +126,8 @@
       <workItem from="1563802459332" duration="27451000" />
       <workItem from="1563965056528" duration="6171000" />
       <workItem from="1563975657991" duration="5191000" />
+      <workItem from="1564144320845" duration="255000" />
+      <workItem from="1564155304261" duration="1504000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -378,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563978832479</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Updated Docs">
+      <created>1564144434027</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1564144434027</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +430,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Comp name" />
     <MESSAGE value="Fixed super()" />
     <MESSAGE value="Fixed super() 2" />
     <MESSAGE value="Fixed live apps service" />
@@ -445,6 +454,7 @@
     <MESSAGE value="on submit" />
     <MESSAGE value="before tag" />
     <MESSAGE value="Cleaned up code and exported utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code and exported utils" />
+    <MESSAGE value="Updated Docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Docs" />
   </component>
 </project>
