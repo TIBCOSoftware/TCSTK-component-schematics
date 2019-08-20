@@ -46,8 +46,6 @@ You will see entries like this:
 
 That's it!
 
-/*
-* Copyright © 2019. TIBCO Software Inc.
-* This file is subject to the license terms contained
-* in the license file that is distributed with this file.
- */
+Copyright © 2019. TIBCO Software Inc.
+This file is subject to the license terms contained
+in the license file that is distributed with this file.
