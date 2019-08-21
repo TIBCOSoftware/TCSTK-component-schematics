@@ -1,4 +1,4 @@
-# TIBCO Cloud Starter - Component Schematics
+# TIBCO Cloud™ Starters Toolkit - Component Schematics
 Component Schematics, will generate code in order for you to customize apps.
 
 ### Create your first Cloud App
