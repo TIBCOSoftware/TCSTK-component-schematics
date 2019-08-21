@@ -1,17 +1,12 @@
 {
   "name": "@tibco-tcstk/component-template",
-  "version": "1.1.8",
+  "version": "1.0.0",
   "description": "Schematics to create new components for the TIBCO Cloud Starters",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
     "pub": "npm run build && npm publish --registry http://application-lb-npm-1392137160.eu-west-1.elb.amazonaws.com/#/"
   },
-  "keywords": [
-    "schematics"
-  ],
-  "author": "",
-  "license": "MIT",
   "schematics": "./src/collection.json",
   "devDependencies": {
     "@angular-devkit/core": "^8.1.2",
@@ -21,5 +16,26 @@
   },
   "dependencies": {
     "schematics-utilities": "^1.1.2"
-  }
+  },
+  "author": {
+    "name": "TIBCO Labs",
+    "email": "tibcolabs@tibco.com",
+    "url": "http://www.tibco.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TIBCOSoftware/TCSTK-component-schematics"
+  },
+  "homepage": "https://tibcosoftware.github.io/TCSToolkit/",
+  "keywords": [
+    "tibco",
+    "cloud",
+    "tci",
+    "liveapps",
+    "angular",
+    "cli",
+    "tcli",
+    "schematics"
+  ],
+  "license": "TIBCO"
 }

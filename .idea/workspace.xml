@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="Fix for cockpits (following manuels access control change)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +127,10 @@
       <workItem from="1563965056528" duration="6171000" />
       <workItem from="1563975657991" duration="5191000" />
       <workItem from="1564144320845" duration="255000" />
-      <workItem from="1564155304261" duration="1504000" />
+      <workItem from="1564155304261" duration="2711000" />
+      <workItem from="1564575229934" duration="1338000" />
+      <workItem from="1564733406390" duration="426000" />
+      <workItem from="1566379685221" duration="388000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -388,7 +391,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564144434027</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fix for cockpits (following manuels access control change)">
+      <created>1564473564939</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1564473564939</updated>
+    </task>
+    <task id="LOCAL-00039" summary="JS Files">
+      <created>1564575301094</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1564575301094</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,8 +447,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Fixed super()" />
-    <MESSAGE value="Fixed super() 2" />
     <MESSAGE value="Fixed live apps service" />
     <MESSAGE value="add import" />
     <MESSAGE value="added declarations in module" />
@@ -455,6 +470,8 @@
     <MESSAGE value="before tag" />
     <MESSAGE value="Cleaned up code and exported utils" />
     <MESSAGE value="Updated Docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Docs" />
+    <MESSAGE value="Fix for cockpits (following manuels access control change)" />
+    <MESSAGE value="JS Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="JS Files" />
   </component>
 </project>

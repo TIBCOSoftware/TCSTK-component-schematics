@@ -1,6 +1,5 @@
-# TIBCO Cloud™ Starters Toolkit -- Component Schematics 
-
-Component Schematics allow you to customize applications using generated components.
+# TIBCO Cloud Starter - Component Schematics
+Component Schematics, will generate code in order for you to customize apps.
 
 ### Create your first Cloud App
 
@@ -11,7 +10,7 @@ tcli new
 ```
 **Note**: if you don't have tcli run:
 ```
-npm install -g @tibco-tcstk/cloud-cli
+npm install -g gulp-cli gulp @tibco-tcstk/cloud-cli
 ```
 
 ## Create your own cloud component
@@ -43,9 +42,10 @@ You will see entries like this:
  ```
  (filter for *** Forms:)\n * *** Forms: > Using auto-rendered form (formRef): SampleApp.SampleApp.creator.Create SampleApp,
 ```
-
-That's it!
-
+---
+For more information see the documentation page: 
+https://tibcosoftware.github.io/TCSToolkit/
+---
 Copyright © 2019. TIBCO Software Inc.
 This file is subject to the license terms contained
-in the license file that is distributed with this file.
+in the license file that is distributed with this library.
