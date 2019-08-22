@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +129,7 @@
       <workItem from="1564155304261" duration="2711000" />
       <workItem from="1564575229934" duration="1338000" />
       <workItem from="1564733406390" duration="426000" />
-      <workItem from="1566379685221" duration="4191000" />
+      <workItem from="1566379685221" duration="5036000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -431,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566476690441</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="updated docs">
+      <created>1566480994646</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1566480994646</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,6 +480,11 @@
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js" />
       </list>
     </option>
   </component>
