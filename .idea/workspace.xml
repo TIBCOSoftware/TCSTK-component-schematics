@@ -128,7 +128,7 @@
       <workItem from="1564155304261" duration="2711000" />
       <workItem from="1564575229934" duration="1338000" />
       <workItem from="1564733406390" duration="426000" />
-      <workItem from="1566379685221" duration="3571000" />
+      <workItem from="1566379685221" duration="4191000" />
     </task>
     <task id="LOCAL-00001" summary="ok">
       <created>1548249397050</created>
@@ -424,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566459156548</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="updated docs">
+      <created>1566476690441</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1566476690441</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,6 +453,25 @@
         <option value="$PROJECT_DIR$/../TCSTK-custom-form-app-plugin/node_modules/@tibco-tcstk/component-template/src/utils/form-utils.js" />
         <option value="$PROJECT_DIR$/../TCSTK-Cloud-CLI/node_modules/@tibco-tcstk/web-scaffolding-utility/Index.js" />
         <option value="$PROJECT_DIR$/../TCSTK-Cloud-CLI/node_modules/@tibco-tcstk/web-scaffolding-utility/Test.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js" />
       </list>
     </option>
   </component>
@@ -466,7 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="add import" />
     <MESSAGE value="added declarations in module" />
     <MESSAGE value="Added Home Cockpit" />
     <MESSAGE value="Fixed Home Cockpit Declaration" />
@@ -491,6 +516,7 @@
     <MESSAGE value="Fix for cockpits (following manuels access control change)" />
     <MESSAGE value="JS Files" />
     <MESSAGE value="updated docs and props" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docs and props" />
+    <MESSAGE value="updated docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated docs" />
   </component>
 </project>
