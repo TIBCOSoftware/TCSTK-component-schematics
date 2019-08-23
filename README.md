@@ -47,9 +47,11 @@ You will see entries like this:
 ---
 For more information see the [TCSTK Documentation](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
 ---
+
+# License
+
 Copyright © 2019. TIBCO Software Inc.
 This file is subject to the license terms contained
-in the license file that is distributed with this library or can be found here:
+in the license file that is distributed with this file.
 
-https://github.com/TIBCOSoftware/TCSTK-component-schematics/blob/master/LICENSE
-
+Please see licence.txt for details of license and dependent third party components referenced by this library.
