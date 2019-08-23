@@ -56,4 +56,4 @@ in the license file that is distributed with this file.
 
 Please see license.txt for details of license and dependent third party components referenced by this library , or it can be found here:
                                                                                                                                                                                                                                                                                       
-https://github.com/TIBCOSoftware/TCSTK-Angular/blob/master/license.txt
+https://github.com/TIBCOSoftware/TCSTK-component-schematics/blob/master/license.txt
