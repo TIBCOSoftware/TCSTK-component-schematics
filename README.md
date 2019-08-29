@@ -1,9 +1,9 @@
 # TIBCO Cloud™ Starters Toolkit - Component Schematics
-<img src="https://community.tibco.com/sites/default/files/tibco_labs_final_with_tm2-01.png" alt="drawing" width="100"/>Powered by [TIBCO Labs](https://community.tibco.com/wiki/tibco-labs)
+<img src="https://community.tibco.com/sites/default/files/tibco_labs_final_with_tm2-01.png" alt="drawing" width="100"/>Powered by [TIBCO Labs™](https://community.tibco.com/wiki/tibco-labs)
 
 Component Schematics, will generate code in order for you to customize apps.
 
-### Create your first Cloud App
+### Create your first TIBCO Cloud™ App
 
 To create your first app, simply run:
 
@@ -15,7 +15,7 @@ tcli new
 npm install -g gulp-cli gulp @tibco-tcstk/cloud-cli
 ```
 
-## Create your own cloud component
+## Create your own component
 Simply type:
 ```bash
 tcli schematic-add
