@@ -45,7 +45,7 @@ You will see entries like this:
  (filter for *** Forms:)\n * *** Forms: > Using auto-rendered form (formRef): SampleApp.SampleApp.creator.Create SampleApp,
 ```
 ---
-For more information see the [TCSTK Documentation](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
+For more information see the [TCSTK Documentation](https://tibcosoftware.github.io/TCSToolkit/)
 ---
 
 # License
