@@ -62,10 +62,44 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
 @Input() customFormDefs: CustomFormDefs;
 
     /**
+     * Enable legacy workitems
+     */
+@Input() legacyWorkitems: boolean = this.legacyWorkitems ? this.legacyWorkitems : false;
+
+    /**
+     * Enable legacy actions
+     */
+@Input() legacyActions: boolean = this.legacyActions ? this.legacyActions : false;
+
+    /**
      * Layout object that can be passed to override default layout of the form renderer
      */
 @Input() layout: any[] = this.layout ?  this.layout : this.DEFAULT_CASE_DATA_LAYOUT;
 
+    /**
+     * Whether to show workitems in context panel (default true)
+     */
+@Input() showWorkitems: boolean = this.showWorkitems ? this.showWorkitems :  true;
+
+    /**
+     * Whether to show notes in context panel (default true)
+     */
+@Input() showNotes: boolean = this.showNotes ? this.showNotes : true;
+
+    /**
+     * Whether to show documents in context panel (default true)
+     */
+@Input() showDocuments: boolean = this.showDocuments ? this.showDocuments : true;
+
+    /**
+     * Whether to show states in context panel (default true)
+     */
+@Input() showStates: boolean = this.showStates ? this.showStates :  true;
+
+    /**
+     * Whether to show audit in context panel (default true)
+     */
+@Input() showAudit: boolean = this.showAudit ? this.showAudit :  true;
 
     /**
      * ~event routeAction : Component requests route to another page

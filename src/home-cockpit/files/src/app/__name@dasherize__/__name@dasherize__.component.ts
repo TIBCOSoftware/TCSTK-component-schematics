@@ -63,6 +63,16 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() customFormDefs: CustomFormDefs;
 
     /**
+     * Enable legacy workitems
+     */
+@Input() legacyWorkitems: boolean = this.legacyWorkitems ? this.legacyWorkitems : false;
+
+    /**
+     * Enable legacy creators
+     */
+
+@Input() legacyCreators: boolean = this.legacyCreators ? this.legacyCreators : false;
+    /**
      * ~event routeAction : Component requests route to another page
      * ~payload RouteAction : RouteAction object to tell caller to navigate somewhere
      */
