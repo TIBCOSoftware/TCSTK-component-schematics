@@ -9,7 +9,7 @@ import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
     styleUrls: ['./<%= dasherize(name) %>-style.css']
 })
 
-export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent {
+export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent implements OnInit {
 
     /**
      * The Application ID of the UI (should ideally be unique as it is shared state key)
@@ -108,6 +108,8 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
 @Output() routeAction: EventEmitter<RouteAction> = new EventEmitter<RouteAction>();
 
 
-
+    ngOnInit(){
+        super.ngOnInit();
+    }
 
 }
