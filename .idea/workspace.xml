@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="changes for NGonChanges">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,14 +142,7 @@
       <workItem from="1568652440038" duration="2975000" />
       <workItem from="1568718016073" duration="1107000" />
       <workItem from="1568807603356" duration="519000" />
-      <workItem from="1572270966046" duration="1824000" />
-    </task>
-    <task id="LOCAL-00005" summary="create app">
-      <created>1548336989449</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1548336989449</updated>
+      <workItem from="1572270966046" duration="2233000" />
     </task>
     <task id="LOCAL-00006" summary="create app">
       <created>1548337791988</created>
@@ -489,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572518938392</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="changes for NGonChanges">
+      <created>1572521105999</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1572521105999</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

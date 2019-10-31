@@ -1,5 +1,4 @@
-
-import { Component, OnInit, EventEmitter , Input, Output} from '@angular/core';
+import { Component, EventEmitter , Input, Output, SimpleChanges} from '@angular/core';
 import {RouteAction} from '@tibco-tcstk/tc-core-lib';
 import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfigurationElement} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
@@ -10,7 +9,6 @@ import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
     styleUrls: ['./<%= dasherize(name) %>-style.css']
 })
 
-// export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent implements OnInit {
 export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent implements OnChanges {
 
     /**
@@ -78,12 +76,6 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
      * ~payload RouteAction : RouteAction object to tell caller to navigate somewhere
      */
 @Output() routeAction: EventEmitter<RouteAction> = new EventEmitter<RouteAction>();
-
-    /*
-        ngOnInit(){
-            super.ngOnInit();
-        }
-    */
 
     ngOnChanges(changes: SimpleChanges): void {
         super.ngOnChanges(changes);
