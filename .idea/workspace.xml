@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,28 +140,10 @@
       <workItem from="1566379685221" duration="5036000" />
       <workItem from="1568177755875" duration="394000" />
       <workItem from="1568634899591" duration="1047000" />
-      <workItem from="1568652440038" duration="1342000" />
-    </task>
-    <task id="LOCAL-00001" summary="ok">
-      <created>1548249397050</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1548249397050</updated>
-    </task>
-    <task id="LOCAL-00002" summary="app">
-      <created>1548320176038</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1548320176039</updated>
-    </task>
-    <task id="LOCAL-00003" summary="component split">
-      <created>1548334332170</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1548334332170</updated>
+      <workItem from="1568652440038" duration="2975000" />
+      <workItem from="1568718016073" duration="1107000" />
+      <workItem from="1568807603356" duration="519000" />
+      <workItem from="1572270966046" duration="621000" />
     </task>
     <task id="LOCAL-00004" summary="showing types">
       <created>1548335381186</created>
@@ -481,7 +460,35 @@
       <option name="project" value="LOCAL" />
       <updated>1568635225260</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="classic forms changes">
+      <created>1568653816912</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1568653816912</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added ngOninit Super()">
+      <created>1568709660903</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1568709660904</updated>
+    </task>
+    <task id="LOCAL-00051" summary="package  lock">
+      <created>1568709694726</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1568709694726</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix to height">
+      <created>1568718689454</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1568718689454</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,6 +554,46 @@
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js.map" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
       </list>
     </option>
   </component>
@@ -581,10 +628,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="added declarations in module" />
-    <MESSAGE value="Added Home Cockpit" />
-    <MESSAGE value="Fixed Home Cockpit Declaration" />
-    <MESSAGE value="Added Case cockpit and home cockpit fixes" />
     <MESSAGE value="Added Utils" />
     <MESSAGE value="updated case (v29)" />
     <MESSAGE value="updated the case cockpit" />
@@ -606,6 +649,10 @@
     <MESSAGE value="JS Files" />
     <MESSAGE value="updated docs and props" />
     <MESSAGE value="updated docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docs" />
+    <MESSAGE value="classic forms changes" />
+    <MESSAGE value="added ngOninit Super()" />
+    <MESSAGE value="package  lock" />
+    <MESSAGE value="fix to height" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix to height" />
   </component>
 </project>
