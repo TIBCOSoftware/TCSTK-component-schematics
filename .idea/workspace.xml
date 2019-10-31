@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +140,7 @@
       <workItem from="1568652440038" duration="2975000" />
       <workItem from="1568718016073" duration="1107000" />
       <workItem from="1568807603356" duration="519000" />
-      <workItem from="1572270966046" duration="2233000" />
-    </task>
-    <task id="LOCAL-00006" summary="create app">
-      <created>1548337791988</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1548337791988</updated>
+      <workItem from="1572270966046" duration="2499000" />
     </task>
     <task id="LOCAL-00007" summary="working version 1">
       <created>1548429659852</created>
@@ -487,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572521105999</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="changes for NGonChanges">
+      <created>1572521495395</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1572521495395</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,6 +591,26 @@
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js.map" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
         <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/home-cockpit/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-spotfire/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-base/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-events/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-liveapps/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/comp-tci/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-action/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-creator/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/custom-form-casedata/index.js" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js.map" />
+        <option value="$PROJECT_DIR$/../TCSTK-buildpipeline/tmp/TCSTK-component-schematics/src/case-cockpit/index.js" />
       </list>
     </option>
   </component>
