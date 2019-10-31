@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
+    <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="changes for NGonChanges">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,14 +144,7 @@
       <workItem from="1568652440038" duration="2975000" />
       <workItem from="1568718016073" duration="1107000" />
       <workItem from="1568807603356" duration="519000" />
-      <workItem from="1572270966046" duration="621000" />
-    </task>
-    <task id="LOCAL-00004" summary="showing types">
-      <created>1548335381186</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1548335381186</updated>
+      <workItem from="1572270966046" duration="1824000" />
     </task>
     <task id="LOCAL-00005" summary="create app">
       <created>1548336989449</created>
@@ -488,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568718689454</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="changes for NGonChanges">
+      <created>1572518938391</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1572518938392</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +629,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Added Utils" />
     <MESSAGE value="updated case (v29)" />
     <MESSAGE value="updated the case cockpit" />
     <MESSAGE value="to V1" />
@@ -653,6 +653,7 @@
     <MESSAGE value="added ngOninit Super()" />
     <MESSAGE value="package  lock" />
     <MESSAGE value="fix to height" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix to height" />
+    <MESSAGE value="changes for NGonChanges" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes for NGonChanges" />
   </component>
 </project>
