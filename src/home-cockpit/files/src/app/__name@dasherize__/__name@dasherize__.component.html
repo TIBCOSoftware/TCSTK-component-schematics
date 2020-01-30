@@ -1,7 +1,7 @@
-<div fxLayout="column" fxFlex>
+<div fxLayout="column" fxFlex *ngIf="cockpitReady">
   <div>
-    <tc-tibco-cloud-menu-bar [toolbarButtons]="toolbarButtons" [headerText]="title"
-                             (toolbarButtonEvent)="handleToolbarButtonEvent($event)">
+    <tc-tibco-cloud-menu-bar [burgerMenuButtons]="burgerMenuButtons" [toolbarButtons]="toolbarButtons" [headerText]="title"
+                             (toolbarButtonEvent)="handleToolbarButtonEvent($event)" (burgerMenuButtonEvent)="handleBurgerMenuClick($event)">
       <div>
         <ng-content select="[customToolbarContent]" fxFlex></ng-content>
         <tcla-live-apps-application-create-button *ngIf="caseStartButtonActive"
@@ -13,7 +13,7 @@
   </div>
 
   <div class="tcs-home-content"
-       style="padding-left: 20px; padding-right: 20px; margin-top: 10px; padding-bottom: 120px; height: 100%; display: block;">
+       style="padding-left: 20px; padding-right: 20px; margin-top: 10px; padding-bottom: 120px; height: calc(100% - 86px); display: block;">
     <div style="height: 100%;">
       <div class="searchCasesWidget" style="min-height: 86px;">
         <tcla-live-apps-search-widget fxFlex [appIds]="appIds" [sandboxId]="sandboxId" [uiAppId]="uiAppId"

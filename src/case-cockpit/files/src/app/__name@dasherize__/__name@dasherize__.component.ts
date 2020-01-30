@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import {RouteAction} from '@tibco-tcstk/tc-core-lib';
-import {LiveAppsCaseCockpitComponent,Roles,RouteAccessControlConfigurationElement} from '@tibco-tcstk/tc-liveapps-lib';
+import {LiveAppsCaseCockpitComponent,Roles,RouteAccessControlConfigurationElement, FormConfig} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
@@ -36,6 +36,11 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
 @Input() caseRef: string;
 
     /**
+     * The workitem Id
+     */
+@Input() workitemId: number;
+
+    /**
      * The ID of the logged user
      */
 @Input() userId: string;
@@ -56,6 +61,11 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
 @Input() access: RouteAccessControlConfigurationElement;
 
     /**
+     * Custom Form Layout Configuration
+     */
+@Input() formConfig: FormConfig;
+
+    /**
      * Custom Form configuration file
      */
 @Input() customFormDefs: CustomFormDefs;
@@ -74,6 +84,12 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
      * Layout object that can be passed to override default layout of the form renderer
      */
 @Input() layout: any[] = this.layout ?  this.layout : this.DEFAULT_CASE_DATA_LAYOUT;
+
+    /**
+     * Allow override of forms framework
+     * Options: bootstrap-4 or material-design
+     */
+@Input() formsFramework: string = this.formsFramework ? this.formsFramework : 'material-design';
 
     /**
      * Whether to show workitems in context panel (default true)
@@ -99,6 +115,7 @@ export class <%= classify(name) %>Component extends LiveAppsCaseCockpitComponent
      * Whether to show audit in context panel (default true)
      */
 @Input() showAudit: boolean = this.showAudit ? this.showAudit :  true;
+
 
     /**
      * ~event routeAction : Component requests route to another page

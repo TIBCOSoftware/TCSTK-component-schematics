@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output, SimpleChanges, OnChanges} from '@angular/core';
 import {RouteAction} from '@tibco-tcstk/tc-core-lib';
-import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfigurationElement} from '@tibco-tcstk/tc-liveapps-lib';
+import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfigurationElement, FormConfig} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
@@ -37,7 +37,7 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() userId: string;
 
     /**
-     * * NOT USED but is the email address of the user (comes from resolver)
+     * * Email address of the user (comes from resolver)
      */
 @Input() email: string;
 
@@ -57,6 +57,11 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
 @Input() access: RouteAccessControlConfigurationElement;
 
     /**
+     * Custom Form Layout Configuration
+     */
+@Input() formConfig: FormConfig;
+
+    /**
      * Custom Form configuration file
      */
 @Input() customFormDefs: CustomFormDefs;
@@ -69,8 +74,14 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
     /**
      * Enable legacy creators
      */
-
 @Input() legacyCreators: boolean = this.legacyCreators ? this.legacyCreators : false;
+
+    /**
+     * Allow override of forms framework
+     * Options: bootstrap-4 or material-design
+     */
+@Input() formsFramework: string = this.formsFramework ? this.formsFramework : 'material-design';
+
     /**
      * ~event routeAction : Component requests route to another page
      * ~payload RouteAction : RouteAction object to tell caller to navigate somewhere
