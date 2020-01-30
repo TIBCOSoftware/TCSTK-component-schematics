@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,14 +147,7 @@
       <workItem from="1574170432065" duration="810000" />
       <workItem from="1575296651442" duration="631000" />
       <workItem from="1580392175865" duration="180000" />
-      <workItem from="1580396561743" duration="759000" />
-    </task>
-    <task id="LOCAL-00008" summary="working version 1.2">
-      <created>1548696997696</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1548696997696</updated>
+      <workItem from="1580396561743" duration="1520000" />
     </task>
     <task id="LOCAL-00009" summary="working version 1.2">
       <created>1548762399314</created>
@@ -495,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572521953162</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Updates on the cockpit">
+      <created>1580397348266</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1580397348268</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +680,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="updated case (v29)" />
     <MESSAGE value="updated the case cockpit" />
     <MESSAGE value="to V1" />
     <MESSAGE value="Added input imports" />
@@ -708,6 +704,7 @@
     <MESSAGE value="package  lock" />
     <MESSAGE value="fix to height" />
     <MESSAGE value="changes for NGonChanges" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for NGonChanges" />
+    <MESSAGE value="Updates on the cockpit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates on the cockpit" />
   </component>
 </project>
