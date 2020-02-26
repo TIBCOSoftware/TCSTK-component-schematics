@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-basic/schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-cockpit/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/case-cockpit/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-base/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-base/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-events/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-events/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-events/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-events/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-liveapps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-liveapps/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-liveapps/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-liveapps/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-basic/files/src/app/__name@dasherize__/__name@dasherize__-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-basic/files/src/app/__name@dasherize__/__name@dasherize__.component.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-spotfire/schema.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-tci/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-tci/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/comp-tci/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/comp-tci/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/home-cockpit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/home-cockpit/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,14 +148,7 @@
       <workItem from="1581589115121" duration="597000" />
       <workItem from="1581669264432" duration="93000" />
       <workItem from="1581669396252" duration="589000" />
-      <workItem from="1582620766813" duration="14863000" />
-    </task>
-    <task id="LOCAL-00010" summary="working version 1.2">
-      <created>1548762731158</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1548762731158</updated>
+      <workItem from="1582620766813" duration="15461000" />
     </task>
     <task id="LOCAL-00011" summary="Removed App">
       <created>1548850002138</created>
@@ -528,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580398347598</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Spotfire Base Schematic">
+      <created>1582715091953</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1582715091953</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +565,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="updated the case cockpit" />
     <MESSAGE value="to V1" />
     <MESSAGE value="Added input imports" />
     <MESSAGE value="Removed Sample components" />
@@ -625,9 +589,18 @@
     <MESSAGE value="fix to height" />
     <MESSAGE value="changes for NGonChanges" />
     <MESSAGE value="Updates on the cockpit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates on the cockpit" />
+    <MESSAGE value="Spotfire Base Schematic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spotfire Base Schematic" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="196" y="144" key="CommitChangelistDialog2" timestamp="1582715882206">
+      <screen x="0" y="23" width="1680" height="972" />
+    </state>
+    <state x="196" y="144" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1582715882206" />
+    <state x="395" y="282" key="Vcs.Push.Dialog.v2" timestamp="1582715094284">
+      <screen x="0" y="23" width="1680" height="972" />
+    </state>
+    <state x="395" y="282" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1582715094284" />
     <state x="461" y="299" width="669" height="486" key="find.popup" timestamp="1582712454170">
       <screen x="0" y="23" width="1680" height="972" />
     </state>

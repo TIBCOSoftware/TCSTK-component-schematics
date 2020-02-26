@@ -35,13 +35,13 @@ export class <%=  classify(name) %>Component implements OnInit {
         showExportFile: false,
         showExportVisualization: false,
         showFilterPanel: false,
-        showHelp: true,
+        showHelp: false,
         showLogout: false,
         showPageNavigation: false,
         showAnalysisInfo: false,
         showReloadAnalysis: false,
         showStatusBar: false,
-        showToolBar: true,
+        showToolBar: false,
         showUndoRedo: false
     };
 
