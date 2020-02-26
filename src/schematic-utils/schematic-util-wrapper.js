@@ -13,9 +13,9 @@ function showHead(type, context, options) {
     // Show the options for this Schematics.
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-    context.logger.info('--- **                V1.050             ** ---');
+    context.logger.info('--- **                V1.2.1             ** ---');
     context.logger.info('-----------------------------------------------');
-    context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM (' + type.toUpperCase() + ')** ---');
+    context.logger.info('--- ** TYPE: ' + type.toUpperCase());
     context.logger.info('-----------------------------------------------');
     context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
 }
@@ -54,7 +54,7 @@ exports.addDependencies = addDependencies;
 // Function for form
 function formChain(options, type) {
     return schematics_1.chain([
-        (_tree, context) => { showHead(type, context, options); },
+        (_tree, context) => { showHead('CUSTOM FORM: ' + type, context, options); },
         // Adding dependencies
         (host, context) => {
             context.logger.log('info', "Name: " + options.name);
@@ -91,7 +91,7 @@ function formChain(options, type) {
         },
         //Apply Template
         schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
-            schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
+            schematics_1.template(Object.assign(Object.assign({}, core_1.strings), { INDEX: options.index, name: options.name })),
         ])),
         addDeclarationToNgModule(options, false),
         addEntryPointToNgModule(options),
@@ -243,4 +243,36 @@ function createAddToModuleContext(host, options) {
     result.classifiedName = stringUtils.classify(`${options.name}Component`);
     return result;
 }
+function addPackageDependencies(host, dependencies) {
+    //const dependencies: NodeDependency[] = [{ type: NodeDependencyType.Default, version: '4.17.10', name: 'lodash-es' }];
+    dependencies.forEach(dependency => schematics_utilities_1.addPackageJsonDependency(host, dependency));
+    return host;
+}
+exports.addPackageDependencies = addPackageDependencies;
+// Function to import a library to node modules
+function addImport(host, options, lib, importPath) {
+    if (!options.module) {
+        throw new schematics_1.SchematicsException(`Module not found.`);
+    }
+    const modulePath = options.module || '';
+    console.log('Adding Import to Point: ', modulePath);
+    console.log('Library to Import: ' + lib);
+    console.log('      Import Path: ' + importPath);
+    const importChanges = schematics_utilities_1.addImportToModule(schematics_utilities_1.getSourceFile(host, options.module), modulePath, lib, importPath);
+    const declarationRecorder = host.beginUpdate(modulePath);
+    for (const change of importChanges) {
+        if (change instanceof schematics_utilities_1.InsertChange) {
+            declarationRecorder.insertLeft(change.pos, change.toAdd);
+            //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        }
+    }
+    host.commitUpdate(declarationRecorder);
+}
+function addImportToNgModule(options, lib, importPath) {
+    return (host) => {
+        addImport(host, options, lib, importPath);
+        return host;
+    };
+}
+exports.addImportToNgModule = addImportToNgModule;
 //# sourceMappingURL=schematic-util-wrapper.js.map

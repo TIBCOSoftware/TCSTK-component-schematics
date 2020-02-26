@@ -13,7 +13,7 @@ function default_1(options) {
         },
         (host, context) => { options = schematic_util_wrapper_1.addDependencies(options, context, host); },
         schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
-            schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
+            schematics_1.template(Object.assign(Object.assign({}, core_1.strings), { INDEX: options.index, name: options.name })),
         ])),
         schematic_util_wrapper_1.addDeclarationToNgModule(options, false)
     ]);

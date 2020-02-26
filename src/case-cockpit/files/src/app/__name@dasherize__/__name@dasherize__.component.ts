@@ -4,7 +4,7 @@ import {LiveAppsCaseCockpitComponent,Roles,RouteAccessControlConfigurationElemen
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
-    selector: 'app-<%= dasherize(name) %>',
+    selector: '<%= dasherize(name) %>',
     templateUrl: './<%= dasherize(name) %>.component.html',
     styleUrls: ['./<%= dasherize(name) %>-style.css']
 })

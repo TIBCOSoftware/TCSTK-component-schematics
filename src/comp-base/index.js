@@ -111,7 +111,7 @@ function default_1(options) {
         //                     them in, and only work on text files (we use an algorithm to detect
         //                     if a file is binary or not).
         schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
-            schematics_1.template(Object.assign({}, core_1.strings, { INDEX: options.index, name: options.name })),
+            schematics_1.template(Object.assign(Object.assign({}, core_1.strings), { INDEX: options.index, name: options.name })),
         ])),
     ]);
 }

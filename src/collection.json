@@ -24,17 +24,22 @@
       "factory": "./home-cockpit",
       "schema": "./home-cockpit/schema.json"
     },"custom-form-creator": {
-      "description": "New Custom Form (Creator) .",
+      "description": "New Custom Form (Creator)",
       "factory": "./custom-form-creator",
       "schema": "./custom-form-creator/schema.json"
     },"custom-form-action": {
-      "description": "New Custom Form (Action) .",
+      "description": "New Custom Form (Action)",
       "factory": "./custom-form-action",
       "schema": "./custom-form-action/schema.json"
     },"custom-form-casedata": {
-      "description": "New Custom Form (Case Data) .",
+      "description": "New Custom Form (Case Data)",
       "factory": "./custom-form-casedata",
       "schema": "./custom-form-casedata/schema.json"
+    },
+    "spotfire-component-basic": {
+      "description": "New Spotfire component",
+      "factory": "./spotfire-component-basic",
+      "schema": "./spotfire-component-basic/schema.json"
     }
   }
 }

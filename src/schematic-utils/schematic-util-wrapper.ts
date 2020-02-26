@@ -19,7 +19,7 @@ import {
     InsertChange,
     ModuleOptions,
     addDeclarationToModule,
-    addExportToModule, getSourceFile
+    addExportToModule, getSourceFile, addPackageJsonDependency, NodeDependency, addImportToModule
 } from "schematics-utilities";
 import {strings} from "@angular-devkit/core";
 import {classify,dasherize} from "@angular-devkit/core/src/utils/strings";
@@ -47,9 +47,9 @@ export function showHead(type:string, context: SchematicContext, options:any){
         // Show the options for this Schematics.
         context.logger.info('-----------------------------------------------');
         context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-        context.logger.info('--- **                V1.050             ** ---');
+        context.logger.info('--- **                V1.2.1             ** ---');
         context.logger.info('-----------------------------------------------');
-        context.logger.info('--- ** TYPE: TIBCO CUSTOM FORM (' + type.toUpperCase() + ')** ---');
+        context.logger.info('--- ** TYPE: ' + type.toUpperCase());
         context.logger.info('-----------------------------------------------');
         context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
 }
@@ -87,10 +87,12 @@ export function addDependencies(options: any, context: SchematicContext, host: T
     return options;
 }
 
+
+
 // Function for form
 export function formChain(options: any, type: string){
     return chain([
-        (_tree: Tree, context: SchematicContext) => {showHead(type, context,options);},
+        (_tree: Tree, context: SchematicContext) => {showHead('CUSTOM FORM: ' + type, context,options);},
         // Adding dependencies
         (host: Tree, context: SchematicContext) => {
             context.logger.log('info', "Name: " + options.name);
@@ -293,4 +295,38 @@ function createAddToModuleContext(host: Tree, options: ModuleOptions): AddToModu
     result.relativePath = buildRelativePath(options.module, componentPath);
     result.classifiedName = stringUtils.classify(`${options.name}Component`);
     return result;
+}
+
+
+export function addPackageDependencies(host: Tree, dependencies: NodeDependency[]): Tree {
+    //const dependencies: NodeDependency[] = [{ type: NodeDependencyType.Default, version: '4.17.10', name: 'lodash-es' }];
+    dependencies.forEach(dependency => addPackageJsonDependency(host, dependency));
+    return host;
+}
+
+// Function to import a library to node modules
+function addImport(host: Tree, options: ModuleOptions, lib: string, importPath : string) {
+    if (!options.module) {
+        throw new SchematicsException(`Module not found.`);
+    }
+    const modulePath = options.module || '';
+    console.log('Adding Import to Point: ',modulePath);
+    console.log('Library to Import: ' + lib)
+    console.log('      Import Path: ' + importPath);
+    const importChanges = addImportToModule(getSourceFile(host, options.module), modulePath, lib, importPath );
+    const declarationRecorder = host.beginUpdate(modulePath);
+    for (const change of importChanges) {
+        if (change instanceof InsertChange) {
+            declarationRecorder.insertLeft(change.pos, change.toAdd);
+            //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        }
+    }
+    host.commitUpdate(declarationRecorder);
+}
+
+export function addImportToNgModule(options: ModuleOptions, lib: string, importPath: string): Rule {
+    return (host: Tree) => {
+        addImport(host, options, lib, importPath);
+        return host;
+    };
 }
