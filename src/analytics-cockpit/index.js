@@ -7,20 +7,17 @@ const schematic_util_wrapper_1 = require("../schematic-utils/schematic-util-wrap
 // interfaces so you get type-safe options.
 function default_1(options) {
     // The chain rule allows us to chain multiple rules and apply them one after the other.
-    options.name = options.name + '-spotfire';
     return schematics_1.chain([
         (_tree, context) => {
-            schematic_util_wrapper_1.showHead("SPOTFIRE - BASIC ", context, options);
+            schematic_util_wrapper_1.showHead("ANALYTICS COCKPIT", context, options);
         },
         (host, context) => {
             options = schematic_util_wrapper_1.addDependencies(options, context, host);
         },
-        schematic_util_wrapper_1.addSpotfireLibs(),
         schematics_1.mergeWith(schematics_1.apply(schematics_1.url('./files'), [
-            schematics_1.template(Object.assign(Object.assign({}, core_1.strings), { INDEX: options.index, name: options.name, sfserver: options.sfserver, sflocation: options.sflocation })),
+            schematics_1.template(Object.assign(Object.assign({}, core_1.strings), { INDEX: options.index, name: options.name })),
         ])),
-        schematic_util_wrapper_1.addDeclarationToNgModule(options, false),
-        schematic_util_wrapper_1.addImportToNgModule(options, 'TcSpotfireLibModule', '@tibco-tcstk/tc-spotfire-lib')
+        schematic_util_wrapper_1.addDeclarationToNgModule(options, false)
     ]);
 }
 exports.default = default_1;

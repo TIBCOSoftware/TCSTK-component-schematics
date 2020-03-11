@@ -19,7 +19,7 @@ import {
     InsertChange,
     ModuleOptions,
     addDeclarationToModule,
-    addExportToModule, getSourceFile, addPackageJsonDependency, NodeDependency, addImportToModule
+    addExportToModule, getSourceFile, addPackageJsonDependency, NodeDependency, addImportToModule, NodeDependencyType
 } from "schematics-utilities";
 import {strings} from "@angular-devkit/core";
 import {classify,dasherize} from "@angular-devkit/core/src/utils/strings";
@@ -47,7 +47,7 @@ export function showHead(type:string, context: SchematicContext, options:any){
         // Show the options for this Schematics.
         context.logger.info('-----------------------------------------------');
         context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-        context.logger.info('--- **                V1.2.1             ** ---');
+        context.logger.info('--- **                V1.2.2             ** ---');
         context.logger.info('-----------------------------------------------');
         context.logger.info('--- ** TYPE: ' + type.toUpperCase());
         context.logger.info('-----------------------------------------------');
@@ -328,5 +328,173 @@ export function addImportToNgModule(options: ModuleOptions, lib: string, importP
     return (host: Tree) => {
         addImport(host, options, lib, importPath);
         return host;
+    };
+}
+
+export function addSpotfireLibs(): Rule {
+    return (host: Tree) => {
+        //console.log(' ' + host + ' ' + context);
+        console.log('Adding Spotfire Libraries...');
+        const dependencies: NodeDependency[] = [
+            {type: NodeDependencyType.Default, version: '^0.7.3', name: '@tibco/spotfire-wrapper'},
+            {type: NodeDependencyType.Default, version: '^1.2.2', name: '@tibco-tcstk/tc-spotfire-lib'}];
+        addPackageDependencies(host, dependencies);
+        console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');
+        return host;
+    }
+}
+
+export class routeConfig {
+    path: string;
+    component: string;
+    configResolverName: string;
+    resolver: string;
+    useClaimsResolver: boolean
+}
+
+/*
+
+*/
+
+const sFSettingImport = "import {SettingsSpotfireComponent, SpotfireConfigResolver} from \"@tibco-tcstk/tc-spotfire-lib\";\n";
+const sFSettingsString = "  {\n" +
+    "    path: 'spotfire-settings',\n" +
+    "    component: SettingsSpotfireComponent,\n" +
+    "    resolve: {\n" +
+    "      spotfireConfigHolder: SpotfireConfigResolver,\n" +
+    "      claimsHolder: ClaimsResolver\n" +
+    "    }\n" +
+    "  },";
+
+const sFMappingImport = "import {\n" +
+    "  SettingsSpotfireCreateCaseMappingComponent,\n" +
+    "  SpotfireMarkingLiveappsConfigResolver\n" +
+    "} from \"@tibco-tcstk/tc-spotfire-lib\";\n";
+const sFMappingString = "\n" +
+    "  {\n" +
+    "    path: 'spotfire-create-live-apps-case-mapping',\n" +
+    "    component: SettingsSpotfireCreateCaseMappingComponent,\n" +
+    "    resolve: {\n" +
+    "      spotfireMappingConfigHolder: SpotfireMarkingLiveappsConfigResolver,\n" +
+    "      claimsHolder: ClaimsResolver\n" +
+    "    }\n" +
+    "  },";
+const sfConfigResolver = "\n  SpotfireConfigResolver,";
+const sfConfigResolverDef = "\n      ,spotfireConfigHolder: SpotfireConfigResolver";
+const sfMarkingResolver = "\n  SpotfireMarkingLiveappsConfigResolver,";
+const sfMarkingResolverDef = "\n      ,spotfireMappingConfigHolder: SpotfireMarkingLiveappsConfigResolver";
+// import {SpotfireConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';
+const sFSettingResolverImport = "import {SpotfireConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';\n";
+// import {SpotfireMarkingLiveappsConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';
+const sFSettingMappingImport = "import {SpotfireMarkingLiveappsConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';\n";
+
+// Function to update the route configuration
+export function addSFRoutes(options: any){
+    // TODO: Add Input: options: routeConfig
+    return (host: Tree) => {
+        if(options.doAddRoutes) {
+            const doSFMapping = options.doAddMapping;
+            // Adding the configuration route
+            const configST = 'CONFIGURATION_ROUTE_CONFIG = [';
+            const routeLocation = 'src/app/route-config/starter-app-route-config/configuration-route-config/configuration-route-config.ts';
+            host = insertIntoFile(host, routeLocation, [''], sFSettingImport, 0);
+            host = insertIntoFile(host, routeLocation, [configST], sFSettingsString, 0);
+            if (doSFMapping) {
+                host = insertIntoFile(host, routeLocation, [''], sFMappingImport, 0);
+                host = insertIntoFile(host, routeLocation, [configST], sFMappingString, 0);
+            }
+            const providersST = 'CONFIGURATION_ROUTE_PROVIDERS = [';
+            host = insertIntoFile(host, routeLocation, [providersST], sfConfigResolver, 0);
+            if (doSFMapping) {
+                host = insertIntoFile(host, routeLocation, [providersST], sfMarkingResolver, 0);
+            }
+            const routeHomeLocation = 'src/app/route-config/starter-app-route-config/starter-app-route-config.ts';
+            const pathST = ["path: 'home',", "resolve: {", '}'];
+            host = insertIntoFile(host, routeHomeLocation, [''], sFSettingResolverImport, 0);
+            host = insertIntoFile(host, routeHomeLocation, pathST, sfConfigResolverDef, -1);
+            if (doSFMapping) {
+                host = insertIntoFile(host, routeHomeLocation, [''], sFSettingMappingImport, 0);
+                host = insertIntoFile(host, routeHomeLocation, pathST, sfMarkingResolverDef, -1);
+            }
+        }
+        return host;
+    };
+}
+
+const sFMenuConfig = "    ,{\n" +
+    "      \"entry\": \"Spotfire\",\n" +
+    "      \"icon\": \"tcs-spotfire-icon\",\n" +
+    "      \"options\": [\n" +
+    "        \"Settings\"\n" +
+    "      ]\n" +
+    "    }";
+
+const sFMenuConfigMapping = ",{\n" +
+    "      \"entry\": \"Spotfire\",\n" +
+    "      \"icon\": \"tcs-spotfire-icon\",\n" +
+    "      \"options\": [\n" +
+    "        \"Settings\",\n" +
+    "        \"Create Live Apps Case Mapping\"\n" +
+    "      ]\n" +
+    "    }\n";
+
+// Function to update the MENU configuration
+export function addSFMenuConfig(options: any){
+    // TODO: Add Input: options: routeConfig
+    return (host: Tree) => {
+        if(options.doAddConfig) {
+            const doSFMapping = options.doAddMapping;
+            const configMenuLocation = 'src/assets/config/configurationMenuConfig.json';
+            var fRegBuffer = host.read(configMenuLocation);
+            if (fRegBuffer) {
+                let content = fRegBuffer.toString();
+                let location = content.lastIndexOf("]") - 1;
+                const recorder = host.beginUpdate(configMenuLocation);
+                let toInsertAfter = sFMenuConfig;
+                if (doSFMapping) {
+                    toInsertAfter = sFMenuConfigMapping;
+                }
+                recorder.insertRight(location, toInsertAfter);
+                host.commitUpdate(recorder);
+            }
+        }
+        return host;
+    };
+}
+
+
+// Function to insert into a file
+// Leave search string blank ("") to add to the beginning of the file
+function insertIntoFile(host: Tree, fileName: string, searchString: string[], toInsertAfter: string , offset: number){
+    var fRegBuffer = host.read(fileName);
+    if(fRegBuffer) {
+        var content = fRegBuffer.toString();
+        console.log('--- INSERTING INTO FILE (' + fileName + ') ---');
+        console.log('- SEARCH STRING: ' + searchString);
+        const recorder = host.beginUpdate(fileName);
+        console.log('- INSERTING: ' + toInsertAfter);
+        if(searchString[0] === ""){
+            recorder.insertRight(0, toInsertAfter);
+        } else {
+            let insertAt = offset;
+            let tempSearchString = content;
+            for(let st of searchString){
+                console.log(st);
+                let tempLoc = tempSearchString.indexOf(st) + st.length;
+                tempSearchString = tempSearchString.substring(tempLoc);
+                insertAt += tempLoc;
+            }
+            recorder.insertRight(insertAt , toInsertAfter);
+        }
+        host.commitUpdate(recorder);
+    }
+    return host;
+}
+
+
+export function createFile(path: string, content: string): Rule {
+    return (tree: Tree, _context: SchematicContext) => {
+        tree.create(path, content);
+        return tree;
     };
 }

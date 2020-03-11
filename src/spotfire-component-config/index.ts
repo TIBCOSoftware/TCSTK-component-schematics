@@ -4,7 +4,7 @@ import {
   addDeclarationToNgModule,
   addDependencies,
   showHead,
-  addImportToNgModule, addSpotfireLibs
+  addImportToNgModule, addSpotfireLibs, addSFRoutes, addSFMenuConfig
 } from "../schematic-utils/schematic-util-wrapper";
 
 // Instead of `any`, it would make sense here to get a schema-to-dts package and output the
@@ -14,7 +14,7 @@ export default function (options: any): Rule {
   options.name = options.name + '-spotfire';
   return chain([
     (_tree: Tree, context: SchematicContext) => {
-      showHead("SPOTFIRE - BASIC ", context,options);
+      showHead("SPOTFIRE - WITH CONFIGURATION ", context,options);
     },
     (host: Tree, context: SchematicContext) => {
       options = addDependencies(options, context, host);
@@ -29,9 +29,16 @@ export default function (options: any): Rule {
         sflocation: options.sflocation
       }),
     ])),
-
     addDeclarationToNgModule(options, false),
-    addImportToNgModule(options, 'TcSpotfireLibModule', '@tibco-tcstk/tc-spotfire-lib')
+    addImportToNgModule(options, 'TcSpotfireLibModule', '@tibco-tcstk/tc-spotfire-lib'),
+    () => {
+      //options.formRegistry = '/src/app/form.registry.ts';
+      // TODO: Set Options
+      // console.warn('Options (Form Registry): ',options);
+    },
+    addSFRoutes(options),
+    addSFMenuConfig(options)
+    // TODO: Hier verder add the config JSON Files...
 
   ]);
 }

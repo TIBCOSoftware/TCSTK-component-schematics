@@ -1,0 +1,14 @@
+{
+  "spotfireServer": "<%= sfserver %>",
+  "analysisPath": "<%= sflocation %>",
+  "tableName": "",
+  "activePageForHome": "",
+  "activePageForDetails": "",
+  "markingName": "",
+  "maxMarkings": 20,
+  "allowedPages": [
+  ],
+  "columnNames": [
+    ""
+  ]
+}

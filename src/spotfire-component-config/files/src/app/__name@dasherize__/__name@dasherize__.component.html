@@ -1,0 +1,9 @@
+<tcsf-spotfire-wrapper  style="width: 100%; height: 100%;"
+                        [url]="sFConfig.spotfireServer"
+                        [path]="sFConfig.analysisPath"
+                        [customization]="sfProps"
+                        [markingOn]="sfMarkingOn"
+                        (markingEvent)="marking($event);"
+                        [maxRows]="sfMarkingMaxRows"
+                        id="SF-id-<%= dasherize(name) %>">
+</tcsf-spotfire-wrapper>

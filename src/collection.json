@@ -16,30 +16,44 @@
   // overwrite the extended schematic factory.
   "schematics": {
     "case-cockpit": {
-      "description": "New Custom Case Cockpit.",
+      "description": "A new custom Case Cockpit.",
       "factory": "./case-cockpit",
       "schema": "./case-cockpit/schema.json"
-    },"home-cockpit": {
-      "description": "New Custom Home Cockpit.",
+    },
+    "home-cockpit": {
+      "description": "A new custom Home Cockpit.",
       "factory": "./home-cockpit",
       "schema": "./home-cockpit/schema.json"
-    },"custom-form-creator": {
+    },
+    "analytics-cockpit": {
+      "description": "A new custom Analytics Cockpit with LiveApps Mapping Configuration.",
+      "factory": "./analytics-cockpit",
+      "schema": "./analytics-cockpit/schema.json"
+    },
+    "custom-form-creator": {
       "description": "New Custom Form (Creator)",
       "factory": "./custom-form-creator",
       "schema": "./custom-form-creator/schema.json"
-    },"custom-form-action": {
+    },
+    "custom-form-action": {
       "description": "New Custom Form (Action)",
       "factory": "./custom-form-action",
       "schema": "./custom-form-action/schema.json"
-    },"custom-form-casedata": {
+    },
+    "custom-form-casedata": {
       "description": "New Custom Form (Case Data)",
       "factory": "./custom-form-casedata",
       "schema": "./custom-form-casedata/schema.json"
     },
     "spotfire-component-basic": {
-      "description": "New Spotfire component",
+      "description": "New Spotfire Component",
       "factory": "./spotfire-component-basic",
       "schema": "./spotfire-component-basic/schema.json"
+    },
+    "spotfire-component-config": {
+      "description": "New Spotfire Component with Configuration",
+      "factory": "./spotfire-component-config",
+      "schema": "./spotfire-component-config/schema.json"
     }
   }
 }

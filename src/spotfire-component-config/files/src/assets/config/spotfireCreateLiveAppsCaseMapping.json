@@ -1,0 +1,21 @@
+{
+  "markingName": "",
+  "tableName": "",
+  "objectPath": "",
+  "attributes": [
+    {
+      "sourceAttr": "",
+      "targetAttr": ""
+    },
+    {
+      "sourceAttr": "",
+      "targetAttr": ""
+    }
+  ],
+  "initialValue": {
+    "CaseObject": {
+      "name": "value",
+      "name2": "value2"
+    }
+  }
+}
