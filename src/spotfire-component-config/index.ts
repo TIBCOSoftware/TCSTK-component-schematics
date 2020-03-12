@@ -31,14 +31,7 @@ export default function (options: any): Rule {
     ])),
     addDeclarationToNgModule(options, false),
     addImportToNgModule(options, 'TcSpotfireLibModule', '@tibco-tcstk/tc-spotfire-lib'),
-    () => {
-      //options.formRegistry = '/src/app/form.registry.ts';
-      // TODO: Set Options
-      // console.warn('Options (Form Registry): ',options);
-    },
     addSFRoutes(options),
     addSFMenuConfig(options)
-    // TODO: Hier verder add the config JSON Files...
-
   ]);
 }

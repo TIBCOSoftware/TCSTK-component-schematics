@@ -10,10 +10,40 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "sfserver": {
+      "type": "string",
+      "description": "The Spotfire Server to use",
+      "x-prompt": "What is the Spotfire server you want to use ?",
+      "default": "https://demo.spotfire.cloud.tibco.com"
+    },
+    "sflocation": {
+      "type": "string",
+      "description": "The Spotfire Report Location",
+      "x-prompt": "What is the Location of the Spotfire Report you want to use ?",
+      "default": "/Public/Expense Analyzer Dashboard"
+    },
+    "doAddRoutes": {
+      "type": "boolean",
+      "description": "",
+      "x-prompt": "Do you want to add the routes ?",
+      "default": "true"
+    },
+    "doAddConfig": {
+      "type": "boolean",
+      "description": "",
+      "x-prompt": "Do you want to add the configuration menu for Spotfire ?",
+      "default": "true"
+    },
+    "doAddMapping": {
+      "type": "boolean",
+      "description": "",
+      "x-prompt": "Do you want to add configuration for Spotfire Mapping to LiveApps ?",
+      "default": "true"
     }
   },
   "required": [
-    "name"
+    "name","sfserver","sflocation","doAddRoutes","doAddConfig","doAddMapping"
   ]
 }
 

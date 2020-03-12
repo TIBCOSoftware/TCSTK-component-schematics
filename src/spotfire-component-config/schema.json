@@ -43,7 +43,7 @@
     }
     },
   "required": [
-    "name","sfserver","sflocation"
+    "name","sfserver","sflocation","doAddRoutes","doAddConfig","doAddMapping"
   ]
 }
 

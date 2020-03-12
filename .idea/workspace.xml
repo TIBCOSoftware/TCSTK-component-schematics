@@ -2,31 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbb5c1a-d41f-4d18-8b57-0b53cafcbd13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/app/__name@dasherize__/__name@dasherize__-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/app/__name@dasherize__/__name@dasherize__.component.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/assets/config/spotfireAppConfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/files/src/assets/config/spotfireCreateLiveAppsCaseMapping.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spotfire-component-config/schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/assets/config/spotfireAppConfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/assets/config/spotfireCreateLiveAppsCaseMapping.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/files/src/app/__name@dasherize__/__name@dasherize__.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics-cockpit/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics-cockpit/schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/schematic-utils/schematic-util-wrapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spotfire-component-basic/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spotfire-component-basic/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spotfire-component-basic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-basic/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spotfire-component-config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/spotfire-component-config/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/spotfire-component-config/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,30 +45,30 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/spotfire-component-config/asset-files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/analytics-cockpit/files" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/hpeters83/cloud-starter-application-template.git" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/spotfire-component-config/asset-files" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/custom-home-cockpit/src/app" />
-      <recent name="$PROJECT_DIR$/src/home-cockpit" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/analytics-cockpit/files/src" />
       <recent name="$PROJECT_DIR$/src/spotfire-component-config/files/src/assets/config" />
       <recent name="$PROJECT_DIR$/src/schematic-utils" />
       <recent name="$PROJECT_DIR$/src/custom-form/files/src/app/custom-forms" />
       <recent name="$PROJECT_DIR$/src/home-cockpit/files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/analytics-cockpit/files" />
+      <recent name="$PROJECT_DIR$/src/spotfire-component-config/asset-files" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/custom-home-cockpit/src/app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -174,14 +163,9 @@
       <workItem from="1581669396252" duration="589000" />
       <workItem from="1582620766813" duration="15668000" />
       <workItem from="1582718593783" duration="1067000" />
-      <workItem from="1583914175259" duration="18550000" />
-    </task>
-    <task id="LOCAL-00012" summary="Comp name">
-      <created>1548850103774</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1548850103774</updated>
+      <workItem from="1583914175259" duration="19135000" />
+      <workItem from="1584001466951" duration="620000" />
+      <workItem from="1584002320056" duration="2959000" />
     </task>
     <task id="LOCAL-00013" summary="Fixed super()">
       <created>1548926350425</created>
@@ -519,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582715896111</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="A schematic for Spotfire with Settings">
+      <created>1583965606732</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1583965606733</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +649,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Added input imports" />
     <MESSAGE value="Removed Sample components" />
     <MESSAGE value="Added Dasherize" />
     <MESSAGE value="Upgrade to Angular 8" />
@@ -683,17 +673,22 @@
     <MESSAGE value="Updates on the cockpit" />
     <MESSAGE value="Spotfire Base Schematic" />
     <MESSAGE value="Basic Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Settings" />
+    <MESSAGE value="A schematic for Spotfire with Settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="A schematic for Spotfire with Settings" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="196" y="144" key="CommitChangelistDialog2" timestamp="1582715895973">
+    <state x="196" y="144" key="CommitChangelistDialog2" timestamp="1583965606486">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="196" y="144" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1582715895973" />
-    <state x="395" y="282" key="Vcs.Push.Dialog.v2" timestamp="1582715897678">
+    <state x="196" y="144" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1583965606486" />
+    <state x="398" y="155" key="SettingsEditor" timestamp="1584005104237">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="398" y="155" key="SettingsEditor/-1920.23.1920.1002/0.23.1680.1027@0.23.1680.1027" timestamp="1584005104237" />
+    <state x="395" y="282" key="Vcs.Push.Dialog.v2" timestamp="1583965609431">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="395" y="282" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1582715897678" />
+    <state x="395" y="282" key="Vcs.Push.Dialog.v2/-1920.23.1920.1057/0.23.1680.972@0.23.1680.972" timestamp="1583965609431" />
     <state x="426" y="119" width="1160" height="760" key="find.popup" timestamp="1583943977170">
       <screen x="0" y="23" width="1680" height="973" />
     </state>

@@ -26,6 +26,21 @@
            fxLayout="row" fxLayout.lt-md="column">
         <div fxFlex.gt-sm="grow" fxLayout="row" style="" [ngStyle.lt-md]="'min-height: 400px;'">
           <mat-tab-group fxFlex>
+            <mat-tab label="Analytics">
+              <ng-template matTabContent>
+                <div class="recentCasesWidget" fxFill>
+                  <tcsf-spotfire-wrapper  style="width: 100%; height: 100%;"
+                                          [url]="sFConfig.spotfireServer"
+                                          [path]="sFConfig.analysisPath"
+                                          [customization]="sfProps"
+                                          [markingOn]="sfMarkingOn"
+                                          (markingEvent)="marking($event);"
+                                          [maxRows]="sfMarkingMaxRows"
+                                          id="SF-id-<%= dasherize(name) %>">
+                  </tcsf-spotfire-wrapper>
+                </div>
+              </ng-template>
+            </mat-tab>
             <mat-tab label="Recent Cases">
               <ng-template matTabContent>
                 <div class="recentCasesWidget" fxFill>

@@ -41,6 +41,9 @@ export interface MyModuleOptions extends ModuleOptions{
     formRegistry?: string;
     type?:string;
     formRef?:string;
+    doAddRoutes?:boolean;
+    doAddConfig?:boolean;
+    doAddMapping?:boolean;
 }
 
 export function showHead(type:string, context: SchematicContext, options:any){
@@ -389,10 +392,11 @@ const sFSettingResolverImport = "import {SpotfireConfigResolver} from '@tibco-tc
 const sFSettingMappingImport = "import {SpotfireMarkingLiveappsConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';\n";
 
 // Function to update the route configuration
-export function addSFRoutes(options: any){
-    // TODO: Add Input: options: routeConfig
+export function addSFRoutes(options: MyModuleOptions){
+    console.log('Spotfire Routes:');
     return (host: Tree) => {
         if(options.doAddRoutes) {
+            console.log('Adding Spotfire Routes...');
             const doSFMapping = options.doAddMapping;
             // Adding the configuration route
             const configST = 'CONFIGURATION_ROUTE_CONFIG = [';
@@ -416,7 +420,9 @@ export function addSFRoutes(options: any){
                 host = insertIntoFile(host, routeHomeLocation, [''], sFSettingMappingImport, 0);
                 host = insertIntoFile(host, routeHomeLocation, pathST, sfMarkingResolverDef, -1);
             }
-        }
+        } else {
+        console.log('Skipping...');
+    }
         return host;
     };
 }
@@ -439,10 +445,11 @@ const sFMenuConfigMapping = ",{\n" +
     "    }\n";
 
 // Function to update the MENU configuration
-export function addSFMenuConfig(options: any){
-    // TODO: Add Input: options: routeConfig
+export function addSFMenuConfig(options: MyModuleOptions){
+    console.log('Spotfire Menu Configurations:');
     return (host: Tree) => {
         if(options.doAddConfig) {
+            console.log('Adding Spotfire Menu Configurations');
             const doSFMapping = options.doAddMapping;
             const configMenuLocation = 'src/assets/config/configurationMenuConfig.json';
             var fRegBuffer = host.read(configMenuLocation);
@@ -457,6 +464,8 @@ export function addSFMenuConfig(options: any){
                 recorder.insertRight(location, toInsertAfter);
                 host.commitUpdate(recorder);
             }
+        } else {
+            console.log('Skipping...');
         }
         return host;
     };

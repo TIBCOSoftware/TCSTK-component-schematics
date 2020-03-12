@@ -1,7 +1,10 @@
 import {Component, EventEmitter, Input, Output, SimpleChanges, OnChanges} from '@angular/core';
-import {RouteAction} from '@tibco-tcstk/tc-core-lib';
-import {LiveAppsHomeCockpitComponent,Roles,RouteAccessControlConfigurationElement, FormConfig} from '@tibco-tcstk/tc-liveapps-lib';
+import {RouteAction, TcButtonsHelperService} from '@tibco-tcstk/tc-core-lib';
+import {LiveAppsHomeCockpitComponent, Roles, RouteAccessControlConfigurationElement, FormConfig, CaseType, TcRolesService} from '@tibco-tcstk/tc-liveapps-lib';
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
+import {SpotfireConfig, SpotfireMarkingCreateCaseConfig, TcSpotfireService} from '@tibco-tcstk/tc-spotfire-lib';
+import {ActivatedRoute} from '@angular/router';
+import {MatDialog} from '@angular/material';
 
 @Component({
     selector: '<%= dasherize(name) %>',
@@ -88,7 +91,59 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
      */
 @Output() routeAction: EventEmitter<RouteAction> = new EventEmitter<RouteAction>();
 
+    // Set your own custom configuration of the Spotfire Report
+    sfProps = {
+        showAbout: false,
+        showAnalysisInformationTool: false,
+        showAuthor: false,
+        showClose: false,
+        showCustomizableHeader: false,
+        showDodPanel: false,
+        showExportFile: false,
+        showExportVisualization: false,
+        showFilterPanel: false,
+        showHelp: false,
+        showLogout: false,
+        showPageNavigation: true,
+        showAnalysisInfo: false,
+        showReloadAnalysis: false,
+        showStatusBar: false,
+        showToolBar: false,
+        showUndoRedo: false
+    };
+
+    // Holders for Spotfire and Marking Mapping configuration
+    public sFConfig: SpotfireConfig;
+    public sFMarkingConfig: SpotfireMarkingCreateCaseConfig;
+
+    // Configuration for what marking to listen to and how many marking rows to pick up (maximum)
+    public sfMarkingOn = '*';
+    public sfMarkingMaxRows = 1000;
+
+    // Variables for LiveApps Data and Marking
+    private laData = {};
+    private markingValue = {};
+
+    // Set initial configuration from data in config
+    constructor (protected buttonsHelper: TcButtonsHelperService, public dialog: MatDialog, protected rolesService: TcRolesService, protected sFHelper: TcSpotfireService, private activeRoute: ActivatedRoute){
+        super(buttonsHelper, dialog, rolesService);
+        this.sFConfig = activeRoute.snapshot.data.spotfireConfigHolder;
+        this.sFMarkingConfig = activeRoute.snapshot.data.spotfireMappingConfigHolder;
+    }
+
+    // Function for changes
     ngOnChanges(changes: SimpleChanges): void {
         super.ngOnChanges(changes);
+    }
+
+    // Function to pick up a marking change.
+    marking(mark) {
+        this.markingValue = mark;
+    }
+
+    // Create case in LiveApps based on marking
+    public handleCreatorAppSelection = (application: CaseType): void => {
+        this.laData = this.sFHelper.createLiveAppsData(this.markingValue, this.sFMarkingConfig);
+        this.openCreatorDialog(application, this.laData, this.sandboxId, this.customFormDefs, false, this.formsFramework, this.formConfig);
     }
 }

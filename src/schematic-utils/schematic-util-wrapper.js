@@ -327,9 +327,10 @@ const sFSettingResolverImport = "import {SpotfireConfigResolver} from '@tibco-tc
 const sFSettingMappingImport = "import {SpotfireMarkingLiveappsConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';\n";
 // Function to update the route configuration
 function addSFRoutes(options) {
-    // TODO: Add Input: options: routeConfig
+    console.log('Spotfire Routes:');
     return (host) => {
         if (options.doAddRoutes) {
+            console.log('Adding Spotfire Routes...');
             const doSFMapping = options.doAddMapping;
             // Adding the configuration route
             const configST = 'CONFIGURATION_ROUTE_CONFIG = [';
@@ -354,6 +355,9 @@ function addSFRoutes(options) {
                 host = insertIntoFile(host, routeHomeLocation, pathST, sfMarkingResolverDef, -1);
             }
         }
+        else {
+            console.log('Skipping...');
+        }
         return host;
     };
 }
@@ -375,9 +379,10 @@ const sFMenuConfigMapping = ",{\n" +
     "    }\n";
 // Function to update the MENU configuration
 function addSFMenuConfig(options) {
-    // TODO: Add Input: options: routeConfig
+    console.log('Spotfire Menu Configurations:');
     return (host) => {
         if (options.doAddConfig) {
+            console.log('Adding Spotfire Menu Configurations');
             const doSFMapping = options.doAddMapping;
             const configMenuLocation = 'src/assets/config/configurationMenuConfig.json';
             var fRegBuffer = host.read(configMenuLocation);
@@ -392,6 +397,9 @@ function addSFMenuConfig(options) {
                 recorder.insertRight(location, toInsertAfter);
                 host.commitUpdate(recorder);
             }
+        }
+        else {
+            console.log('Skipping...');
         }
         return host;
     };
