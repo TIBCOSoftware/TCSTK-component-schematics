@@ -29,6 +29,9 @@ ng generate @tibco-tcstk/component-template:home-cockpit CustomHomeCockpit
 ng generate @tibco-tcstk/component-template:custom-form-creator CustomFormCreator
 ng generate @tibco-tcstk/component-template:custom-form-action CustomFormAction
 ng generate @tibco-tcstk/component-template:custom-form-casedata CustomFormCaseData
+ng generate @tibco-tcstk/component-template:analytics-cockpit CustomAnalyticsCockpit
+ng generate @tibco-tcstk/component-template:spotfire-component-basic CustomSpotfireComponent
+ng generate @tibco-tcstk/component-template:spotfire-component-config CustomSpotfireComponentWithConfig
 
 ```
 You can change the entries starting with custom into any name you like.
