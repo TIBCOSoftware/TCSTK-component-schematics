@@ -339,8 +339,9 @@ export function addSpotfireLibs(): Rule {
         //console.log(' ' + host + ' ' + context);
         console.log('Adding Spotfire Libraries...');
         const dependencies: NodeDependency[] = [
-            {type: NodeDependencyType.Default, version: '^0.7.3', name: '@tibco/spotfire-wrapper'},
-            {type: NodeDependencyType.Default, version: '^1.2.2', name: '@tibco-tcstk/tc-spotfire-lib'}];
+            //TODO: make versions configurable
+            {type: NodeDependencyType.Default, version: '^0.8.0', name: '@tibco/spotfire-wrapper'},
+            {type: NodeDependencyType.Default, version: '^1.2.5', name: '@tibco-tcstk/tc-spotfire-lib'}];
         addPackageDependencies(host, dependencies);
         console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');
         return host;
