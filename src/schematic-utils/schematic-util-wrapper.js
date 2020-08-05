@@ -260,11 +260,14 @@ function addImport(host, options, lib, importPath) {
     console.log('Adding Import to Point: ', modulePath);
     console.log('Library to Import: ' + lib);
     console.log('      Import Path: ' + importPath);
+    const importChanges = schematics_utilities_1.addImportToModule(schematics_utilities_1.getSourceFile(host, options.module), modulePath, lib, importPath);
+    // TODO: Fix this to update to (schematics-utilities - 2.0.1)
+    /*
     //const sourceFile:typescript.SourceFile = getSourceFile(host, options.module);
-    const sourceFile = schematics_utilities_1.getSourceFile(host, options.module);
-    console.log('ADDING SOURCE FILE: ', sourceFile);
-    const importChanges = schematics_utilities_1.addImportToModule(sourceFile, modulePath, lib, importPath);
-    console.log('DONE ADDING SOURCE FILE: ', importChanges);
+    const sourceFile:any = getSourceFile(host, options.module);
+    console.log('ADDING SOURCE FILE: ' , sourceFile);
+    const importChanges = addImportToModule(sourceFile, modulePath, lib, importPath );
+    console.log('DONE ADDING SOURCE FILE: ' , importChanges);*/
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
         if (change instanceof schematics_utilities_1.InsertChange) {
