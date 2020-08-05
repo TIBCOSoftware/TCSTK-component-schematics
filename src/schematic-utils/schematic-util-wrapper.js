@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createFile = exports.addSFMenuConfig = exports.addSFRoutes = exports.routeConfig = exports.addSpotfireLibs = exports.addImportToNgModule = exports.addPackageDependencies = exports.addDeclarationToNgModule = exports.addEntryPointToNgModule = exports.updateFormRegistry = exports.formChain = exports.addDependencies = exports.showHead = exports.AddToModuleContext = void 0;
 const schematics_1 = require("@angular-devkit/schematics");
 const schematics_utilities_1 = require("schematics-utilities");
 const core_1 = require("@angular-devkit/core");
 const strings_1 = require("@angular-devkit/core/src/utils/strings");
+// import {typescript} from "schematics-utilities/dist/cdk";
 // import {addDeclarationToModule, addExportToModule} from "../schematics-angular-utils/ast-utils";
 const stringUtils = { dasherize: strings_1.dasherize, classify: strings_1.classify };
 class AddToModuleContext {
@@ -13,7 +15,7 @@ function showHead(type, context, options) {
     // Show the options for this Schematics.
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-    context.logger.info('--- **                V1.2.2             ** ---');
+    context.logger.info('--- **                V1.2.5             ** ---');
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- ** TYPE: ' + type.toUpperCase());
     context.logger.info('-----------------------------------------------');
@@ -258,7 +260,11 @@ function addImport(host, options, lib, importPath) {
     console.log('Adding Import to Point: ', modulePath);
     console.log('Library to Import: ' + lib);
     console.log('      Import Path: ' + importPath);
-    const importChanges = schematics_utilities_1.addImportToModule(schematics_utilities_1.getSourceFile(host, options.module), modulePath, lib, importPath);
+    //const sourceFile:typescript.SourceFile = getSourceFile(host, options.module);
+    const sourceFile = schematics_utilities_1.getSourceFile(host, options.module);
+    console.log('ADDING SOURCE FILE: ', sourceFile);
+    const importChanges = schematics_utilities_1.addImportToModule(sourceFile, modulePath, lib, importPath);
+    console.log('DONE ADDING SOURCE FILE: ', importChanges);
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
         if (change instanceof schematics_utilities_1.InsertChange) {
@@ -280,8 +286,9 @@ function addSpotfireLibs() {
         //console.log(' ' + host + ' ' + context);
         console.log('Adding Spotfire Libraries...');
         const dependencies = [
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.7.3', name: '@tibco/spotfire-wrapper' },
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^1.2.2', name: '@tibco-tcstk/tc-spotfire-lib' }
+            //TODO: make versions configurable
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.8.0', name: '@tibco/spotfire-wrapper' },
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^1.2.5', name: '@tibco-tcstk/tc-spotfire-lib' }
         ];
         addPackageDependencies(host, dependencies);
         console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');

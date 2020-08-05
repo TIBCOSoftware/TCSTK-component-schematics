@@ -23,6 +23,7 @@ import {
 } from "schematics-utilities";
 import {strings} from "@angular-devkit/core";
 import {classify,dasherize} from "@angular-devkit/core/src/utils/strings";
+// import {typescript} from "schematics-utilities/dist/cdk";
 // import {addDeclarationToModule, addExportToModule} from "../schematics-angular-utils/ast-utils";
 const stringUtils = { dasherize, classify };
 
@@ -50,7 +51,7 @@ export function showHead(type:string, context: SchematicContext, options:any){
         // Show the options for this Schematics.
         context.logger.info('-----------------------------------------------');
         context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-        context.logger.info('--- **                V1.2.2             ** ---');
+        context.logger.info('--- **                V1.2.5             ** ---');
         context.logger.info('-----------------------------------------------');
         context.logger.info('--- ** TYPE: ' + type.toUpperCase());
         context.logger.info('-----------------------------------------------');
@@ -316,7 +317,11 @@ function addImport(host: Tree, options: ModuleOptions, lib: string, importPath :
     console.log('Adding Import to Point: ',modulePath);
     console.log('Library to Import: ' + lib)
     console.log('      Import Path: ' + importPath);
-    const importChanges = addImportToModule(getSourceFile(host, options.module), modulePath, lib, importPath );
+    //const sourceFile:typescript.SourceFile = getSourceFile(host, options.module);
+    const sourceFile:any = getSourceFile(host, options.module);
+    console.log('ADDING SOURCE FILE: ' , sourceFile)
+    const importChanges = addImportToModule(sourceFile, modulePath, lib, importPath );
+    console.log('DONE ADDING SOURCE FILE: ' , importChanges)
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
         if (change instanceof InsertChange) {
