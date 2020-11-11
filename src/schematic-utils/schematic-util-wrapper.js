@@ -15,7 +15,7 @@ function showHead(type, context, options) {
     // Show the options for this Schematics.
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-    context.logger.info('--- **                V1.2.5             ** ---');
+    context.logger.info('--- **                V2.1.0             ** ---');
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- ** TYPE: ' + type.toUpperCase());
     context.logger.info('-----------------------------------------------');
@@ -260,6 +260,7 @@ function addImport(host, options, lib, importPath) {
     console.log('Adding Import to Point: ', modulePath);
     console.log('Library to Import: ' + lib);
     console.log('      Import Path: ' + importPath);
+    // @ts-ignore
     const importChanges = schematics_utilities_1.addImportToModule(schematics_utilities_1.getSourceFile(host, options.module), modulePath, lib, importPath);
     // TODO: Fix this to update to (schematics-utilities - 2.0.1)
     /*
@@ -290,8 +291,8 @@ function addSpotfireLibs() {
         console.log('Adding Spotfire Libraries...');
         const dependencies = [
             //TODO: make versions configurable
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.8.0', name: '@tibco/spotfire-wrapper' },
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^1.2.5', name: '@tibco-tcstk/tc-spotfire-lib' }
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.13.0', name: '@tibco/spotfire-wrapper' },
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^2.1.0-rc', name: '@tibco-tcstk/tc-spotfire-lib' }
         ];
         addPackageDependencies(host, dependencies);
         console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');

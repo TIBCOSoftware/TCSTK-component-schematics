@@ -12,7 +12,7 @@ function default_1(options) {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.07              ** ---');
+            context.logger.info('--- **                V2.1.0             ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: CLOUD EVENTS                ** ---');
             context.logger.info('-----------------------------------------------');
@@ -35,6 +35,7 @@ function default_1(options) {
             context.logger.info('sourceLoc: ' + sourceLoc);
             context.logger.info('Project Root: ' + project.root);
             //console.log(project);
+            // @ts-ignore
             schematics_utilities_1.addModuleImportToRootModule(host, moduleName, sourceLoc, project);
             context.logger.info('Installed Dependencies...');
         },

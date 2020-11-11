@@ -10,10 +10,10 @@
   },
   "schematics": "./src/collection.json",
   "devDependencies": {
-    "@angular-devkit/core": "^9.1.12",
-    "@angular-devkit/schematics": "^9.1.12",
-    "@types/node": "^8.10.62",
-    "typescript": "^3.9.7"
+    "@angular-devkit/core": "^10.2.0",
+    "@angular-devkit/schematics": "^10.2.0",
+    "@types/node": "^12.19.4",
+    "typescript": "^4.0.5"
   },
   "dependencies": {
     "schematics-utilities": "^2.0.2"
