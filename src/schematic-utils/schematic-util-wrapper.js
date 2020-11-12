@@ -155,7 +155,7 @@ function addEntryPointToNgModule(options) {
 exports.addEntryPointToNgModule = addEntryPointToNgModule;
 // wrapper to create a rule
 function addDeclarationToNgModule(options, exports) {
-    // console.log('addDeclarationToNgModule:' , options.module);
+    // console.log('addDeclarationToNgModule:' , options);
     return (host) => {
         addDeclaration(host, options);
         if (exports) {
@@ -167,27 +167,29 @@ function addDeclarationToNgModule(options, exports) {
 exports.addDeclarationToNgModule = addDeclarationToNgModule;
 // Function to add a declaration to a module
 function addDeclaration(host, options) {
-    // console.log('Add Declaration', host);
-    console.log('Adding Declaration:', options.module);
+    //console.log('Add Declaration', host);
+    // console.log('Adding Declaration:' , options.module);
     const context = createAddToModuleContext(host, options);
     const modulePath = options.module || '';
-    // console.log('context.source:',context.source);
-    // console.log('modulePath:',modulePath);
-    // console.log('context.classifiedName:',context.classifiedName);
-    // console.log('context.relativePath:',context.relativePath);
+    //console.log('context.source:',context.source);
+    //console.log('modulePath:',modulePath);
+    //console.log('context.classifiedName:',context.classifiedName);
+    //console.log('context.relativePath:',context.relativePath);
     const declarationChanges = schematics_utilities_1.addDeclarationToModule(context.source, modulePath, context.classifiedName, context.relativePath);
     // console.log('declarationChanges:',declarationChanges);
     const declarationRecorder = host.beginUpdate(modulePath);
-    // console.log('mp:',modulePath);
-    for (const change of declarationChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            // console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+    // console.log('mp: ',modulePath);
+    for (const myChange of declarationChanges) {
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = myChange;
+        //if (myChange instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',newChange.pos , ' change.toAdd:',newChange.toAdd);
+        //}
     }
+    // console.log('Commit Update: ' , declarationRecorder);
     host.commitUpdate(declarationRecorder);
 }
-;
 // Function to add an export to a module
 function addExport(host, options) {
     const context = createAddToModuleContext(host, options);
@@ -195,13 +197,14 @@ function addExport(host, options) {
     const exportChanges = schematics_utilities_1.addExportToModule(context.source, modulePath, context.classifiedName, context.relativePath);
     const exportRecorder = host.beginUpdate(modulePath);
     for (const change of exportChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            exportRecorder.insertLeft(change.pos, change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        exportRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //}
     }
     host.commitUpdate(exportRecorder);
 }
-;
 // Function to add an Entry point to the module
 function addEntryPoint(host, options) {
     const context = createAddToModuleContext(host, options);
@@ -216,19 +219,20 @@ function addEntryPoint(host, options) {
     const declarationRecorder = host.beginUpdate(modulePath);
     // console.log('mp:',modulePath);
     for (const change of declarationChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        //}
     }
     host.commitUpdate(declarationRecorder);
 }
-;
 //Function to build up the AddToModule Context class
 function createAddToModuleContext(host, options) {
     console.log('Create Add to Module Context: ', options.module);
     const result = new AddToModuleContext();
-    // console.log('options.module: ', options.module);
+    console.log('options.module: ', options.module);
     if (!options.module) {
         throw new schematics_1.SchematicsException(`Module not found.`);
     }
@@ -271,10 +275,12 @@ function addImport(host, options, lib, importPath) {
     console.log('DONE ADDING SOURCE FILE: ' , importChanges);*/
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        //}
     }
     host.commitUpdate(declarationRecorder);
 }
