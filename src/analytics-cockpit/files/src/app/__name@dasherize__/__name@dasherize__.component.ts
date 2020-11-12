@@ -4,7 +4,7 @@ import {LiveAppsHomeCockpitComponent, Roles, RouteAccessControlConfigurationElem
 import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 import {SpotfireConfig, SpotfireMarkingCreateCaseConfig, TcSpotfireService} from '@tibco-tcstk/tc-spotfire-lib';
 import {ActivatedRoute} from '@angular/router';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
     selector: '<%= dasherize(name) %>',
