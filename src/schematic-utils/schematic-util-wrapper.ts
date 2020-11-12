@@ -22,10 +22,10 @@ import {
     addExportToModule, getSourceFile, addPackageJsonDependency, NodeDependency, addImportToModule, NodeDependencyType
 } from "schematics-utilities";
 import {strings} from "@angular-devkit/core";
-import {classify,dasherize} from "@angular-devkit/core/src/utils/strings";
+import {classify, dasherize} from "@angular-devkit/core/src/utils/strings";
 // import {typescript} from "schematics-utilities/dist/cdk";
 // import {addDeclarationToModule, addExportToModule} from "../schematics-angular-utils/ast-utils";
-const stringUtils = { dasherize, classify };
+const stringUtils = {dasherize, classify};
 
 export class AddToModuleContext {
     source: any;
@@ -33,32 +33,32 @@ export class AddToModuleContext {
     classifiedName: string;
 }
 
-export interface MyModuleOptions extends ModuleOptions{
+export interface MyModuleOptions extends ModuleOptions {
     module?: string;
     name: string;
     flat?: boolean;
     path?: string;
     skipImport?: boolean;
     formRegistry?: string;
-    type?:string;
-    formRef?:string;
-    doAddRoutes?:boolean;
-    doAddConfig?:boolean;
-    doAddMapping?:boolean;
+    type?: string;
+    formRef?: string;
+    doAddRoutes?: boolean;
+    doAddConfig?: boolean;
+    doAddMapping?: boolean;
 }
 
-export function showHead(type:string, context: SchematicContext, options:any){
-        // Show the options for this Schematics.
-        context.logger.info('-----------------------------------------------');
-        context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-        context.logger.info('--- **                V2.1.0             ** ---');
-        context.logger.info('-----------------------------------------------');
-        context.logger.info('--- ** TYPE: ' + type.toUpperCase());
-        context.logger.info('-----------------------------------------------');
-        context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
+export function showHead(type: string, context: SchematicContext, options: any) {
+    // Show the options for this Schematics.
+    context.logger.info('-----------------------------------------------');
+    context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
+    context.logger.info('--- **                V2.1.0             ** ---');
+    context.logger.info('-----------------------------------------------');
+    context.logger.info('--- ** TYPE: ' + type.toUpperCase());
+    context.logger.info('-----------------------------------------------');
+    context.logger.info('Building TIBCO Cloud Component, with the following settings: ' + JSON.stringify(options));
 }
 
-export function addDependencies(options: any, context: SchematicContext, host: Tree){
+export function addDependencies(options: any, context: SchematicContext, host: Tree) {
     context.logger.log('info', "Name: " + options.name);
     context.logger.info('Adding dependencies...');
     const workspace = getWorkspace(host);
@@ -92,11 +92,12 @@ export function addDependencies(options: any, context: SchematicContext, host: T
 }
 
 
-
 // Function for form
-export function formChain(options: any, type: string){
+export function formChain(options: any, type: string) {
     return chain([
-        (_tree: Tree, context: SchematicContext) => {showHead('CUSTOM FORM: ' + type, context,options);},
+        (_tree: Tree, context: SchematicContext) => {
+            showHead('CUSTOM FORM: ' + type, context, options);
+        },
         // Adding dependencies
         (host: Tree, context: SchematicContext) => {
             context.logger.log('info', "Name: " + options.name);
@@ -121,9 +122,9 @@ export function formChain(options: any, type: string){
                 options.path = `/${project.root}/src/${projectDirName}`;
             }
             options.module = findModuleFromOptions(host, options);
-            const moduleNameNew = options.name + '-'+type+ '-form';
-            const parsedPath = parseName(options.path+ '/custom-forms/', moduleNameNew);
-            console.log('parsedPath: ' , parsedPath);
+            const moduleNameNew = options.name + '-' + type + '-form';
+            const parsedPath = parseName(options.path + '/custom-forms/', moduleNameNew);
+            console.log('parsedPath: ', parsedPath);
             options.name = parsedPath.name;
             context.logger.info('options.name: ' + options.name);
             options.path = parsedPath.path;
@@ -131,7 +132,7 @@ export function formChain(options: any, type: string){
             options.export = false;
             // context.logger.info('Adding declaration: ' + options.export);
             options.type = type;
-           console.warn('Options: ',options);
+            console.warn('Options: ', options);
         },
         //Apply Template
         mergeWith(apply(url('./files'), [
@@ -144,13 +145,13 @@ export function formChain(options: any, type: string){
         addDeclarationToNgModule(options, false),
         addEntryPointToNgModule(options),
         () => {
-            options.module = options.module.replace('.ts','.dev');
+            options.module = options.module.replace('.ts', '.dev');
             // console.warn('Options (DEV): ',options);
         },
         addDeclarationToNgModule(options, false),
         addEntryPointToNgModule(options),
         () => {
-            options.module = options.module.replace('.dev','.build');
+            options.module = options.module.replace('.dev', '.build');
             // console.warn('Options (BUILD): ',options);
         },
         addDeclarationToNgModule(options, false),
@@ -164,12 +165,12 @@ export function formChain(options: any, type: string){
 }
 
 // Function to update the form registry
-export function updateFormRegistry(options: MyModuleOptions){
+export function updateFormRegistry(options: MyModuleOptions) {
     return (host: Tree) => {
-        console.log('Updating form registry: ' ,options);
-        if(options.formRegistry && options.formRef && options.type && options.name){
+        console.log('Updating form registry: ', options);
+        if (options.formRegistry && options.formRef && options.type && options.name) {
             var fRegBuffer = host.read(options.formRegistry);
-            if(fRegBuffer) {
+            if (fRegBuffer) {
                 var content = fRegBuffer.toString();
                 // console.warn('Form Registry: ', content);
                 console.log('--- Updating Form Registry ---')
@@ -177,13 +178,13 @@ export function updateFormRegistry(options: MyModuleOptions){
                 console.log('-        ID: ' + options.formRef);
                 console.log('-      TYPE: ' + options.type);
                 console.log('-      NAME: ' + options.name);
-                const toInsert = "\n  new FormRecord('"+options.formRef+"', '"+options.type+"', '"+options.name+"', '"+ options.name + " " + options.type + " Form', "+ classify(options.name ) + "Component),";
+                const toInsert = "\n  new FormRecord('" + options.formRef + "', '" + options.type + "', '" + options.name + "', '" + options.name + " " + options.type + " Form', " + classify(options.name) + "Component),";
                 console.log('- INSERTING: ' + toInsert);
                 const searchString = 'FORM_REGISTRY = [';
                 recorder.insertRight(content.indexOf(searchString) + searchString.length, toInsert);
                 // Add the import statement
-                const importStatement = 'import {' + classify(options.name) +'Component} from \'./custom-forms/' + dasherize(options.name) + '/' + dasherize(options.name) + '.component\';\n';
-                recorder.insertRight(0,importStatement);
+                const importStatement = 'import {' + classify(options.name) + 'Component} from \'./custom-forms/' + dasherize(options.name) + '/' + dasherize(options.name) + '.component\';\n';
+                recorder.insertRight(0, importStatement);
                 host.commitUpdate(recorder);
             }
         }
@@ -230,10 +231,10 @@ function addDeclaration(host: Tree, options: ModuleOptions) {
     // console.log('mp: ',modulePath);
     for (const myChange of declarationChanges) {
         // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
-        let newChange:InsertChange = <InsertChange>myChange;
+        let newChange: InsertChange = <InsertChange>myChange;
         //if (myChange instanceof InsertChange) {
-            declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
-            //console.log('change.pos:',newChange.pos , ' change.toAdd:',newChange.toAdd);
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',newChange.pos , ' change.toAdd:',newChange.toAdd);
         //}
     }
     // console.log('Commit Update: ' , declarationRecorder);
@@ -251,9 +252,9 @@ function addExport(host: Tree, options: ModuleOptions) {
     const exportRecorder = host.beginUpdate(modulePath);
     for (const change of exportChanges) {
         // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
-        let newChange:InsertChange = <InsertChange>change;
+        let newChange: InsertChange = <InsertChange>change;
         //if (change instanceof InsertChange) {
-            exportRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        exportRecorder.insertLeft(newChange.pos, newChange.toAdd);
         //}
     }
     host.commitUpdate(exportRecorder);
@@ -263,7 +264,7 @@ function addExport(host: Tree, options: ModuleOptions) {
 function addEntryPoint(host: Tree, options: MyModuleOptions) {
     const context = createAddToModuleContext(host, options);
     const modulePath = options.module || '';
-    console.log('Adding Entry Point: ',modulePath);
+    console.log('Adding Entry Point: ', modulePath);
     // console.log('AE]context.source:',context.source);
     // console.log('AE]modulePath:',modulePath);
     // console.log('AE]context.classifiedName:',context.classifiedName);
@@ -277,10 +278,10 @@ function addEntryPoint(host: Tree, options: MyModuleOptions) {
     // console.log('mp:',modulePath);
     for (const change of declarationChanges) {
         // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
-        let newChange:InsertChange = <InsertChange>change;
+        let newChange: InsertChange = <InsertChange>change;
         //if (change instanceof InsertChange) {
-            declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
-            // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
         //}
     }
     host.commitUpdate(declarationRecorder);
@@ -288,7 +289,7 @@ function addEntryPoint(host: Tree, options: MyModuleOptions) {
 
 //Function to build up the AddToModule Context class
 function createAddToModuleContext(host: Tree, options: ModuleOptions): AddToModuleContext {
-    console.log('Create Add to Module Context: ' , options.module);
+    console.log('Create Add to Module Context: ', options.module);
     const result = new AddToModuleContext();
     console.log('options.module: ', options.module);
     if (!options.module) {
@@ -316,16 +317,16 @@ export function addPackageDependencies(host: Tree, dependencies: NodeDependency[
 }
 
 // Function to import a library to node modules
-function addImport(host: Tree, options: ModuleOptions, lib: string, importPath : string) {
+function addImport(host: Tree, options: ModuleOptions, lib: string, importPath: string) {
     if (!options.module) {
         throw new SchematicsException(`Module not found.`);
     }
     const modulePath = options.module || '';
-    console.log('Adding Import to Point: ',modulePath);
+    console.log('Adding Import to Point: ', modulePath);
     console.log('Library to Import: ' + lib)
     console.log('      Import Path: ' + importPath);
     // @ts-ignore
-    const importChanges = addImportToModule(getSourceFile(host, options.module), modulePath, lib, importPath );
+    const importChanges = addImportToModule(getSourceFile(host, options.module), modulePath, lib, importPath);
     // TODO: Fix this to update to (schematics-utilities - 2.0.1)
     /*
     //const sourceFile:typescript.SourceFile = getSourceFile(host, options.module);
@@ -336,10 +337,10 @@ function addImport(host: Tree, options: ModuleOptions, lib: string, importPath :
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
         // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
-        let newChange:InsertChange = <InsertChange>change;
+        let newChange: InsertChange = <InsertChange>change;
         //if (change instanceof InsertChange) {
-            declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
-            //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
         //}
     }
     host.commitUpdate(declarationRecorder);
@@ -411,10 +412,10 @@ const sFSettingResolverImport = "import {SpotfireConfigResolver} from '@tibco-tc
 const sFSettingMappingImport = "import {SpotfireMarkingLiveappsConfigResolver} from '@tibco-tcstk/tc-spotfire-lib';\n";
 
 // Function to update the route configuration
-export function addSFRoutes(options: MyModuleOptions){
+export function addSFRoutes(options: MyModuleOptions) {
     console.log('Spotfire Routes:');
     return (host: Tree) => {
-        if(options.doAddRoutes) {
+        if (options.doAddRoutes) {
             console.log('Adding Spotfire Routes...');
             const doSFMapping = options.doAddMapping;
             // Adding the configuration route
@@ -440,8 +441,8 @@ export function addSFRoutes(options: MyModuleOptions){
                 host = insertIntoFile(host, routeHomeLocation, pathST, sfMarkingResolverDef, -1);
             }
         } else {
-        console.log('Skipping...');
-    }
+            console.log('Skipping Adding of Spotfire Routes......');
+        }
         return host;
     };
 }
@@ -464,10 +465,10 @@ const sFMenuConfigMapping = ",{\n" +
     "    }\n";
 
 // Function to update the MENU configuration
-export function addSFMenuConfig(options: MyModuleOptions){
+export function addSFMenuConfig(options: MyModuleOptions) {
     console.log('Spotfire Menu Configurations:');
     return (host: Tree) => {
-        if(options.doAddConfig) {
+        if (options.doAddConfig) {
             console.log('Adding Spotfire Menu Configurations');
             const doSFMapping = options.doAddMapping;
             const configMenuLocation = 'src/assets/config/configurationMenuConfig.json';
@@ -484,7 +485,7 @@ export function addSFMenuConfig(options: MyModuleOptions){
                 host.commitUpdate(recorder);
             }
         } else {
-            console.log('Skipping...');
+            console.log('Skipping Adding of Spotfire Menu Configurations...');
         }
         return host;
     };
@@ -493,26 +494,26 @@ export function addSFMenuConfig(options: MyModuleOptions){
 
 // Function to insert into a file
 // Leave search string blank ("") to add to the beginning of the file
-function insertIntoFile(host: Tree, fileName: string, searchString: string[], toInsertAfter: string , offset: number){
+function insertIntoFile(host: Tree, fileName: string, searchString: string[], toInsertAfter: string, offset: number) {
     var fRegBuffer = host.read(fileName);
-    if(fRegBuffer) {
+    if (fRegBuffer) {
         var content = fRegBuffer.toString();
         console.log('--- INSERTING INTO FILE (' + fileName + ') ---');
         console.log('- SEARCH STRING: ' + searchString);
         const recorder = host.beginUpdate(fileName);
         console.log('- INSERTING: ' + toInsertAfter);
-        if(searchString[0] === ""){
+        if (searchString[0] === "") {
             recorder.insertRight(0, toInsertAfter);
         } else {
             let insertAt = offset;
             let tempSearchString = content;
-            for(let st of searchString){
+            for (let st of searchString) {
                 console.log(st);
                 let tempLoc = tempSearchString.indexOf(st) + st.length;
                 tempSearchString = tempSearchString.substring(tempLoc);
                 insertAt += tempLoc;
             }
-            recorder.insertRight(insertAt , toInsertAfter);
+            recorder.insertRight(insertAt, toInsertAfter);
         }
         host.commitUpdate(recorder);
     }

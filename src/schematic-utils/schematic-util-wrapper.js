@@ -56,7 +56,9 @@ exports.addDependencies = addDependencies;
 // Function for form
 function formChain(options, type) {
     return schematics_1.chain([
-        (_tree, context) => { showHead('CUSTOM FORM: ' + type, context, options); },
+        (_tree, context) => {
+            showHead('CUSTOM FORM: ' + type, context, options);
+        },
         // Adding dependencies
         (host, context) => {
             context.logger.log('info', "Name: " + options.name);
@@ -373,7 +375,7 @@ function addSFRoutes(options) {
             }
         }
         else {
-            console.log('Skipping...');
+            console.log('Skipping Adding of Spotfire Routes......');
         }
         return host;
     };
@@ -416,7 +418,7 @@ function addSFMenuConfig(options) {
             }
         }
         else {
-            console.log('Skipping...');
+            console.log('Skipping Adding of Spotfire Menu Configurations...');
         }
         return host;
     };
