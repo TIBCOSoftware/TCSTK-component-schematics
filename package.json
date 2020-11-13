@@ -5,8 +5,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "bwatch": "tsc -p tsconfig.json -watch",
-    "test": "npm run build && jasmine src/**/*_spec.js",
-    "pub": "npm run build && npm publish --registry http://application-lb-npm-1392137160.eu-west-1.elb.amazonaws.com/#/"
+    "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "schematics": "./src/collection.json",
   "devDependencies": {
