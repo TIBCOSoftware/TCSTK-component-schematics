@@ -2,39 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular-devkit/core");
 const schematics_1 = require("@angular-devkit/schematics");
-//import {NodePackageInstallTask} from '@angular-devkit/schematics/tasks';
-//import {} from '@angular-devkit/schematics/tools/';
-//import { addPackageJsonDependency,getWorkspace, getProjectFromWorkspace, addModuleImportToRootModule ,NodeDependency, NodeDependencyType } from 'schematics-utilities';
 const schematics_utilities_1 = require("schematics-utilities");
-/*
-function addDependencies(host: Tree): Tree {
-  const dependencies: NodeDependency[] = [
-    { type: NodeDependencyType.Default, version: '4.17.10', name: 'lodash-es' }
-  ];
-
-  // 2. Just use it whenever you need :)
-  dependencies.forEach(dependency => addPackageJsonDependency(host, dependency));
-
-  return host;
-}
-
-function addModuleToImports(options: any): Rule {
-  return (host: Tree, context: SchematicContext) => {
-    const workspace = getWorkspace(host);
-    const project = getProjectFromWorkspace(
-        workspace,
-        // Takes the first project in case it's not provided by CLI
-        options.project ? options.project : Object.keys(workspace['projects'])[0]
-    );
-    const moduleName = 'MadeWithLoveModule';
-
-    addModuleImportToRootModule(host, moduleName, 'angular-made-with-love', project);
-    context.logger.log('info', `✅️ "${moduleName}" is imported`);
-
-    return host;
-  };
-}
-*/
 // Instead of `any`, it would make sense here to get a schema-to-dts package and output the
 // interfaces so you get type-safe options.
 function default_1(options) {
@@ -44,7 +12,7 @@ function default_1(options) {
             // Show the options for this Schematics.
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-            context.logger.info('--- **                V1.07              ** ---');
+            context.logger.info('--- **                V2.1.0             ** ---');
             context.logger.info('-----------------------------------------------');
             context.logger.info('--- ** TYPE: CLOUD BASE                  ** ---');
             context.logger.info('-----------------------------------------------');
@@ -58,9 +26,6 @@ function default_1(options) {
             context.logger.log('info', "Name: " + options.name);
             //context.logger.log('info', "Host: " + host);
             context.logger.info('Adding dependencies...');
-            //addDependencies(host);
-            //context.logger.info('Adding module to imports...')
-            //addModuleToImports(options);
             const workspace = schematics_utilities_1.getWorkspace(host);
             const project = schematics_utilities_1.getProjectFromWorkspace(workspace, 
             // Takes the first project in case it's not provided by CLI
@@ -73,6 +38,7 @@ function default_1(options) {
             context.logger.info('sourceLoc: ' + sourceLoc);
             context.logger.info('Project Root: ' + project.root);
             //console.log(project);
+            // @ts-ignore
             schematics_utilities_1.addModuleImportToRootModule(host, moduleName, sourceLoc, project);
             //addDeclarationToModule(getSourceFile(host, "/src/app/app.module.ts"),moduleName,options.name,sourceLoc);
             //options.module = moduleName;

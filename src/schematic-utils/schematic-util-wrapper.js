@@ -15,7 +15,7 @@ function showHead(type, context, options) {
     // Show the options for this Schematics.
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-    context.logger.info('--- **                V1.2.5             ** ---');
+    context.logger.info('--- **                V2.1.0             ** ---');
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- ** TYPE: ' + type.toUpperCase());
     context.logger.info('-----------------------------------------------');
@@ -56,7 +56,9 @@ exports.addDependencies = addDependencies;
 // Function for form
 function formChain(options, type) {
     return schematics_1.chain([
-        (_tree, context) => { showHead('CUSTOM FORM: ' + type, context, options); },
+        (_tree, context) => {
+            showHead('CUSTOM FORM: ' + type, context, options);
+        },
         // Adding dependencies
         (host, context) => {
             context.logger.log('info', "Name: " + options.name);
@@ -155,7 +157,7 @@ function addEntryPointToNgModule(options) {
 exports.addEntryPointToNgModule = addEntryPointToNgModule;
 // wrapper to create a rule
 function addDeclarationToNgModule(options, exports) {
-    // console.log('addDeclarationToNgModule:' , options.module);
+    // console.log('addDeclarationToNgModule:' , options);
     return (host) => {
         addDeclaration(host, options);
         if (exports) {
@@ -167,27 +169,29 @@ function addDeclarationToNgModule(options, exports) {
 exports.addDeclarationToNgModule = addDeclarationToNgModule;
 // Function to add a declaration to a module
 function addDeclaration(host, options) {
-    // console.log('Add Declaration', host);
-    console.log('Adding Declaration:', options.module);
+    //console.log('Add Declaration', host);
+    // console.log('Adding Declaration:' , options.module);
     const context = createAddToModuleContext(host, options);
     const modulePath = options.module || '';
-    // console.log('context.source:',context.source);
-    // console.log('modulePath:',modulePath);
-    // console.log('context.classifiedName:',context.classifiedName);
-    // console.log('context.relativePath:',context.relativePath);
+    //console.log('context.source:',context.source);
+    //console.log('modulePath:',modulePath);
+    //console.log('context.classifiedName:',context.classifiedName);
+    //console.log('context.relativePath:',context.relativePath);
     const declarationChanges = schematics_utilities_1.addDeclarationToModule(context.source, modulePath, context.classifiedName, context.relativePath);
     // console.log('declarationChanges:',declarationChanges);
     const declarationRecorder = host.beginUpdate(modulePath);
-    // console.log('mp:',modulePath);
-    for (const change of declarationChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            // console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+    // console.log('mp: ',modulePath);
+    for (const myChange of declarationChanges) {
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = myChange;
+        //if (myChange instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',newChange.pos , ' change.toAdd:',newChange.toAdd);
+        //}
     }
+    // console.log('Commit Update: ' , declarationRecorder);
     host.commitUpdate(declarationRecorder);
 }
-;
 // Function to add an export to a module
 function addExport(host, options) {
     const context = createAddToModuleContext(host, options);
@@ -195,13 +199,14 @@ function addExport(host, options) {
     const exportChanges = schematics_utilities_1.addExportToModule(context.source, modulePath, context.classifiedName, context.relativePath);
     const exportRecorder = host.beginUpdate(modulePath);
     for (const change of exportChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            exportRecorder.insertLeft(change.pos, change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        exportRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //}
     }
     host.commitUpdate(exportRecorder);
 }
-;
 // Function to add an Entry point to the module
 function addEntryPoint(host, options) {
     const context = createAddToModuleContext(host, options);
@@ -216,19 +221,20 @@ function addEntryPoint(host, options) {
     const declarationRecorder = host.beginUpdate(modulePath);
     // console.log('mp:',modulePath);
     for (const change of declarationChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        // console.log('AE]change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        //}
     }
     host.commitUpdate(declarationRecorder);
 }
-;
 //Function to build up the AddToModule Context class
 function createAddToModuleContext(host, options) {
     console.log('Create Add to Module Context: ', options.module);
     const result = new AddToModuleContext();
-    // console.log('options.module: ', options.module);
+    console.log('options.module: ', options.module);
     if (!options.module) {
         throw new schematics_1.SchematicsException(`Module not found.`);
     }
@@ -260,6 +266,7 @@ function addImport(host, options, lib, importPath) {
     console.log('Adding Import to Point: ', modulePath);
     console.log('Library to Import: ' + lib);
     console.log('      Import Path: ' + importPath);
+    // @ts-ignore
     const importChanges = schematics_utilities_1.addImportToModule(schematics_utilities_1.getSourceFile(host, options.module), modulePath, lib, importPath);
     // TODO: Fix this to update to (schematics-utilities - 2.0.1)
     /*
@@ -270,10 +277,12 @@ function addImport(host, options, lib, importPath) {
     console.log('DONE ADDING SOURCE FILE: ' , importChanges);*/
     const declarationRecorder = host.beginUpdate(modulePath);
     for (const change of importChanges) {
-        if (change instanceof schematics_utilities_1.InsertChange) {
-            declarationRecorder.insertLeft(change.pos, change.toAdd);
-            //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
-        }
+        // FIXED FOR ANGULAR 10; ADDED A CAST TO InsertChange
+        let newChange = change;
+        //if (change instanceof InsertChange) {
+        declarationRecorder.insertLeft(newChange.pos, newChange.toAdd);
+        //console.log('change.pos:',change.pos , ' change.toAdd:',change.toAdd);
+        //}
     }
     host.commitUpdate(declarationRecorder);
 }
@@ -290,8 +299,8 @@ function addSpotfireLibs() {
         console.log('Adding Spotfire Libraries...');
         const dependencies = [
             //TODO: make versions configurable
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.8.0', name: '@tibco/spotfire-wrapper' },
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^1.2.5', name: '@tibco-tcstk/tc-spotfire-lib' }
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.13.0', name: '@tibco/spotfire-wrapper' },
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^2.1.0-rc', name: '@tibco-tcstk/tc-spotfire-lib' }
         ];
         addPackageDependencies(host, dependencies);
         console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');
@@ -366,7 +375,7 @@ function addSFRoutes(options) {
             }
         }
         else {
-            console.log('Skipping...');
+            console.log('Skipping Adding of Spotfire Routes......');
         }
         return host;
     };
@@ -409,7 +418,7 @@ function addSFMenuConfig(options) {
             }
         }
         else {
-            console.log('Skipping...');
+            console.log('Skipping Adding of Spotfire Menu Configurations...');
         }
         return host;
     };

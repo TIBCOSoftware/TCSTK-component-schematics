@@ -51,6 +51,7 @@ export default function (options: any): Rule {
       context.logger.info('Project Root: ' + project.root);
       //console.log(project);
 
+      // @ts-ignore
       addModuleImportToRootModule(host, moduleName, sourceLoc, project);
       context.logger.info('Installed Dependencies...');
     },

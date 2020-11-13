@@ -21,7 +21,7 @@ export default function (options: any): Rule {
       // Show the options for this Schematics.
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-      context.logger.info('--- **                V1.07              ** ---');
+      context.logger.info('--- **                V2.1.0             ** ---');
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- ** TYPE: CLOUD EVENTS                ** ---');
       context.logger.info('-----------------------------------------------');
@@ -49,6 +49,7 @@ export default function (options: any): Rule {
       context.logger.info('Project Root: ' + project.root);
       //console.log(project);
 
+      // @ts-ignore
       addModuleImportToRootModule(host, moduleName, sourceLoc, project);
       context.logger.info('Installed Dependencies...');
 
