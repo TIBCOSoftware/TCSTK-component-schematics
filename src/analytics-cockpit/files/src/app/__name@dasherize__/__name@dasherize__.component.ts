@@ -144,6 +144,6 @@ export class <%= classify(name) %>Component extends LiveAppsHomeCockpitComponent
     // Create case in LiveApps based on marking
     public handleCreatorAppSelection = (application: CaseType): void => {
         this.laData = this.sFHelper.createLiveAppsData(this.markingValue, this.sFMarkingConfig);
-        this.openCreatorDialog(application, this.laData, this.sandboxId, this.customFormDefs, false, this.formsFramework, this.formConfig);
+        this.openCreatorDialog(application, this.laData, this.sandboxId, this.customFormDefs, this.legacyCreators, this.formsFramework, this.formConfig);
     }
 }
