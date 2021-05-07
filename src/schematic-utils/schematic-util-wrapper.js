@@ -15,7 +15,7 @@ function showHead(type, context, options) {
     // Show the options for this Schematics.
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-    context.logger.info('--- **                V2.1.0             ** ---');
+    context.logger.info('--- **                V2.3.3             ** ---');
     context.logger.info('-----------------------------------------------');
     context.logger.info('--- ** TYPE: ' + type.toUpperCase());
     context.logger.info('-----------------------------------------------');
@@ -300,7 +300,7 @@ function addSpotfireLibs() {
         const dependencies = [
             //TODO: make versions configurable
             { type: schematics_utilities_1.NodeDependencyType.Default, version: '^0.13.0', name: '@tibco/spotfire-wrapper' },
-            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^2.1.0-rc', name: '@tibco-tcstk/tc-spotfire-lib' }
+            { type: schematics_utilities_1.NodeDependencyType.Default, version: '^2.3.3-rc', name: '@tibco-tcstk/tc-spotfire-lib' }
         ];
         addPackageDependencies(host, dependencies);
         console.log('Spotfire Libraries, added to package.json. Please run "npm install" to install them...');

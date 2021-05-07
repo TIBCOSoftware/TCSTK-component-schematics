@@ -21,7 +21,7 @@ export default function (options: any): Rule {
       // Show the options for this Schematics.
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- **  TIBCO CLOUD COMPONENT GENERATOR  ** ---');
-      context.logger.info('--- **                V2.1.0             ** ---');
+      context.logger.info('--- **                V2.3.3             ** ---');
       context.logger.info('-----------------------------------------------');
       context.logger.info('--- ** TYPE: CLOUD EVENTS                ** ---');
       context.logger.info('-----------------------------------------------');
