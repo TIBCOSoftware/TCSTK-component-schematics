@@ -15,13 +15,13 @@
         "type": "string",
         "description": "The Spotfire Server to use",
         "x-prompt": "What is the Spotfire server you want to use ?",
-        "default": "https://demo.spotfire.cloud.tibco.com"
+        "default": "https://eu.spotfire-next.cloud.tibco.com"
       },
     "sflocation": {
         "type": "string",
         "description": "The Spotfire Report Location",
         "x-prompt": "What is the Location of the Spotfire Report you want to use ?",
-        "default": "/Public/Expense Analyzer Dashboard"
+        "default": "/Samples/Expense Analyzer Dashboard"
       },
     "doAddRoutes": {
       "type": "boolean",
