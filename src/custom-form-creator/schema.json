@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "CloudStarterSchema",
-  "title": "Cloud Starter Schema",
+  "$id": "CloudApplicationSchema",
+  "title": "Cloud Application Schema",
   "type": "object",
   "properties": {
     "name": {
