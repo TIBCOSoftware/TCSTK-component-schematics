@@ -1,4 +1,5 @@
 # TIBCO Cloud™ Composer - Component Schematics
+
 <img src="https://community.tibco.com/sites/default/files/tibco_labs_final_with_tm2-01.png" alt="drawing" width="100"/>Powered by [TIBCO Labs™](https://community.tibco.com/wiki/tibco-labs)
 
 Component Schematics, will generate code in order for you to customize apps.
