@@ -1,4 +1,5 @@
-# TIBCO Cloud™ Starters Toolkit - Component Schematics
+# TIBCO Cloud™ Composer - Component Schematics
+
 <img src="https://community.tibco.com/sites/default/files/tibco_labs_final_with_tm2-01.png" alt="drawing" width="100"/>Powered by [TIBCO Labs™](https://community.tibco.com/wiki/tibco-labs)
 
 Component Schematics, will generate code in order for you to customize apps.
@@ -47,9 +48,10 @@ You will see entries like this:
  ```
  (filter for *** Forms:)\n * *** Forms: > Using auto-rendered form (formRef): SampleApp.SampleApp.creator.Create SampleApp,
 ```
----
-For more information see the [TCSTK Documentation](https://tibcosoftware.github.io/TCSToolkit/)
----
+
+> Part of [TIBCO Cloud Composer](https://tibcosoftware.github.io/TCSToolkit/)
+
+![Logo](https://tibcosoftware.github.io/TIBCO-LABS/about/tibcolabs-brand.png "Labs Logo")
 
 # License
 
@@ -57,6 +59,5 @@ Copyright © 2021. TIBCO Software Inc.
 This file is subject to the license terms contained
 in the license file that is distributed with this file.
 
-Please see tpc.txt for details of license and dependent third party components referenced by this library , or it can be found here:
-                                                                                                                                                                                                                                                                                      
-https://github.com/TIBCOSoftware/TCSTK-component-schematics/blob/master/license.txt
+Please see 'TIB_cloud-composer_x.x.x_license'.pdf/.txt for details of license and dependent third party components referenced by this library.
+
